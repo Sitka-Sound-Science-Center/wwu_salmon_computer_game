@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class TutorialText : MonoBehaviour
+{
+    public GameObject textPopUp;
+    public Animator animator;
+    public TMP_Text popUpText;
+    
+
+    public string[] levelDesc = {"alevin text", "fry text", "parr text", "smolt text", "adult text", "spawning text"};
+    public void PopUp(string boxText){
+        textPopUp.SetActive(true);
+        popUpText.text = boxText;
+        animator.SetTrigger("pop");
+    }
+
+    void Start() {
+        print("Started listener");
+    }
+    void Update(){
+        if (Input.GetKey(KeyCode.Q)) {
+            print("Got Key Q");
+            this.PopUp("ITS WORKING");
+        } 
+    }
+}
