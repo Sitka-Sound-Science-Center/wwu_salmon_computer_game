@@ -8,9 +8,7 @@ public class LevelSelect : MonoBehaviour
 
     private string curSpecies;
     private string curStage;
-    // the key is the name of the lifecycle stage
-    // the value is an array of its GameObjects: [info screen, highlight]
-    public Dictionary<string, GameObject[]> stages = new Dictionary<string, GameObject[]>();
+    public FishButton[] fishButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +22,12 @@ public class LevelSelect : MonoBehaviour
         
     }
 
-    public void SelectStage(string stage)
+    public void SelectStage(FishButton stage)
     {
-        foreach (KeyValuePair<string, GameObject[]> entry in stages)
+        foreach (FishButton fish in fishButtons)
         {
-            entry.Value[0].SetActive(entry.Key == stage);
-            entry.Value[1].SetActive(entry.Key == stage);
+            fish.SetSelect(stage == fish);
         }
-    }
-
-    private void SetHighlight(string stage)
-    {
-        
     }
 
     public void SelectSpecies(string species)
