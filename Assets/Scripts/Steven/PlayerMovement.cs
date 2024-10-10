@@ -5,6 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Vector3 MoveVector = new (0,0,0);
+    [SerializeField]
+    float MoveSpeed = 30;
+    float horizontalInput = 0;
+    float verticalInput = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,31 +18,35 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(MoveVector);
+        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * MoveSpeed * Time.deltaTime);
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //verticalInput = Input.GetAxis("Vertical");
     }
 
     public void moveLeft()
     {
-        MoveVector = new (-1, 0, 0);
+        horizontalInput = -1;
+        
     }
 
     public void moveRight()
     {
-        MoveVector = new(1, 0, 0);
+        horizontalInput = 1;
     }
 
     public void moveUp() {
-        MoveVector = new(0, 1, 0);
+        verticalInput = 1;
 
     }
 
     public void moveDown()
     {
-        MoveVector = new(0, -1, 0);
+        verticalInput = -1;
     }
     public void cancelMove()
     {
-        MoveVector = Vector3.zero;
+        horizontalInput = 0;
+        verticalInput = 0;
 
     }
 }
