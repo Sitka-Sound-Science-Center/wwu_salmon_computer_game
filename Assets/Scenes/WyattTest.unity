@@ -508,7 +508,6 @@ GameObject:
   - component: {fileID: 665827370}
   - component: {fileID: 665827369}
   - component: {fileID: 665827367}
-  - component: {fileID: 665827372}
   m_Layer: 0
   m_Name: EnemyFish
   m_TagString: Untagged
@@ -628,19 +627,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &665827372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665827366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29bad7d7a0657cc39362c41e78f82d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fishSpeed: 2
 --- !u!1 &724111305
 GameObject:
   m_ObjectHideFlags: 0
