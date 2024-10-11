@@ -6,8 +6,9 @@ public class LevelSelect : MonoBehaviour
 {
     public GameObject currentInfo;
 
-    private string species;
-    private string stage;
+    private string curSpecies;
+    private string curStage;
+    public FishButton[] fishButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +22,16 @@ public class LevelSelect : MonoBehaviour
         
     }
 
-    public void SelectStage(GameObject info)
+    public void SelectStage(FishButton stage)
     {
-        currentInfo.SetActive(false);
-        currentInfo = info;
-        info.SetActive(true);
-
-        //set select highlight
+        foreach (FishButton fish in fishButtons)
+        {
+            fish.SetSelect(stage == fish);
+        }
     }
 
     public void SelectSpecies(string species)
     {
-        this.species = species;
+        this.curSpecies = species;
     }
 }
