@@ -26,22 +26,18 @@ public class ButtonMovement : MonoBehaviour
 
         if(horizontalInput < 0)
         {
-            transform.localScale = -scale;
+            transform.localScale = new Vector3 (-scale.x, scale.y, scale.z);
         }
         else
         {
             transform.localScale = scale;
         }
 
-
-
-
-
-
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * MoveSpeed * Time.deltaTime);
         float tiltAroundZ = Mathf.Atan2(verticalInput, horizontalInput) * Mathf.Rad2Deg;
-        Quaternion target = Quaternion.Euler(0, 0, tiltAroundZ);
-        transform.SetPositionAndRotation(transform.position, target);
+        print(tiltAroundZ);
+        //Quaternion target = Quaternion.Euler(0, 0, tiltAroundZ);
+        //transform.SetPositionAndRotation(transform.position, target);
         // Smoothly tilts a transform towards a target rotation.
         
         // float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
@@ -51,6 +47,6 @@ public class ButtonMovement : MonoBehaviour
         
 
         // Dampen towards the target rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 }
