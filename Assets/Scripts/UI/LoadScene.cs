@@ -5,16 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    public string sceneToLoad;
+    public Level sceneToLoad;
+    public enum Level
+    {
+        LevelSelect,
+        River,
+        Ocean,
+        Spawning
+    }
 
     public void StartLoad()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(sceneToLoad.ToString());
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(sceneToLoad.ToString());
     }
 }
 
