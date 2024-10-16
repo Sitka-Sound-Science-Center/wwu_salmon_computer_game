@@ -10,7 +10,7 @@ public class CrushedRockPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        infoBox.SetActive(false);
     }
 
     // Update is called once per frame

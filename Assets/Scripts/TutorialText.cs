@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TutorialText : MonoBehaviour
 {
     public GameObject textPopUp;
     public Animator animator;
     public TMP_Text popUpText;
-    
+    [SerializeField]
+    public string FirstTutorialText;
 
     public string[] levelDesc = {"alevin text", "fry text", "parr text", "smolt text", "adult text", "spawning text"};
     public void PopUp(string boxText){
@@ -19,6 +21,7 @@ public class TutorialText : MonoBehaviour
 
     void Start() {
         print("Started listener");
+        this.PopUp(FirstTutorialText);
     }
     void Update(){
         if (Input.GetKey(KeyCode.Q)) {
