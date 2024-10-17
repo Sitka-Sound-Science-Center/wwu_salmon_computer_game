@@ -18,35 +18,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * MoveSpeed * Time.deltaTime);
-        //horizontalInput = Input.GetAxis("Horizontal");
-        //verticalInput = Input.GetAxis("Vertical");
-    }
-
-    public void moveLeft()
-    {
-        horizontalInput = -1;
-        
-    }
-
-    public void moveRight()
-    {
-        horizontalInput = 1;
-    }
-
-    public void moveUp() {
-        verticalInput = 1;
-
-    }
-
-    public void moveDown()
-    {
-        verticalInput = -1;
-    }
-    public void cancelMove()
-    {
-        horizontalInput = 0;
-        verticalInput = 0;
-
     }
 }
