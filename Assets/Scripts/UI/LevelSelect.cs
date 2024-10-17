@@ -7,7 +7,7 @@ public class LevelSelect : MonoBehaviour
 {
     public GameObject currentInfo;
 
-    private TextMeshProUGUI curSpecies;
+    public TextMeshProUGUI curSpecies;
     private string curStage;
     public FishButton[] fishButtons;
 
