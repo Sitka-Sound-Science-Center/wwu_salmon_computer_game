@@ -35,13 +35,16 @@ public class LevelSelect : MonoBehaviour
             || curStage == "Fry" || curStage == "Smolt")
         {
             loadScene.sceneToLoad = LoadScene.Level.River;
-        } else if (curStage == "Adult")
+        } 
+        else if (curStage == "Adult")
         {
             loadScene.sceneToLoad = LoadScene.Level.Ocean;
-        } else if (curStage == "Spawning")
+        } 
+        else if (curStage == "Spawning")
         {
             loadScene.sceneToLoad = LoadScene.Level.Spawning;
-        } else
+        } 
+        else
         {
             Debug.Log("Invalid level");
         }
