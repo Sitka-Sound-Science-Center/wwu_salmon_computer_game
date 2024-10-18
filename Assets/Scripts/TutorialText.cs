@@ -13,7 +13,8 @@ public class TutorialText : MonoBehaviour
     public string FirstTutorialText;
 
     public string[] levelDesc = {"alevin text", "fry text", "parr text", "smolt text", "adult text", "spawning text"};
-    public void PopUp(string boxText){
+    
+    public void PopUp(string boxText) {
         textPopUp.SetActive(true);
         popUpText.text = boxText;
         animator.SetTrigger("pop");
@@ -23,7 +24,8 @@ public class TutorialText : MonoBehaviour
         print("Started listener");
         this.PopUp(FirstTutorialText);
     }
-    void Update(){
+
+    void Update() {
         if (Input.GetKey(KeyCode.Q)) {
             print("Got Key Q");
             this.PopUp("ITS WORKING");
