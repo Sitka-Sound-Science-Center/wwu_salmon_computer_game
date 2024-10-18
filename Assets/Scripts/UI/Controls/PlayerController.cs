@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     [SerializeField]
-    private float playerSpeed = 10f;
+    private float playerSpeed = 11f;
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = 0f;
@@ -80,5 +80,11 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    //Methods for unit test
+    public float getPlayerSpeed()
+    {
+        return playerSpeed;
     }
 }
