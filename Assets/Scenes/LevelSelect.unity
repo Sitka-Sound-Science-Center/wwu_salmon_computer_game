@@ -1535,12 +1535,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 310105138}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: adult
@@ -1670,12 +1670,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 468979514}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: fry
@@ -2105,12 +2105,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 586398418}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: smolt
@@ -4335,7 +4335,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999304591}
-  - component: {fileID: 999304592}
   m_Layer: 0
   m_Name: Stages
   m_TagString: Untagged
@@ -4363,27 +4362,6 @@ Transform:
   - {fileID: 310105137}
   m_Father: {fileID: 1174953725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &999304592
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999304590}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 167140ca77bfcb4da99e2e1135c4718a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1021242987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,12 +4850,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1094783081}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: alevin
@@ -6836,12 +6814,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1537692715}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: adult
@@ -9392,7 +9370,7 @@ MonoBehaviour:
   - {fileID: 1776451594}
   - {fileID: 964084859}
   - {fileID: 1951479417}
-  TestingEnabled: 1
+  loaded: 0
 --- !u!4 &2141155709
 Transform:
   m_ObjectHideFlags: 0
