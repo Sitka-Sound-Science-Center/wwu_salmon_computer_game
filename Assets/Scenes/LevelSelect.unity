@@ -1535,12 +1535,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 310105138}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: adult
@@ -1670,12 +1670,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 468979514}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: fry
@@ -2105,12 +2105,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 586398418}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: smolt
@@ -2697,12 +2697,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 690978803}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: egg
@@ -5000,12 +5000,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1094783081}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: alevin
@@ -7288,12 +7288,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectStage
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1537692715}
-          m_ObjectArgumentAssemblyTypeName: FishButton, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: adult
@@ -7893,14 +7893,14 @@ RectTransform:
   m_GameObject: {fileID: 1719358747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1.1078801, y: 1.2600001, z: 1.0354003}
+  m_LocalScale: {x: -1.1078801, y: 0.89, z: 1.0354003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 586398414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -7}
+  m_AnchoredPosition: {x: 10, y: -7}
   m_SizeDelta: {x: 321, y: 152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719358749
@@ -7923,7 +7923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59183fad4c4695642b5a35c78506c21b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7cb6aa6fe432a074697f10ecb63f5bb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
