@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+
 //using TreeEditor;
 //using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+
 public class PlayerController : MonoBehaviour
 {
     private Player playerInput;
-    private CharacterController controller;
+    //private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     [SerializeField]
@@ -19,10 +23,13 @@ public class PlayerController : MonoBehaviour
     Vector3 scale;
     float smooth = 5.0f;
     float flip = 0;
+    private Rigidbody2D rb;
+    private Vector3 move;
     private void Awake()
     {
         playerInput = new Player();
-        controller = GetComponent<CharacterController>();
+        //controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
@@ -40,15 +47,27 @@ public class PlayerController : MonoBehaviour
        scale = transform.localScale;
     }
 
+    private void FixedUpdate()
+    {
+        HandleMove();
+    }
+
+    private void HandleMove()
+    {
+        rb.AddForce(move, ForceMode2D.Impulse);
+        print(move);
+    }
+
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
+        //groundedPlayer = controller.isGrounded;
+        //if (groundedPlayer && playerVelocity.y < 0)
+        //{
+        //    playerVelocity.y = 0f;
+       /// /}
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        Vector3 move = new Vector3(movementInput.x, movementInput.y,0f);
+        
+        move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
         float tiltAroundZ = Mathf.Atan2(movementInput.x, movementInput.y) * Mathf.Rad2Deg;
 
         if(move.x < 0f)
@@ -63,7 +82,7 @@ public class PlayerController : MonoBehaviour
         //Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip*180));
         //transform.localScale = new Vector3(scale.x * flip, scale.y, scale.z);
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        
         
 
 
@@ -79,7 +98,7 @@ public class PlayerController : MonoBehaviour
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        //controller.Move(playerVelocity * Time.deltaTime);
     }
 
     //Methods for unit test
