@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     Vector3 scale;
     float smooth = 5.0f;
     float flip = 0;
+    float lastflip = 0;
     private Rigidbody2D rb;
     private Vector3 move;
     private void Awake()
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
     private void HandleMove()
     {
         rb.AddForce(move, ForceMode2D.Impulse);
-        print(move);
+        
     }
 
     void Update()
@@ -68,20 +69,34 @@ public class PlayerController : MonoBehaviour
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
         
         move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
-        float tiltAroundZ = Mathf.Atan2(movementInput.x, movementInput.y) * Mathf.Rad2Deg;
+        
 
-        if(move.x < 0f)
+        float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
+        print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
+        
+        if (move.x < 0f)
         {
             flip = -1;
         }
         else
         {
-            flip = 1;  
+            flip = 1;
+ 
         }
 
-        //Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip*180));
-        //transform.localScale = new Vector3(scale.x * flip, scale.y, scale.z);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
+        
+
+        Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
+        if (lastflip != flip)
+        {
+            transform.rotation = rotation;
+        }
+
+        lastflip = flip;
+
+
+        transform.localScale = new Vector3(scale.x, scale.y * flip, scale.z);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
         
         
 
