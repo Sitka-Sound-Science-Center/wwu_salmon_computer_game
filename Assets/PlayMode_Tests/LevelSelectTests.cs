@@ -30,6 +30,23 @@ public class LevelSelectTests : MonoBehaviour
         SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
     } 
 
+    // MAKE GLOBAL WAIT ONE FRAME SET REFS FUNCTION 
+
+    [UnityTest]
+    public IEnumerator TestPhaseInfoBoxes() {
+        yield return new WaitWhile(() => loaded == false);
+        FishButtons = GameObject.FindGameObjectsWithTag("FishButton");
+        foreach (GameObject fish in FishButtons) {
+            fish.GetComponent<Button>().onClick.Invoke();
+            string InfoBoxName = fish.name + "Info";
+            GameObject InfoBox = GameObject.FindWithTag("InfoBox");
+            Assert.That(InfoBoxName, Is.EqualTo(InfoBox.name));
+        }
+    }
+
+    // TODO TEST THAT CHECKS IF CORRECT SET OF ASSETS IS DISPLAYED ON MAIN MENU SCREEN WHEN SPECIES CHANGES
+    // TODO TEST THAT IDLE TIMER BEGINS AT APPROPRIATE TIME AND ANIMATION IS CORRECTLY STARTED THEN STOPPED ON NEXT TOUCH
+
     [UnityTest]
     public IEnumerator TestLevelSelect() {
         yield return new WaitWhile(() => loaded == false);
@@ -39,7 +56,6 @@ public class LevelSelectTests : MonoBehaviour
             fish.GetComponent<Button>().onClick.Invoke();
             string curStage = fish.name;
             string sceneToLoad = LoadScript.sceneToLoad.ToString();
-            print(curStage + " " + sceneToLoad);
             if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
                 Assert.That(sceneToLoad, Is.EqualTo("River"));
             } 

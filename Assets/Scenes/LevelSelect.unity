@@ -1744,7 +1744,7 @@ GameObject:
   - component: {fileID: 474622274}
   m_Layer: 5
   m_Name: AdultInfo
-  m_TagString: Untagged
+  m_TagString: InfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4367,7 +4367,7 @@ GameObject:
   - component: {fileID: 902165327}
   m_Layer: 5
   m_Name: SmoltInfo
-  m_TagString: Untagged
+  m_TagString: InfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5791,7 +5791,7 @@ GameObject:
   - component: {fileID: 1288838180}
   m_Layer: 5
   m_Name: SpawningInfo
-  m_TagString: Untagged
+  m_TagString: InfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6818,7 +6818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1527196762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7559,7 +7559,7 @@ GameObject:
   - component: {fileID: 1750905554}
   m_Layer: 5
   m_Name: AlevinInfo
-  m_TagString: Untagged
+  m_TagString: InfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9351,7 +9351,7 @@ GameObject:
   - component: {fileID: 2089687549}
   m_Layer: 5
   m_Name: FryInfo
-  m_TagString: Untagged
+  m_TagString: InfoBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

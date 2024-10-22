@@ -10,6 +10,7 @@ TagManager:
   - SpeciesScreen
   - SpeciesButton
   - Canvas
+  - InfoBox
   layers:
   - Default
   - TransparentFX
