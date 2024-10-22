@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.TestTools;
 using NUnit.Framework;
+using TMPro;
 
 [TestFixture]
 public class LevelSelectTests : MonoBehaviour
 {
     public LoadScene LoadScript;
+    public LevelSelect LevelScript;
     public GameObject SpeciesScreen;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
@@ -22,7 +24,6 @@ public class LevelSelectTests : MonoBehaviour
 
     [OneTimeSetUp]
     public void Init() {
-        print("Level select test init");
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         // Only guarantees full scene load on next frame so tests must wait 
@@ -61,13 +62,25 @@ public class LevelSelectTests : MonoBehaviour
         SpeciesScreen.SetActive(false);
     }
 
-    public void TestSpeciesSelect() {
-        //GameObject ChangeButton = GameObject.FindWithTag("ChangeButton"); 
-        //GameObject SpeciesScreen;
-        //foreach (GameObject species in SpeciesButtons) {
-        //    SpeciesScreen.SetActive(true);
-        //    species.GetComponent<Button>().onClick.Invoke();
-        //}
+    [UnityTest]
+    public IEnumerator TestSpeciesSelect() {
+        yield return new WaitWhile(() => loaded == false);
+        LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
+        GameObject ChangeButton = GameObject.FindWithTag("ChangeButton");
+        ChangeButton.GetComponent<Button>().onClick.Invoke();
+        GameObject SpeciesScreen = GameObject.FindWithTag("SpeciesScreen");
+        SpeciesButtons = GameObject.FindGameObjectsWithTag("SpeciesButton");
+        foreach (GameObject species in SpeciesButtons) {
+            species.GetComponent<Button>().onClick.Invoke();
+            Assert.That(SpeciesScreen.activeSelf, Is.False);
+
+            // Each species select button has a parent object with the species name for the button
+            string selectedSpecies = species.transform.parent.gameObject.name;
+            string curSpecies = LevelScript.curSpecies.text;
+            Assert.That(curSpecies, Is.EqualTo(selectedSpecies));
+            SpeciesScreen.SetActive(true);
+        }
+        SpeciesScreen.SetActive(false);
     }
 
     /* 

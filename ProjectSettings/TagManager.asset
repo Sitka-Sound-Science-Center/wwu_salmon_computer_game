@@ -8,6 +8,8 @@ TagManager:
   - FishButton
   - ChangeButton
   - SpeciesScreen
+  - SpeciesButton
+  - Canvas
   layers:
   - Default
   - TransparentFX
