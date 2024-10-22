@@ -13,7 +13,7 @@ public class LevelSelectTests : MonoBehaviour
 {
     public LoadScene LoadScript;
     public LevelSelect LevelScript;
-    public GameObject SpeciesScreen;
+    public GameObject ChangeButton;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
     public bool loaded=false;
@@ -22,20 +22,26 @@ public class LevelSelectTests : MonoBehaviour
         loaded = true;
     }
 
+    void SetLevelSelectTestRefs(Scene scene, LoadSceneMode mode) {
+        FishButtons = GameObject.FindGameObjectsWithTag("FishButton");
+        SpeciesButtons = GameObject.FindGameObjectsWithTag("SpeciesButton");
+        ChangeButton = GameObject.FindWithTag("ChangeButton");
+        LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
+        LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
+    }
+
     [OneTimeSetUp]
     public void Init() {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += SetLevelSelectTestRefs;
 
         // Only guarantees full scene load on next frame so tests must wait 
         SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
     } 
 
-    // MAKE GLOBAL WAIT ONE FRAME SET REFS FUNCTION 
-
     [UnityTest]
     public IEnumerator TestPhaseInfoBoxes() {
         yield return new WaitWhile(() => loaded == false);
-        FishButtons = GameObject.FindGameObjectsWithTag("FishButton");
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             string InfoBoxName = fish.name + "Info";
@@ -50,8 +56,6 @@ public class LevelSelectTests : MonoBehaviour
     [UnityTest]
     public IEnumerator TestLevelSelect() {
         yield return new WaitWhile(() => loaded == false);
-        FishButtons = GameObject.FindGameObjectsWithTag("FishButton");
-        LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             string curStage = fish.name;
@@ -71,7 +75,6 @@ public class LevelSelectTests : MonoBehaviour
     [UnityTest]
     public IEnumerator TestChangeButton() {
         yield return new WaitWhile(() => loaded == false);
-        GameObject ChangeButton = GameObject.FindWithTag("ChangeButton");
         ChangeButton.GetComponent<Button>().onClick.Invoke();
         GameObject SpeciesScreen = GameObject.FindWithTag("SpeciesScreen");
         Assert.That((SpeciesScreen != null), Is.EqualTo(true));
@@ -81,11 +84,8 @@ public class LevelSelectTests : MonoBehaviour
     [UnityTest]
     public IEnumerator TestSpeciesSelect() {
         yield return new WaitWhile(() => loaded == false);
-        LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
-        GameObject ChangeButton = GameObject.FindWithTag("ChangeButton");
         ChangeButton.GetComponent<Button>().onClick.Invoke();
         GameObject SpeciesScreen = GameObject.FindWithTag("SpeciesScreen");
-        SpeciesButtons = GameObject.FindGameObjectsWithTag("SpeciesButton");
         foreach (GameObject species in SpeciesButtons) {
             species.GetComponent<Button>().onClick.Invoke();
             Assert.That(SpeciesScreen.activeSelf, Is.False);
