@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.TestTools;
 using NUnit.Framework;
-using TMPro;
 
 [TestFixture]
 public class LevelSelectTests : MonoBehaviour
@@ -38,6 +37,8 @@ public class LevelSelectTests : MonoBehaviour
         // Only guarantees full scene load on next frame so tests must wait 
         SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
     } 
+
+    // TODO MAKE TEARDOWN FOR THIS TEST SUITE?? //
 
     [UnityTest]
     public IEnumerator TestPhaseInfoBoxes() {
@@ -98,24 +99,4 @@ public class LevelSelectTests : MonoBehaviour
         }
         SpeciesScreen.SetActive(false);
     }
-
-    /* 
-     !!! LEGACY TESTING CODE !!!
-    
-    [SerializeField]
-    bool TestingEnabled = false; // !!! SET TO TRUE IN EDITOR TO RUN TESTS ON SCENE LOAD !!! //
-
-    void Start() {
-        if (TestingEnabled) {
-        // Start button has LoadScene script attached, where each fish button
-        // on level select screen will set the sceneToLoad variable
-        RunTests();
-    }
-
-    public void RunTests() {
-        TestLevelSelect();
-        TestChangeButton();
-        TestSpeciesSelect();
-    }
-    */
 }
