@@ -11,6 +11,7 @@ TagManager:
   - SpeciesButton
   - Canvas
   - InfoBox
+  - StagesParent
   layers:
   - Default
   - TransparentFX

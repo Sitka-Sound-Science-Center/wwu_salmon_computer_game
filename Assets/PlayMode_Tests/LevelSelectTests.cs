@@ -12,6 +12,7 @@ public class LevelSelectTests : MonoBehaviour
 {
     public LoadScene LoadScript;
     public LevelSelect LevelScript;
+    public Animator animator;
     public GameObject ChangeButton;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
@@ -27,6 +28,12 @@ public class LevelSelectTests : MonoBehaviour
         ChangeButton = GameObject.FindWithTag("ChangeButton");
         LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
         LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
+        animator = GameObject.FindWithTag("StagesParent").GetComponent<Animator>();
+    }
+
+    bool AnimatorIsPlaying(Animator animator) {
+        AnimatorStateInfo StateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        return StateInfo.length > StateInfo.normalizedTime;
     }
 
     [OneTimeSetUp]
@@ -52,16 +59,14 @@ public class LevelSelectTests : MonoBehaviour
     }
 
     // TODO TEST THAT CHECKS IF CORRECT SET OF ASSETS IS DISPLAYED ON MAIN MENU SCREEN WHEN SPECIES CHANGES
-    // TODO TEST THAT IDLE TIMER BEGINS AT APPROPRIATE TIME AND ANIMATION IS CORRECTLY STARTED THEN STOPPED ON NEXT TOUCH
     [UnityTest]
     public IEnumerator TestIdleAdimationTimer() {
         yield return new WaitWhile(() => loaded == false);
-        // send touch event
-        // start timer
-        // constantly ping animator to check if its playing anim
-        // assert animator begins to play the idle animation once the necessary no input timer
+        // send touch event to (800,0) in canvas space (bottom right corner)
+        yield return new WaitForSeconds(5);
+        Assert.That(AnimatorIsPlaying(animator), Is.EqualTo(true));
         // send 2nd touch event
-        // assert that animator stops playing animation on touch 
+        Assert.That(AnimatorIsPlaying(animator), Is.EqualTo(false));
     }
 
 
