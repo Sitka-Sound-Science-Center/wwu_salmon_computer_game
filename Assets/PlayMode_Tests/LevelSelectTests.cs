@@ -53,6 +53,18 @@ public class LevelSelectTests : MonoBehaviour
 
     // TODO TEST THAT CHECKS IF CORRECT SET OF ASSETS IS DISPLAYED ON MAIN MENU SCREEN WHEN SPECIES CHANGES
     // TODO TEST THAT IDLE TIMER BEGINS AT APPROPRIATE TIME AND ANIMATION IS CORRECTLY STARTED THEN STOPPED ON NEXT TOUCH
+    [UnityTest]
+    public IEnumerator TestIdleAdimationTimer() {
+        yield return new WaitWhile(() => loaded == false);
+        // send touch event
+        // start timer
+        // constantly ping animator to check if its playing anim
+        // assert animator begins to play the idle animation once the necessary no input timer
+        // send 2nd touch event
+        // assert that animator stops playing animation on touch 
+    }
+
+
 
     [UnityTest]
     public IEnumerator TestLevelSelect() {
