@@ -44,7 +44,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 6218519533378465070}
   m_Layer: 7
   m_Name: PhysicsPebble
-  m_TagString: Untagged
+  m_TagString: Pebble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

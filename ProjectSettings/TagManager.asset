@@ -12,6 +12,7 @@ TagManager:
   - Canvas
   - InfoBox
   - StagesParent
+  - Pebble
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Fish_Rocks
   - Rock_Rocks
-  - 
+  - Boot
   - 
   - 
   - 
