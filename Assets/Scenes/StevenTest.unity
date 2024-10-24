@@ -686,12 +686,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2425032489070450765, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3079183100303869183, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 527969055}
     - target: {fileID: 3079183100303869183, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685417372327763685, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8699029908036573247, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
@@ -947,6 +955,18 @@ PrefabInstance:
       value: Fish_Player_prefab
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1092,7 +1112,7 @@ MonoBehaviour:
   spawnableArea: {fileID: 1708970456}
   RockFieldHeight: 0
   rocksPerSecond: 50
-  maxRockCount: 200
+  maxRockCount: 100
 --- !u!1 &2045549228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 897311503746791111, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
