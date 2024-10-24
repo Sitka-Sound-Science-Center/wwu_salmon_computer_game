@@ -69,8 +69,6 @@ public class LevelSelectTests : MonoBehaviour
         Assert.That(AnimatorIsPlaying(animator), Is.EqualTo(false));
     }
 
-
-
     [UnityTest]
     public IEnumerator TestLevelSelect() {
         yield return new WaitWhile(() => loaded == false);
