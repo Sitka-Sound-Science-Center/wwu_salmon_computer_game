@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.TestTools;
+using UnityEngine.UI;
 
 public class TestSuite
 {
     GameObject playerPrefab = Resources.Load<GameObject>("Fish_Player_prefab");
+    GameObject JoyStick = Resources.Load<GameObject>("ControlCanvas");
     
     
     // A Test behaves as an ordinary method
@@ -34,6 +37,23 @@ public class TestSuite
         GameObject player = GameObject.Instantiate(playerPrefab, playerPos, playerDir);
         float movespeed = player.GetComponent<PlayerController>().getPlayerSpeed();
         Assert.That(movespeed, Is.EqualTo(10f));
+    }
+    [Test]
+    public void JoystickCanvasSize()
+    {
+        Vector2 targetSize = new Vector2(1920, 1080);
+        GameObject testStick = GameObject.Instantiate(JoyStick);
+        Vector2 size = testStick.GetComponent<CanvasScaler>().referenceResolution;
+        Assert.That(size, Is.EqualTo(targetSize));
+    }
+
+    [Test]
+
+    public void JoystickInputPath()
+    {
+        string path = "<Gamepad>/leftStick";
+        GameObject testStick = GameObject.Instantiate(JoyStick);
+        
     }
 
 }
