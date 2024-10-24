@@ -92,7 +92,7 @@ public class RockCreator : MonoBehaviour
     private GameObject getRandPebble()
     {
         int rnd = Random.Range(0, pebbles.Count);
-        print(rnd);
+        
         return pebbles[rnd];    
     }
     private Vector3 getRandomAngle()

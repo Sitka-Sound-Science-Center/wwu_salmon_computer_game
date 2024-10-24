@@ -18,7 +18,11 @@ public class ObjectEnabler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponentInChildren<Rigidbody2D>().isKinematic = false;
+        Rigidbody2D comp;
+        if (collision.TryGetComponent(out comp))
+        {
+            comp.isKinematic = false;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -28,8 +32,12 @@ public class ObjectEnabler : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.gameObject.GetComponentInChildren<Rigidbody2D>().isKinematic = true;
-        collision.gameObject.GetComponentInChildren<Rigidbody2D>().velocity = Vector3.zero;
-        collision.gameObject.GetComponentInChildren<Rigidbody2D>().angularVelocity = 0;
+        Rigidbody2D comp;
+        if (collision.TryGetComponent(out comp))
+        {
+            comp.isKinematic = true;
+            comp.velocity = Vector3.zero;
+            comp.angularVelocity = 0;
+        }
     }
 }
