@@ -288,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7605644339372503972}
   - component: {fileID: 3352904914320306214}
+  - component: {fileID: 6555728878371855830}
   - component: {fileID: 6218519533378465070}
   m_Layer: 7
   m_Name: PhysicsPebble
@@ -324,7 +325,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -347,6 +348,41 @@ CircleCollider2D:
   m_Offset: {x: 0.124402046, y: 0}
   serializedVersion: 2
   m_Radius: 2.1462827
+--- !u!58 &6555728878371855830
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399941186200866830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 510
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!50 &6218519533378465070
 Rigidbody2D:
   serializedVersion: 4
