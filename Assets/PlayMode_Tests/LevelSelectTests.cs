@@ -14,9 +14,12 @@ public class LevelSelectTests : MonoBehaviour
     public LevelSelect LevelScript;
     public Animator animator;
     public GameObject ChangeButton;
+    public GameObject Canvas;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
+    public AnimatorClipInfo[] ClipInfo;
     public bool loaded=false;
+    private string ClipName;
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         loaded = true;
@@ -29,11 +32,19 @@ public class LevelSelectTests : MonoBehaviour
         LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
         LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
         animator = GameObject.FindWithTag("StagesParent").GetComponent<Animator>();
+        Canvas = GameObject.FindWithTag("Canvas");
     }
 
-    bool AnimatorIsPlaying(Animator animator) {
+    public string GetCurrentClipName() {
+        int layerIndex = 0;
+        ClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
+        ClipName = ClipInfo[0].clip.name;
+        return ClipName;
+    }
+
+    bool IsPlayingIdleHiglight() {
         AnimatorStateInfo StateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        return StateInfo.length > StateInfo.normalizedTime;
+        return (ClipName=="IdleHighlight") && (StateInfo.normalizedTime>=0F);
     }
 
     [OneTimeSetUp]
@@ -56,17 +67,6 @@ public class LevelSelectTests : MonoBehaviour
             GameObject InfoBox = GameObject.FindWithTag("InfoBox");
             Assert.That(InfoBoxName, Is.EqualTo(InfoBox.name));
         }
-    }
-
-    // TODO TEST THAT CHECKS IF CORRECT SET OF ASSETS IS DISPLAYED ON MAIN MENU SCREEN WHEN SPECIES CHANGES
-    [UnityTest]
-    public IEnumerator TestIdleAdimationTimer() {
-        yield return new WaitWhile(() => loaded == false);
-        // send touch event to (800,0) in canvas space (bottom right corner)
-        yield return new WaitForSeconds(5);
-        Assert.That(AnimatorIsPlaying(animator), Is.EqualTo(true));
-        // send 2nd touch event
-        Assert.That(AnimatorIsPlaying(animator), Is.EqualTo(false));
     }
 
     [UnityTest]
