@@ -1,51 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class TouchListener : MonoBehaviour
+public class TouchListener : MonoBehaviour, IPointerDownHandler
 {
-    public Animator animator;
+    private FishButton[] StateList;
     private float timer=0F;
+    private float phaseTimer=0F;
+    private int HighlightState=0;
     [SerializeField]
     private float IdleThreshold=10F;
-    private AnimatorClipInfo[] ClipInfo;
-    private AnimatorStateInfo StateInfo;
-    private string ClipName;
-
-    public string GetCurrentClipName() {
-        int layerIndex = 0;
-        ClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
-        return ClipInfo[0].clip.name;
-    }
-
-    bool IsPlayingIdleHiglight() {
-        return (ClipName=="IdleHighlight") && (StateInfo.normalizedTime>=0F);
-    }
+    [SerializeField]
+    private float HighlightDuration=1F;
 
     /*
     Listen for a global PointerDownEvent and fire this callback
-    to stop the idle cycling highlight animation which is fired
-    on any touch or mouse event
+    to stop the idle cycling highlight animation. This callback is fired 
+    when ever the PointerDown event occurs. 
     */
-    public void onPointerDown() { 
-        if (IsPlayingIdleHiglight()) {
-            animator.SetTrigger("StopIdle"); // Stop the animation
-        }
-
+    public void OnPointerDown(PointerEventData data) { 
         timer=0F;
     }
 
-    void Start() {
-        animator=gameObject.GetComponent<Animator>();
+    void GetNextAnimationState() {
+        StateList[HighlightState].SetSelect(false);
+        StateList[(HighlightState+1)%5].SetSelect(true);
+        HighlightState++;
+    }
+
+    void Awake() {
+        StateList=gameObject.GetComponent<LevelSelect>().fishButtons;
     }
 
     void Update() {
         if (timer<IdleThreshold) timer+=Time.deltaTime;
-        StateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        ClipName = GetCurrentClipName();
-        if (timer>=IdleThreshold && !IsPlayingIdleHiglight()) {
-            animator.SetTrigger("IdleHighlight"); // Start the animation
+        if (phaseTimer<HighlightDuration) phaseTimer+=Time.deltaTime;
+        if (timer>=IdleThreshold && phaseTimer>=HighlightDuration) {
+            GetNextAnimationState();
+            phaseTimer=0F;
         }
     }
 }
