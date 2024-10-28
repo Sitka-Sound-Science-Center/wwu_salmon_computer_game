@@ -9,6 +9,7 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
     private float timer=0F;
     private float phaseTimer=0F;
     private int HighlightState=0;
+    private LevelSelect LevelScript;
     [SerializeField]
     private float IdleThreshold=10F;
     [SerializeField]
@@ -21,16 +22,26 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
     */
     public void OnPointerDown(PointerEventData data) { 
         timer=0F;
+
+        // Set scene to load after leaving idle state
+        LevelScript.SelectStage(StateList[HighlightState]);
+    }
+
+    public void SetHighlightState(FishButton active) {
+        for (int i=0;i<StateList.Length;i++) {
+            if (StateList[i]==active) HighlightState=i;
+        }
     }
 
     void GetNextAnimationState() {
         StateList[HighlightState].SetSelect(false);
         StateList[(HighlightState+1)%5].SetSelect(true);
-        HighlightState++;
+        HighlightState=(HighlightState+1)%5;
     }
 
     void Awake() {
-        StateList=gameObject.GetComponent<LevelSelect>().fishButtons;
+        LevelScript=gameObject.GetComponent<LevelSelect>();
+        StateList=LevelScript.fishButtons;
     }
 
     void Update() {
