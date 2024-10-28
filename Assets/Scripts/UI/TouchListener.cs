@@ -27,7 +27,6 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
     public void GetNextAnimationState() {
         LevelScript.SelectStage(StateList[(HighlightState+1)%5]);
         HighlightState=(HighlightState+1)%5;
-        print(HighlightState);
     }
 
     void Awake() {
