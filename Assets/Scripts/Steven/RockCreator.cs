@@ -67,10 +67,19 @@ public class RockCreator : MonoBehaviour
     {
 
         counter += 1;
-        if (rockCount < maxRockCount && counter == 50/rocksPerSecond) //once per second
+        if (rockCount < maxRockCount && counter == 50/(rocksPerSecond)) //once per second
         {
             SpawnARock();
-            rockCount += 1;
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            SpawnARock();
+            rockCount += 10;
             counter = 0;
         }
     }
