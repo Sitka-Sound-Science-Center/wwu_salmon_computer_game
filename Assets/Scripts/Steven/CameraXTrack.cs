@@ -7,6 +7,8 @@ public class CameraXTrack : MonoBehaviour
 {
     [SerializeField]
     GameObject Player;
+    [SerializeField]
+    float fryHeight;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +20,10 @@ public class CameraXTrack : MonoBehaviour
     {
         this.transform.position = new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.75f), this.transform.position.y, this.transform.position.z);   
    
+    }
+
+    public void ChangeToFryPosition()
+    {
+        this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(transform.position.y, transform.position.y + fryHeight, 0.75f), this.transform.position.z);
     }
 }

@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         
 
         float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
-        print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
+        //print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
         
         if (move.x < 0f)
         {

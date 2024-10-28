@@ -12,6 +12,7 @@ TagManager:
   - Canvas
   - InfoBox
   - EventSystem
+  - Pebble
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - WindowBoundsLayer
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Fish_Rocks
+  - Rock_Rocks
+  - Boot
   - 
   - 
   - 
