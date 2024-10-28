@@ -8,6 +8,8 @@ public class PhaseController : MonoBehaviour
 {
     [SerializeField]
     private string phaseCurrent;
+    [SerializeField]
+    private GameObject PlayerCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class PhaseController : MonoBehaviour
             case "Fry":
                 print("Changing to Fry");
                 setPhase("Fry");
+                PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
                 break;
             case "Smolt":
 
@@ -44,11 +47,14 @@ public class PhaseController : MonoBehaviour
     private void setPhase(string phase)
     {
         //disable current phase
-        GameObject p = GetComponentInChildren<GameObject>(GameObject.Find(phaseCurrent));
-        p.SetActive(false);
+        GameObject currentPhase = this.transform.Find(phaseCurrent).gameObject;
+        GameObject nextPhase = this.transform.Find(phase).gameObject;
+
+        currentPhase.SetActive(false);
+        nextPhase.SetActive(true);
 
         //enable next phsae
-        GetComponentInChildren<GameObject>(GameObject.Find(phase)).SetActive(true);
+        
         
         
     }
