@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 28b5d72ca1544444191e6864a99d5e33
   - enabled: 1
-    path: Assets/Scenes/River.unity
+    path: Assets/Scenes/Old and Test/River_OLD.unity
     guid: 50b2afdd60b324448937bb807e38d5b5
   - enabled: 0
     path: Assets/Scenes/Ocean.unity
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Spawning.unity
     guid: c70c5517baadb334b9c9c8b0dbc7b23c
   - enabled: 1
-    path: Assets/Scenes/StevenTest.unity
+    path: Assets/Scenes/River.unity
     guid: a7b1ef6f78416574194c290a80a6d009
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cd7ec76d980a6d9458f2b843d34f7d28, type: 2}
