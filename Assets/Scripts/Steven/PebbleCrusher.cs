@@ -28,6 +28,7 @@ public class PebbleCrusher : MonoBehaviour
                 //disable just the circle collider, NOT the polygon collider
                 component.enabled = false;
             }
+            collision.GetComponent<Rigidbody2D>().isKinematic = false;
         }
     }
 }

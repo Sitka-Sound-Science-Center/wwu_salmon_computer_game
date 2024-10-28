@@ -43,7 +43,7 @@ public class RockCreator : MonoBehaviour
         pebble = Resources.Load<GameObject>("PhysicsPebble");
         pebbleB = Resources.Load<GameObject>("PhysicsPebbleB");
         pebbles.Add(pebble);
-        //pebbles.Add(pebbleB);
+        pebbles.Add(pebbleB);
 
         //derive spawn range
         float rectX = this.GetComponent<RectTransform>().rect.x + this.GetComponent<RectTransform>().position.x; //left edge of transform
