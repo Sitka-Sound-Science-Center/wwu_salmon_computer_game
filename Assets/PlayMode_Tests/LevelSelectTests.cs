@@ -12,12 +12,12 @@ public class LevelSelectTests : MonoBehaviour
 {
     public LoadScene LoadScript;
     public LevelSelect LevelScript;
+    public TouchListener TouchScript;
     public Animator animator;
     public GameObject ChangeButton;
     public GameObject Canvas;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
-    public AnimatorClipInfo[] ClipInfo;
     public bool loaded=false;
     private string ClipName;
 
@@ -29,22 +29,10 @@ public class LevelSelectTests : MonoBehaviour
         FishButtons = GameObject.FindGameObjectsWithTag("FishButton");
         SpeciesButtons = GameObject.FindGameObjectsWithTag("SpeciesButton");
         ChangeButton = GameObject.FindWithTag("ChangeButton");
-        LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
-        LevelScript = GameObject.FindWithTag("Canvas").GetComponent<LevelSelect>();
-        animator = GameObject.FindWithTag("StagesParent").GetComponent<Animator>();
         Canvas = GameObject.FindWithTag("Canvas");
-    }
-
-    public string GetCurrentClipName() {
-        int layerIndex = 0;
-        ClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex); 
-        ClipName = ClipInfo[0].clip.name;
-        return ClipName;
-    }
-
-    bool IsPlayingIdleHiglight() {
-        AnimatorStateInfo StateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        return (ClipName=="IdleHighlight") && (StateInfo.normalizedTime>=0F);
+        LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
+        LevelScript = Canvas.GetComponent<LevelSelect>();
+        TouchScript = Canvas.GetComponent<TouchListener>();
     }
 
     [OneTimeSetUp]
@@ -57,6 +45,18 @@ public class LevelSelectTests : MonoBehaviour
     } 
 
     // TODO MAKE TEARDOWN FOR THIS TEST SUITE?? //
+
+    [UnityTest]
+    public IEnumerator TestNextState() {
+        yield return new WaitWhile(() => loaded == false);
+        foreach (GameObject fish in FishButtons) {
+            fish.GetComponent<Button>().onClick.Invoke();
+            Assert.That(LevelScript.active, Is.EqualTo(fish.GetComponent<FishButton>()));
+            int prev = TouchScript.HighlightState;
+            TouchScript.GetNextAnimationState();
+            Assert.That(TouchScript.HighlightState, Is.EqualTo((prev+1)%5));
+        }
+    }
 
     [UnityTest]
     public IEnumerator TestPhaseInfoBoxes() {
