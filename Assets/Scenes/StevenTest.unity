@@ -1319,11 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 204.426
+      value: 204.4259
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 77.0453
+      value: 64.5319
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1355,11 +1355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 420
+      value: 420.9
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22
+      value: -21.9
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1890,6 +1890,10 @@ PrefabInstance:
     - target: {fileID: 8699029908036573247, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_Name
       value: ControlCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199108556825756448, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 117.59985
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2696,7 +2700,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 31.144863, y: -43.821365}
+  m_Offset: {x: 53.88102, y: -43.821365}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2707,7 +2711,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 277.2884, y: 129.5068}
+  m_Size: {x: 322.76068, y: 129.5068}
   m_EdgeRadius: 0
 --- !u!114 &1411749114
 MonoBehaviour:
@@ -4363,8 +4367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.59149, y: 25.78511}
-  m_SizeDelta: {x: 130.5671, y: 146.5785}
+  m_AnchoredPosition: {x: 39.59149, y: 33.345825}
+  m_SizeDelta: {x: 130.5671, y: 131.4571}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989399435
 MonoBehaviour:
@@ -4373,7 +4377,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989399433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcea178cb40f95845bb8260682198c0d, type: 3}
   m_Name: 
@@ -4390,10 +4394,14 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
+<<<<<<< Updated upstream
     m_Bits: 1
+=======
+    m_Bits: 128
+>>>>>>> Stashed changes
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 383
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4410,8 +4418,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000022888184, y: -41.17125}
-  m_Size: {x: 131.89787, y: 145.91364}
+  m_Offset: {x: -0.000022888184, y: -34.16337}
+  m_Size: {x: 131.89787, y: 131.89787}
   m_Direction: 0
 --- !u!223 &1989399437
 Canvas:
@@ -4420,7 +4428,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989399433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -4443,7 +4451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989399433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
