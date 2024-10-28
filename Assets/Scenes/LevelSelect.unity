@@ -5182,15 +5182,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94967f515aa0b3458e52f2f0a4b3b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentInfo: {fileID: 1750905551}
-  curSpecies: {fileID: 1581118114}
   fishButtons:
   - {fileID: 1094783081}
   - {fileID: 468979514}
   - {fileID: 586398418}
   - {fileID: 1537692715}
   - {fileID: 310105138}
+  currentInfo: {fileID: 1750905551}
+  curSpecies: {fileID: 1581118114}
   loadScene: {fileID: 1245982665}
+  active: {fileID: 0}
 --- !u!114 &1174953728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5203,6 +5204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45475814ec62b78f9b9593a0b09287d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HighlightState: 0
   IdleThreshold: 10
   HighlightDuration: 1
 --- !u!1 &1196132954
@@ -6695,7 +6697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1527196762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7440,7 +7442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1750905554
 RectTransform:
   m_ObjectHideFlags: 0
