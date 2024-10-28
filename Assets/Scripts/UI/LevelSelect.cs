@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LevelSelect : MonoBehaviour 
+public class LevelSelect : MonoBehaviour
 {
-    public GameObject currentInfo;
-
-    public TextMeshProUGUI curSpecies;
     public FishButton[] fishButtons;
-
+    public GameObject currentInfo;
+    public TextMeshProUGUI curSpecies;
     public LoadScene loadScene;
-
+    private TouchListener TouchScript;
+    private FishButton active;
 
     public void SelectStage(FishButton stage) {
         ChooseSelectedLevel(stage.name);
-        foreach (FishButton fish in fishButtons) {
-            fish.SetSelect(stage == fish);
-        }
+        active.SetSelect(false);
+        stage.SetSelect(true);
+        active=stage;
+        TouchScript.SetHighlightState(active);
     }
 
     public void SelectSpecies(string species) {
@@ -35,5 +35,10 @@ public class LevelSelect : MonoBehaviour
             loadScene.sceneToLoad = LoadScene.Level.Spawning;
         } 
         return loadScene.sceneToLoad.ToString();
+    }
+
+    void Awake() {
+        TouchScript = gameObject.GetComponent<TouchListener>();
+        active=fishButtons[0];
     }
 }
