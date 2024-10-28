@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,6 +18,8 @@ public class RockCreator : MonoBehaviour
     private float rocksPerSecond;
     [SerializeField]
     private int maxRockCount;
+    [SerializeField]
+    private string size;
 
 
     private Vector3 position;
@@ -39,12 +42,22 @@ public class RockCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //spawnPointOriginY = spawnPoint.position.y;
-        pebble = Resources.Load<GameObject>("PhysicsPebble");
-        pebbleB = Resources.Load<GameObject>("PhysicsPebbleB");
-        pebbles.Add(pebble);
-        pebbles.Add(pebbleB);
+        switch (size) {
+            case "small":
+            //spawnPointOriginY = spawnPoint.position.y;
+            pebble = Resources.Load<GameObject>("PhysicsPebble");
+            pebbleB = Resources.Load<GameObject>("PhysicsPebbleB");
+            pebbles.Add(pebble);
+            pebbles.Add(pebbleB);
+            break;
 
+            case "medium":
+                pebbles.Add(Resources.Load<GameObject>("PhysicsPebbleM1"));
+                pebbles.Add(Resources.Load<GameObject>("PhysicsPebbleM2"));
+                break;
+            default:
+                break;
+        }
         //derive spawn range
         float rectX = this.GetComponent<RectTransform>().rect.x + this.GetComponent<RectTransform>().position.x; //left edge of transform
         float rectY = this.GetComponent<RectTransform>().rect.y + this.GetComponent<RectTransform>().position.y; //bottom edge of transform
