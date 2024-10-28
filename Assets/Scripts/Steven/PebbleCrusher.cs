@@ -20,6 +20,7 @@ public class PebbleCrusher : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pebble"))
         {
+            print("pebble detected");
             CircleCollider2D component;
             if (collision.TryGetComponent(out component))
             {
