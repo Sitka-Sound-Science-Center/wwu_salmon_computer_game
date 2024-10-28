@@ -26,13 +26,13 @@ public class LevelSelect : MonoBehaviour
 
     public string ChooseSelectedLevel(string curStage) {
         if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
-            loadScene.sceneToLoad = LoadScene.Level.River;
+            loadScene.sceneToLoad = LoadScene.Level.StevenTest;
         } 
         else if (curStage == "Adult") {
-            loadScene.sceneToLoad = LoadScene.Level.Ocean;
+            loadScene.sceneToLoad = LoadScene.Level.StevenTest;
         } 
         else if (curStage == "Spawning") {
-            loadScene.sceneToLoad = LoadScene.Level.Spawning;
+            loadScene.sceneToLoad = LoadScene.Level.StevenTest;
         } 
         return loadScene.sceneToLoad.ToString();
     }

@@ -10,7 +10,8 @@ public class LoadScene : MonoBehaviour
         LevelSelect,
         River,
         Ocean,
-        Spawning
+        Spawning,
+        StevenTest
     }
 
     public void StartLoad() {
