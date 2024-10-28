@@ -9,15 +9,14 @@ public class LevelSelect : MonoBehaviour
     public GameObject currentInfo;
     public TextMeshProUGUI curSpecies;
     public LoadScene loadScene;
+    public FishButton active;
     private TouchListener TouchScript;
-    private FishButton active;
 
     public void SelectStage(FishButton stage) {
         ChooseSelectedLevel(stage.name);
         active.SetSelect(false);
         stage.SetSelect(true);
         active=stage;
-        TouchScript.SetHighlightState(active);
     }
 
     public void SelectSpecies(string species) {
@@ -40,5 +39,6 @@ public class LevelSelect : MonoBehaviour
     void Awake() {
         TouchScript = gameObject.GetComponent<TouchListener>();
         active=fishButtons[0];
+        SelectStage(active);
     }
 }
