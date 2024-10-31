@@ -1189,7 +1189,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 137.42, y: 330.8}
+  m_SizeDelta: {x: 140, y: 330.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291324415
 MonoBehaviour:
@@ -4142,7 +4142,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Insert Description]'
+  m_text: 'Sockeye salmon are a species of Pacific salmon known for their bright
+    red and green spawning colors. They typically weigh between 4 to 8 pounds and
+    grow upto 33 inches long. These fish uniquely spawn in proximity to lakes. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
   m_sharedMaterial: {fileID: 5817473539475872835, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
@@ -4169,8 +4171,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
-  m_fontSizeBase: 15.8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4505,7 +4507,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 137.42, y: 330.8}
+  m_SizeDelta: {x: 140, y: 330.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964084861
 MonoBehaviour:
@@ -4615,8 +4617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015616, y: -36.457996}
-  m_SizeDelta: {x: 137.42, y: 138.2667}
+  m_AnchoredPosition: {x: 0, y: -36}
+  m_SizeDelta: {x: 140, y: 138.2667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021242989
 MonoBehaviour:
@@ -4638,7 +4640,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Insert Description]'
+  m_text: 'Pink salmon, or humpback salmon are the smallest and most common Pacific
+    salmon. During spawning males develop a distinct hump on their back. These fish
+    spawn every other year. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
   m_sharedMaterial: {fileID: 5817473539475872835, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
@@ -4665,8 +4669,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
-  m_fontSizeBase: 15.8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5956,8 +5960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015616, y: -36.457996}
-  m_SizeDelta: {x: 137.42, y: 138.2667}
+  m_AnchoredPosition: {x: 0, y: -36}
+  m_SizeDelta: {x: 140, y: 138.2667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300320653
 MonoBehaviour:
@@ -5979,7 +5983,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Insert Description]'
+  m_text: 'Chum salmon, or dog salmon are known for their bold stripes of color when
+    spawning. In Alaska, these are the first of the salmon species to spawn. These
+    salmon are bountiful in Alaska but lack commercial value. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
   m_sharedMaterial: {fileID: 5817473539475872835, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
@@ -6006,8 +6012,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
-  m_fontSizeBase: 15.8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7884,7 +7890,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Insert Description]'
+  m_text: 'Coho salmon, also known as silver salmon, are found in the north Pacific
+    Ocean.  They typically weigh between 8 to 12 pounds and can grow up to 30 inches
+    in length. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
   m_sharedMaterial: {fileID: 5817473539475872835, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
@@ -7911,8 +7919,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
-  m_fontSizeBase: 15.8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8134,7 +8142,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 137.42, y: 330.8}
+  m_SizeDelta: {x: 140, y: 330.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1776451596
 MonoBehaviour:
@@ -8288,7 +8296,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 137.42, y: 330.8}
+  m_SizeDelta: {x: 140, y: 330.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825504544
 MonoBehaviour:
@@ -8362,8 +8370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015616, y: -36.457996}
-  m_SizeDelta: {x: 137.42, y: 138.2667}
+  m_AnchoredPosition: {x: 0, y: -36}
+  m_SizeDelta: {x: 140, y: 138.2667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847589921
 MonoBehaviour:
@@ -8385,7 +8393,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Insert Description]'
+  m_text: 'Chinook, or king salmon are the largest and most valuable of the Pacific
+    salmon species. Many Alaskan native tribes relied on these fish as a source of
+    food and bounty. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
   m_sharedMaterial: {fileID: 5817473539475872835, guid: 20e2114a0a1d28649aea9296d20ff653, type: 2}
@@ -8412,8 +8422,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.8
-  m_fontSizeBase: 15.8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8864,7 +8874,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 137.42, y: 330.8}
+  m_SizeDelta: {x: 140, y: 330.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1951479419
 MonoBehaviour:
