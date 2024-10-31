@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 291324414}
   - component: {fileID: 291324416}
   - component: {fileID: 291324415}
+  - component: {fileID: 291324417}
   m_Layer: 5
   m_Name: Coho
   m_TagString: Untagged
@@ -1229,6 +1230,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291324413}
   m_CullTransparentMesh: 1
+--- !u!114 &291324417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291324413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Coho
+  icon: {fileID: 892415615}
+  infoScreen: {fileID: 0}
+  highlight: {fileID: 0}
 --- !u!1 &299661718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1320,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299661718}
+  m_CullTransparentMesh: 1
+--- !u!1 &308027895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308027896}
+  - component: {fileID: 308027898}
+  - component: {fileID: 308027897}
+  m_Layer: 0
+  m_Name: Chum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &308027896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308027895}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410641102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -172, y: 29}
+  m_SizeDelta: {x: 560, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &308027897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308027895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 44339c322a369df46a8aada9aaeb79a8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &308027898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308027895}
   m_CullTransparentMesh: 1
 --- !u!1 &310062765
 GameObject:
@@ -1491,6 +1583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  icon: {fileID: 0}
   infoScreen: {fileID: 1288838179}
   highlight: {fileID: 261291308}
 --- !u!114 &310105139
@@ -1734,6 +1828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  icon: {fileID: 0}
   infoScreen: {fileID: 2089687548}
   highlight: {fileID: 1634367593}
 --- !u!1 &474622273
@@ -1924,6 +2020,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499645387}
+  m_CullTransparentMesh: 1
+--- !u!1 &516342097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516342098}
+  - component: {fileID: 516342100}
+  - component: {fileID: 516342099}
+  m_Layer: 0
+  m_Name: Chinook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &516342098
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516342097}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410641102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -175, y: 29}
+  m_SizeDelta: {x: 492, y: 173}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &516342099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516342097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -1301323827, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &516342100
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516342097}
   m_CullTransparentMesh: 1
 --- !u!1 &579112839
 GameObject:
@@ -2169,6 +2340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  icon: {fileID: 0}
   infoScreen: {fileID: 902165326}
   highlight: {fileID: 1719358747}
 --- !u!1 &612602721
@@ -3122,22 +3295,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425883964}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1174953727}
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
+        m_MethodName: SelectSpecies
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 964084863}
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: SelectSpecies
-        m_Mode: 5
+      - m_Target: {fileID: 1425883964}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3267,6 +3440,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1174953727}
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
+        m_MethodName: SelectSpecies
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1776451598}
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1425883964}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3277,18 +3462,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: SelectSpecies
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Pink
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &735694489
@@ -3621,22 +3794,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1425883964}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1174953727}
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
+        m_MethodName: SelectSpecies
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1951479421}
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: SelectSpecies
-        m_Mode: 5
+      - m_Target: {fileID: 1425883964}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4367,12 +4540,12 @@ GameObject:
   - component: {fileID: 892415618}
   - component: {fileID: 892415617}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: Coho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &892415616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4380,17 +4553,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892415615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1212224386}
+  m_Father: {fileID: 1410641102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -172, y: 29}
-  m_SizeDelta: {x: 560, y: 250}
+  m_SizeDelta: {x: 482, y: 153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892415617
 MonoBehaviour:
@@ -4412,7 +4585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44339c322a369df46a8aada9aaeb79a8, type: 3}
+  m_Sprite: {fileID: -618087593, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4613,6 +4786,7 @@ GameObject:
   - component: {fileID: 964084860}
   - component: {fileID: 964084862}
   - component: {fileID: 964084861}
+  - component: {fileID: 964084863}
   m_Layer: 5
   m_Name: Chum
   m_TagString: Untagged
@@ -4681,6 +4855,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964084859}
   m_CullTransparentMesh: 1
+--- !u!114 &964084863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964084859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Chum
+  icon: {fileID: 308027895}
+  infoScreen: {fileID: 0}
+  highlight: {fileID: 0}
 --- !u!1 &999304590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4717,6 +4907,81 @@ Transform:
   - {fileID: 310105137}
   m_Father: {fileID: 1174953725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1005104854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005104855}
+  - component: {fileID: 1005104857}
+  - component: {fileID: 1005104856}
+  m_Layer: 0
+  m_Name: Sockeye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1005104855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005104854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410641102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -172, y: 29}
+  m_SizeDelta: {x: 489, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1005104856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005104854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1826594756, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1005104857
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005104854}
+  m_CullTransparentMesh: 1
 --- !u!1 &1021242987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  icon: {fileID: 0}
   infoScreen: {fileID: 1750905551}
   highlight: {fileID: 1527196761}
 --- !u!1 &1100285372
@@ -5551,6 +5818,7 @@ MonoBehaviour:
   - {fileID: 310105138}
   currentInfo: {fileID: 1750905551}
   curSpecies: {fileID: 1581118114}
+  curSpeciesIcon: {fileID: 308027895}
   loadScene: {fileID: 1245982665}
   active: {fileID: 0}
 --- !u!114 &1174953728
@@ -5639,7 +5907,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2044221161}
-  - {fileID: 892415616}
+  - {fileID: 1410641102}
   - {fileID: 712072442}
   - {fileID: 1581118113}
   - {fileID: 280841845}
@@ -6275,6 +6543,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1174953727}
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
+        m_MethodName: SelectSpecies
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1825504546}
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sockeye
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1425883964}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6285,18 +6565,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: SelectSpecies
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Sockeye
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1332455980
@@ -6682,6 +6950,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409913155}
   m_CullTransparentMesh: 1
+--- !u!1 &1410641101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1410641102}
+  m_Layer: 0
+  m_Name: FishIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1410641102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410641101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 892415616}
+  - {fileID: 308027896}
+  - {fileID: 1005104855}
+  - {fileID: 516342098}
+  - {fileID: 1787134321}
+  m_Father: {fileID: 1212224386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425883964
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,6 +7571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  icon: {fileID: 0}
   infoScreen: {fileID: 474622273}
   highlight: {fileID: 1280416914}
 --- !u!1 &1561947511
@@ -8242,6 +8548,7 @@ GameObject:
   - component: {fileID: 1776451595}
   - component: {fileID: 1776451597}
   - component: {fileID: 1776451596}
+  - component: {fileID: 1776451598}
   m_Layer: 5
   m_Name: Pink
   m_TagString: Untagged
@@ -8309,6 +8616,97 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776451594}
+  m_CullTransparentMesh: 1
+--- !u!114 &1776451598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776451594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Pink
+  icon: {fileID: 1787134320}
+  infoScreen: {fileID: 0}
+  highlight: {fileID: 0}
+--- !u!1 &1787134320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787134321}
+  - component: {fileID: 1787134323}
+  - component: {fileID: 1787134322}
+  m_Layer: 0
+  m_Name: Pink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1787134321
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787134320}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1410641102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -172, y: 29}
+  m_SizeDelta: {x: 472, y: 149}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1787134322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787134320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -67127209, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1787134323
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787134320}
   m_CullTransparentMesh: 1
 --- !u!1 &1795133208
 GameObject:
@@ -8396,6 +8794,7 @@ GameObject:
   - component: {fileID: 1825504543}
   - component: {fileID: 1825504545}
   - component: {fileID: 1825504544}
+  - component: {fileID: 1825504546}
   m_Layer: 5
   m_Name: Sockeye
   m_TagString: Untagged
@@ -8464,6 +8863,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825504542}
   m_CullTransparentMesh: 1
+--- !u!114 &1825504546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825504542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Sockeye
+  icon: {fileID: 1005104854}
+  infoScreen: {fileID: 0}
+  highlight: {fileID: 0}
 --- !u!1 &1847589919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8973,8 +9388,9 @@ GameObject:
   - component: {fileID: 1951479418}
   - component: {fileID: 1951479420}
   - component: {fileID: 1951479419}
+  - component: {fileID: 1951479421}
   m_Layer: 5
-  m_Name: King
+  m_Name: Chinook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9041,6 +9457,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951479417}
   m_CullTransparentMesh: 1
+--- !u!114 &1951479421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951479417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Chinook
+  icon: {fileID: 516342097}
+  infoScreen: {fileID: 0}
+  highlight: {fileID: 0}
 --- !u!1 &1994219289
 GameObject:
   m_ObjectHideFlags: 0
@@ -9680,6 +10112,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1174953727}
+        m_TargetAssemblyTypeName: LevelSelect, GameAssembly
+        m_MethodName: SelectSpecies
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 291324417}
+          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coho
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1425883964}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -9690,18 +10134,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1174953727}
-        m_TargetAssemblyTypeName: LevelSelect, Assembly-CSharp
-        m_MethodName: SelectSpecies
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Coho
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2064108660
@@ -9799,7 +10231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'KING
+  m_text: 'CHINOOK
 
     [TLINGIT]'
   m_isRightToLeft: 0
