@@ -17,6 +17,7 @@ public class LevelSelect : MonoBehaviour
         active.SetSelect(false);
         stage.SetSelect(true);
         active=stage;
+        TouchScript.SetState(active);
     }
 
     public void SelectSpecies(string species) {
@@ -36,7 +37,7 @@ public class LevelSelect : MonoBehaviour
         return loadScene.sceneToLoad.ToString();
     }
 
-    void Awake() {
+    void Start() {
         TouchScript = gameObject.GetComponent<TouchListener>();
         active=fishButtons[0];
         SelectStage(active);
