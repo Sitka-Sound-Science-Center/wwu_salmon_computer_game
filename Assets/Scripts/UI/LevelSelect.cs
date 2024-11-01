@@ -7,9 +7,13 @@ public class LevelSelect : MonoBehaviour
 {
     public FishButton[] fishButtons;
     public GameObject currentInfo;
+
     public TextMeshProUGUI curSpecies;
+    public GameObject curSpeciesIcon;
+
     public LoadScene loadScene;
     public FishButton active;
+
     private TouchListener TouchScript;
 
     public void SelectStage(FishButton stage) {
@@ -20,8 +24,11 @@ public class LevelSelect : MonoBehaviour
         TouchScript.SetState(active);
     }
 
-    public void SelectSpecies(string species) {
-        curSpecies.text = species;
+    public void SelectSpecies(FishButton fish) {
+        curSpecies.text = fish.name;
+        fish.icon.SetActive(true);
+        curSpeciesIcon.SetActive(false);
+        curSpeciesIcon = fish.icon;
     }
 
     public string ChooseSelectedLevel(string curStage) {

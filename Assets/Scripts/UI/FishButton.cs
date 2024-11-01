@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class FishButton : MonoBehaviour
 {
+    public string name;
+    public GameObject icon;
     public GameObject infoScreen;
     public GameObject highlight;
 
     public void SetSelect(bool select) {
-        infoScreen.SetActive(select);
-        highlight.SetActive(select);
+        if (infoScreen != null && highlight != null)
+        {
+            infoScreen.SetActive(select);
+            highlight.SetActive(infoScreen != null && select);
+        }
     }
 }
