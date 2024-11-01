@@ -1549,6 +1549,18 @@ MonoBehaviour:
           m_StringArgument: adult
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1174953728}
+        m_TargetAssemblyTypeName: TouchListener, GameAssembly
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &310105140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,6 +1694,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: fry
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174953728}
+        m_TargetAssemblyTypeName: TouchListener, GameAssembly
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &468979512
@@ -2117,6 +2141,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: smolt
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174953728}
+        m_TargetAssemblyTypeName: TouchListener, GameAssembly
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &586398416
@@ -5223,6 +5259,18 @@ MonoBehaviour:
           m_StringArgument: alevin
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1174953728}
+        m_TargetAssemblyTypeName: TouchListener, GameAssembly
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1094783079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5686,7 +5734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 250, y: 73.5}
+  m_AnchoredPosition: {x: 250, y: 140}
   m_SizeDelta: {x: 175, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245982662
@@ -7221,6 +7269,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: adult
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174953728}
+        m_TargetAssemblyTypeName: TouchListener, GameAssembly
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1537692713
