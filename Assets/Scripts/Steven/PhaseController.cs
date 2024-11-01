@@ -41,7 +41,6 @@ public class PhaseController : MonoBehaviour
                 print("something went wrong in phase changer");
                 break;
         }
-
     }
 
     private void setPhase(string phase)
@@ -52,10 +51,7 @@ public class PhaseController : MonoBehaviour
 
         currentPhase.SetActive(false);
         nextPhase.SetActive(true);
-
+        //phaseCurrent = phase;
         //enable next phsae
-        
-        
-        
     }
 }

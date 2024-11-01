@@ -11,9 +11,9 @@ public class RockCreator : MonoBehaviour
 
     private int counter = 0;
     [SerializeField]
-        private RectTransform spawnableArea;
+    private RectTransform spawnableArea;
     [SerializeField]
-        private int RockFieldHeight;
+    private int RockFieldHeight;
     [SerializeField]
     private float rocksPerSecond;
     [SerializeField]
@@ -96,11 +96,13 @@ public class RockCreator : MonoBehaviour
             counter = 0;
         }
     }
+    
     private Vector3 newPosition()
     {
         position = new Vector3(Random.Range(x_lower, x_upper), Random.Range(y_lower, y_upper), 0f);
         return position;
     }
+
     private void SpawnARock() {
 
         Vector3 spawnPosition = newPosition();
@@ -117,6 +119,7 @@ public class RockCreator : MonoBehaviour
         
         return pebbles[rnd];    
     }
+
     private Vector3 getRandomAngle()
     {
         

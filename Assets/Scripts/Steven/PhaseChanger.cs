@@ -30,6 +30,7 @@ public class PhaseChanger : MonoBehaviour
         {
             print("player collision");
             player.GetComponent<PhaseController>().ChangePhase(phaseName);
+            // update phase and disable trigger so you cant go back in time?
         }
     }
 }
