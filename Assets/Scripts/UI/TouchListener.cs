@@ -8,12 +8,16 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
     private FishButton[] StateList;
     private float timer=0F;
     private float phaseTimer=0F;
-    public int HighlightState=0;
+    public int HighlightState;
     private LevelSelect LevelScript;
     [SerializeField]
     private float IdleThreshold=10F;
     [SerializeField]
     private float HighlightDuration=1F;
+
+    public void ResetTimer() {
+        timer=0F;
+    }
 
     /*
     Listen for a global PointerDownEvent and fire this callback
@@ -21,12 +25,11 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
     when ever the PointerDown event occurs. 
     */
     public void OnPointerDown(PointerEventData data) { 
-        timer=0F;
+        ResetTimer();
     }
 
     public void GetNextAnimationState() {
         LevelScript.SelectStage(StateList[(HighlightState+1)%5]);
-        HighlightState=(HighlightState+1)%5;
     }
 
     void Awake() {
@@ -41,5 +44,11 @@ public class TouchListener : MonoBehaviour, IPointerDownHandler
             GetNextAnimationState();
             phaseTimer=0F;
         }
+    }
+
+    public void SetState(FishButton fish) {
+        int i=0;
+        while (StateList[i]!=fish) i++;
+        HighlightState=i;
     }
 }
