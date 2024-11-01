@@ -10,6 +10,7 @@ public class PhaseController : MonoBehaviour
     private string phaseCurrent;
     [SerializeField]
     private GameObject PlayerCamera;
+    private GameObject CurrentPhase;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class PhaseController : MonoBehaviour
         
     }
 
+    // some sort of GetNextPhase(CurrentPhase) instead?
     public void ChangePhase(string nextPhase)
     {
         print("change phase reached");
