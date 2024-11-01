@@ -43,15 +43,13 @@ public class PhaseController : MonoBehaviour
         }
     }
 
-    private void setPhase(string phase)
-    {
-        //disable current phase
-        GameObject currentPhase = this.transform.Find(phaseCurrent).gameObject;
+    private void setPhase(string phase) {
+        // change these two GameObjects to be references in the controller 
+        // or use findwithtag or similar not Find()
+        GameObject currentPhase = this.transform.Find(phaseCurrent).gameObject; 
         GameObject nextPhase = this.transform.Find(phase).gameObject;
-
         currentPhase.SetActive(false);
         nextPhase.SetActive(true);
-        //phaseCurrent = phase;
-        //enable next phsae
+        phaseCurrent = phase;
     }
 }
