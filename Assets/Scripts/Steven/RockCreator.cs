@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class RockCreator : MonoBehaviour
 {
 
-    private int counter=1;
+    private int counter=0;
     [SerializeField]
     private RectTransform spawnableArea;
     [SerializeField]
@@ -72,9 +72,10 @@ public class RockCreator : MonoBehaviour
     private void FixedUpdate() {
         counter++;
         // Spawn 10 rocks every other update
-        if (rockCount < maxRockCount && counter%3==0) {
+        if (rockCount < maxRockCount && counter==50/rocksPerSecond) {
             SpawnKRocks(10);
             rockCount += 10;
+            counter=0;
         }
     }
     
