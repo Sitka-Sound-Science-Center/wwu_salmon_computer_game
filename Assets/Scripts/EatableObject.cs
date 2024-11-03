@@ -8,17 +8,18 @@ public class EatableObject : MonoBehaviour
     private float RestoreValue=0.125F; // what proportion of the meter is refilled, in [0,1]
     [SerializeField]
     private GameObject HungerMeter; 
+    private float MaxFill=550; // actual width of parent container
+    private float ActualRestore;
 
     void Start() {
-        print("Start eatable " + gameObject.name);
+        ActualRestore = RestoreValue*MaxFill;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        print("Collision:" + other.GetComponent<Collider2D>().name);
         if (other.gameObject.CompareTag("Player")) {
             RectTransform rt = HungerMeter.GetComponent<RectTransform>();
             float curWidth = rt.rect.width;
-            float nextWidth = curWidth*(1+RestoreValue);
+            float nextWidth = curWidth+ActualRestore;
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
         }
     }
