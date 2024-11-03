@@ -7,7 +7,7 @@ public class EatableObject : MonoBehaviour
     [SerializeField]
     private float RestoreValue=0.125F; // what proportion of the meter is refilled, in [0,1]
     [SerializeField]
-    private GameObject HungerMeter; 
+    public GameObject HungerMeter; 
     private RectTransform rt;
     private float MaxFill=550; // actual width of parent container
     private float ActualRestore;
@@ -23,6 +23,7 @@ public class EatableObject : MonoBehaviour
             // Cap hunger at max length of parent container
             float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+            Destroy(gameObject);
         }
     }
 }
