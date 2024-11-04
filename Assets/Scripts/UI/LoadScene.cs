@@ -10,8 +10,8 @@ public class LoadScene : MonoBehaviour
     public Level sceneToLoad;
 
     public GameObject loadingScreen;
-    private Slider progressBar;
-    private TextMeshProUGUI message;
+    public Slider progressBar;
+    public TextMeshProUGUI message;
 
     AsyncOperation loadingOperation;
 
@@ -34,9 +34,9 @@ public class LoadScene : MonoBehaviour
     public void StartLoadAsync()
     {
         loadingScreen.SetActive(true);
-        message = loadingScreen.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
-        progressBar = loadingScreen.transform.GetChild(1).gameObject.GetComponent<Slider>();
-        message.text = "";
+        //message = loadingScreen.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
+        //progressBar = loadingScreen.transform.GetChild(1).gameObject.GetComponent<Slider>();
+        message.text = "LOADING...";
 
         loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad.ToString());
         loadingOperation.allowSceneActivation = false;
@@ -45,22 +45,27 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator WaitForLoad()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
 
-        progressBar.value = Mathf.Clamp01(loadingOperation.progress / 0.9f);
+        //progressBar.value = Mathf.Clamp01(loadingOperation.progress / 0.9f);
 
         while (!loadingOperation.isDone)
         {
-            if (loadingOperation.progress >= 0.9f)
+            if (loadingOperation.progress >= 0.9f && progressBar.value == 1)
             {
+                progressBar.value = 1;
                 message.text = "CLICK ANYWHERE TO CONTINUE";
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     loadingOperation.allowSceneActivation = true;
-                    //yield break;
                 }
+            } else
+            {
+                // fake loading, makes progress bar look better when loading too fast
+                progressBar.value += 0.1f;
+                yield return new WaitForSeconds(0.05f);
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return null;
         }
     }
 
