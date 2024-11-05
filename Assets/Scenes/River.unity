@@ -2135,6 +2135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1411749112}
+  - {fileID: 792069185}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &527969058
@@ -3237,8 +3238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca6229eff96d695e81ff4f044908ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxFoodObjects: 10
   FoodPrefab: {fileID: 1181478382769471881, guid: 4d6300747d121327ba24b180f9bbf50e, type: 3}
   HungerMeter: {fileID: 451931466}
+  FoodObjectCount: 0
 --- !u!4 &792069185
 Transform:
   m_ObjectHideFlags: 0
@@ -3247,12 +3250,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792069183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 627.99, y: 100, z: -1.7903348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 627.99, y: 100, z: 8.209665}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 527969057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &800694547 stripped
 Transform:
@@ -9164,4 +9167,3 @@ SceneRoots:
   - {fileID: 969363443}
   - {fileID: 1116362845}
   - {fileID: 239563424}
-  - {fileID: 792069185}
