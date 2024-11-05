@@ -15,6 +15,10 @@ public class LoadScene : MonoBehaviour
 
     AsyncOperation loadingOperation;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(loadingScreen);
+    }
     void Start()
     {
         loadingScreen.SetActive(false);
@@ -39,8 +43,7 @@ public class LoadScene : MonoBehaviour
         message.text = "LOADING...";
 
         loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad.ToString());
-        loadingOperation.allowSceneActivation = false;
-        StartCoroutine(WaitForLoad());
+        loadingOperation.allowSceneActivation = false;       
     }
 
     IEnumerator WaitForLoad()
@@ -67,6 +70,8 @@ public class LoadScene : MonoBehaviour
             }
             yield return null;
         }
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
