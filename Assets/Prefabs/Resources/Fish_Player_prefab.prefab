@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 7959554770608443229}
   m_Layer: 0
   m_Name: Fry
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 2827907948551449403}
   m_Layer: 0
   m_Name: Smolt
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
