@@ -8,6 +8,9 @@ public class BootDropper : MonoBehaviour
 {
     [SerializeField]
     GameObject boot;
+    [SerializeField]
+    GameObject textBox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,11 @@ public class BootDropper : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             boot.GetComponent<Rigidbody2D>().isKinematic = false;
+            //send message to UI canvas to display habitat distruciton message
+            textBox.gameObject.SetActive(true);
+            
         }
     }
+
+
 }

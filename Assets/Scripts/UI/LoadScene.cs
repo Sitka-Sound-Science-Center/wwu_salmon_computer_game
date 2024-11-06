@@ -43,7 +43,8 @@ public class LoadScene : MonoBehaviour
         message.text = "LOADING...";
 
         loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad.ToString());
-        loadingOperation.allowSceneActivation = false;       
+        loadingOperation.allowSceneActivation = false;
+        StartCoroutine(WaitForLoad());
     }
 
     IEnumerator WaitForLoad()
