@@ -121,4 +121,26 @@ public class PlayerController : MonoBehaviour
     {
         return playerSpeed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            Destroy(collision.gameObject);
+            //signal food progress bar +
+            
+        }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Predator"))
+        {
+            print("outch");
+            //signal health/food progress bar -
+        }
+    }
+
+
+
 }

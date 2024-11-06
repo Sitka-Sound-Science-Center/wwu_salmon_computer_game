@@ -1,7 +1,10 @@
+using Codice.Client.Common.GameUI;
+using Codice.CM.Client.Differences.Merge;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(RectTransform))]
@@ -38,8 +41,9 @@ public class RockCreator : MonoBehaviour
     private GameObject pebble;
     private GameObject pebbleB;
     private List<GameObject> pebbles = new List<GameObject>();
-    
+
     // Start is called before the first frame update
+    
     void Start()
     {
         switch (size) {
@@ -67,7 +71,7 @@ public class RockCreator : MonoBehaviour
         y_lower = rectY;
         y_upper = rectY + area.y;
 
-
+        print("start has run");
     }
 
     // Update is called once per frame
@@ -108,7 +112,7 @@ public class RockCreator : MonoBehaviour
         Vector3 spawnPosition = newPosition();
         Quaternion spawnRotation = Quaternion.Euler(getRandomAngle()); 
         
-        GameObject pebblen = Instantiate(getRandPebble(), spawnPosition, spawnRotation);
+        GameObject pebblen = Instantiate(getRandPebble(), spawnPosition, spawnRotation, this.transform);
         
 
     }
@@ -126,4 +130,5 @@ public class RockCreator : MonoBehaviour
         Vector3 v = new Vector3(0f, 0f, Random.Range(0,360));
         return v;
     }
+
 }

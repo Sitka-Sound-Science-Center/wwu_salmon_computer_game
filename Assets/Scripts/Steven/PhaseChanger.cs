@@ -10,6 +10,8 @@ public class PhaseChanger : MonoBehaviour
     private string phaseName;
     [SerializeField]
     private GameObject player;
+    [SerializeField]
+    private GameObject textBox;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,9 @@ public class PhaseChanger : MonoBehaviour
             print("player collision");
             player.GetComponent<PhaseController>().ChangePhase(phaseName);
             // update phase and disable trigger so you cant go back in time?
+            //enable textbox
+            textBox.SetActive(true);
+
         }
     }
 }

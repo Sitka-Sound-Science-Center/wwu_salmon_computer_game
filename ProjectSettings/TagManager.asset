@@ -13,6 +13,9 @@ TagManager:
   - InfoBox
   - EventSystem
   - Pebble
+  - HMeter
+  - Food
+  - Predator
   layers:
   - Default
   - TransparentFX
@@ -23,8 +26,8 @@ TagManager:
   - Fish_Rocks
   - Rock_Rocks
   - Boot
-  - 
-  - 
+  - Food
+  - Predators
   - 
   - 
   - 
