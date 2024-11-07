@@ -8896,7 +8896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3852512246691899756, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: rocksPerSecond
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5944475133918284444, guid: 11b93cc1fbd0eda40b1fc66965bb078d, type: 3}
       propertyPath: m_Pivot.x
