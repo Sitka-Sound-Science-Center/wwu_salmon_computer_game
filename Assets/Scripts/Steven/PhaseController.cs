@@ -49,8 +49,9 @@ public class PhaseController : MonoBehaviour
         //disable current phase
         GameObject currentPhase = this.transform.Find(phaseCurrent).gameObject;
         GameObject nextPhase = this.transform.Find(phase).gameObject;
-
+        
         currentPhase.SetActive(false);
+        phaseCurrent = phase;
         nextPhase.SetActive(true);
         //phaseCurrent = phase;
         //enable next phsae

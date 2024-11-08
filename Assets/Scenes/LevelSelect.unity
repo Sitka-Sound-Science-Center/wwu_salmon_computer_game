@@ -5885,7 +5885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightState: 0
   IdleThreshold: 10
-  HighlightDuration: 1
+  HighlightDuration: 30
 --- !u!1 &1196132954
 GameObject:
   m_ObjectHideFlags: 0

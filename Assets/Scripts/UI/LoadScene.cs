@@ -15,13 +15,12 @@ public class LoadScene : MonoBehaviour
 
     AsyncOperation loadingOperation;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(loadingScreen);
-    }
     void Start()
     {
-        loadingScreen.SetActive(false);
+        if (loadingScreen != null)
+        {
+            loadingScreen.SetActive(false);
+        }
     }
 
     public enum Level {
