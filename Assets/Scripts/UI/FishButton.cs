@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FishButton : MonoBehaviour
 {
-    public string name;
+    public string Fishname;
     public GameObject icon;
     public GameObject infoScreen;
     public GameObject highlight;

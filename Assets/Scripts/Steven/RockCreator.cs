@@ -1,11 +1,7 @@
-using Codice.Client.Common.GameUI;
-using Codice.CM.Client.Differences.Merge;
+
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 [RequireComponent(typeof(RectTransform))]
 [RequireComponent (typeof(int))]

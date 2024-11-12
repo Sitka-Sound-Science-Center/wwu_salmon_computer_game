@@ -36,10 +36,12 @@ public class LevelSelect : MonoBehaviour
             loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         else if (curStage == "Adult") {
-            loadScene.sceneToLoad = LoadScene.Level.Ocean;
+            //loadScene.sceneToLoad = LoadScene.Level.Ocean;
+            loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         else if (curStage == "Spawning") {
-            loadScene.sceneToLoad = LoadScene.Level.Spawning;
+            //loadScene.sceneToLoad = LoadScene.Level.Spawning;
+            loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         return loadScene.sceneToLoad.ToString();
     }

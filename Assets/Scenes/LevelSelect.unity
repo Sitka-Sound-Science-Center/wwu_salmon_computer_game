@@ -4351,9 +4351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PINK
-
-    [TLINGIT]'
+  m_text: "CH\xC1AS'\nPINK"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
@@ -5870,7 +5868,7 @@ MonoBehaviour:
   - {fileID: 310105138}
   currentInfo: {fileID: 1750905551}
   curSpecies: {fileID: 1581118114}
-  curSpeciesIcon: {fileID: 308027895}
+  curSpeciesIcon: {fileID: 892415615}
   loadScene: {fileID: 1420605852}
   active: {fileID: 0}
 --- !u!114 &1174953728
@@ -5887,7 +5885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightState: 0
   IdleThreshold: 10
-  HighlightDuration: 1
+  HighlightDuration: 30
 --- !u!1 &1196132954
 GameObject:
   m_ObjectHideFlags: 0
@@ -6702,9 +6700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SOCKEYE
-
-    [TLINGIT]'
+  m_text: "G\u0332AAT\nSOCKEYE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
@@ -9806,9 +9802,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'COHO
+  m_text: 'L''OOK
 
-    [TLINGIT]'
+    COHO
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
@@ -10017,9 +10015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CHUM
-
-    [TLINGIT]'
+  m_text: "T\xC9EL'\nCHUM"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
@@ -10298,9 +10294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CHINOOK
-
-    [TLINGIT]'
+  m_text: "T'\xC1\nCHINOOK"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
