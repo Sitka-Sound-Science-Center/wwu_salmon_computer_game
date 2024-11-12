@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6668380885843227318}
   - component: {fileID: 414456372213447748}
   - component: {fileID: 2282454461928137760}
+  - component: {fileID: -5271616674700942532}
   m_Layer: 9
   m_Name: plankton
   m_TagString: Food
@@ -135,3 +136,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.755
+--- !u!114 &-5271616674700942532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598803296806127971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551caf27c89e114d1badc7ba42266f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RestoreValue: 0.125
+  HungerMeter: {fileID: 0}
+  Spawner: {fileID: 0}
