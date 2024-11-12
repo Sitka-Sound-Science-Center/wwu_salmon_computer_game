@@ -75,6 +75,7 @@ public class LevelSelectTests : MonoBehaviour
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             string curStage = fish.name;
+            // Start button doesnt have loadscene script attached fix this
             string sceneToLoad = LoadScript.sceneToLoad.ToString();
             if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
                 Assert.That(sceneToLoad, Is.EqualTo("River"));
