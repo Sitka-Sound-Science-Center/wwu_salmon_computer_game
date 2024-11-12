@@ -38,7 +38,8 @@ public class PhaseController : MonoBehaviour
                 PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
                 break;
             case "Smolt":
-
+                setPhase("Smolt");
+                break;
             default:
                 print("something went wrong in phase changer");
                 break;

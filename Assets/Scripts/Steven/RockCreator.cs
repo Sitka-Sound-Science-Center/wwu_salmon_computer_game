@@ -1,7 +1,10 @@
+using Codice.Client.Common.GameUI;
+using Codice.CM.Client.Differences.Merge;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(RectTransform))]
@@ -48,7 +51,7 @@ public class RockCreator : MonoBehaviour
         pebbles.Add(Resources.Load<GameObject>("PhysicsPebbleM2"));
     }
 
-    void Awake() {
+    void Awake() { 
         if (size=="small") LoadSmallPebbles();
         else LoadMediumPebbles();
     }
@@ -87,7 +90,7 @@ public class RockCreator : MonoBehaviour
     private void SpawnARock() {
         Vector3 spawnPosition = newPosition();
         Quaternion spawnRotation = Quaternion.Euler(getRandomAngle()); 
-        GameObject pebblen = Instantiate(getRandPebble(), spawnPosition, spawnRotation);
+        GameObject pebblen = Instantiate(getRandPebble(), spawnPosition, spawnRotation, this.transform);
     }
 
     private void SpawnKRocks(int k) {
@@ -105,4 +108,5 @@ public class RockCreator : MonoBehaviour
         Vector3 v = new Vector3(0f, 0f, Random.Range(0,360));
         return v;
     }
+
 }
