@@ -16,6 +16,7 @@ TagManager:
   - HMeter
   - Food
   - Predator
+  - Spawner
   layers:
   - Default
   - TransparentFX
