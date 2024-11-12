@@ -16,6 +16,7 @@ TagManager:
   - HMeter
   - Food
   - Predator
+  - Crusher
   layers:
   - Default
   - TransparentFX
