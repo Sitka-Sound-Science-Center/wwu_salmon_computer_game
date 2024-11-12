@@ -14,6 +14,8 @@ public class EatableObject : MonoBehaviour
     private float ActualRestore;
 
     void Start() {
+        HungerMeter = GameObject.FindWithTag("HMeter");
+        Spawner = GameObject.FindWithTag("Spawner");
         ActualRestore = RestoreValue*MaxFill;
         rt = HungerMeter.GetComponent<RectTransform>();
     }
@@ -24,7 +26,7 @@ public class EatableObject : MonoBehaviour
             // Cap hunger at max length of parent container
             float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
-            Spawner.GetComponent<FoodSpawner>().FoodObjectCount--;    
+            Spawner.GetComponent<FoodController>().FoodObjectCount--;    
         }
         Destroy(gameObject);
     }
