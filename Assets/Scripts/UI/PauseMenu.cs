@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -23,8 +24,11 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Opening info menu");
     }
 
-    public void Exit()
-    {
+    public void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Exit() {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
