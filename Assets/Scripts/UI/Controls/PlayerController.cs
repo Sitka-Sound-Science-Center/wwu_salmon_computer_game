@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
             float nextWidth = curWidth - ActualRestore;
             if (nextWidth <= 0)
             {
-                //TODO: set timescale to zero
+                UnityEngine.Time.timeScale = 0;
                 string reason = other.gameObject.GetComponent<DeathReason>().reason;
                 print (reason);
                 

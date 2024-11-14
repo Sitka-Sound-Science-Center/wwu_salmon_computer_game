@@ -6511,6 +6511,10 @@ PrefabInstance:
       propertyPath: m_text
       value: INFO
       objectReference: {fileID: 0}
+    - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
+      propertyPath: TimeOnScreen
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
