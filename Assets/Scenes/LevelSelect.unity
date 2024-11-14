@@ -1871,7 +1871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &474622274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5645,7 +5645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: During adult life, salmon become highly adapted to ocean life.  Adult salmon
+  m_text: During adulthood, salmon become highly adapted to ocean life.  Adult salmon
     are capable swimmers able to navigate long distances in the ocean waters. Salmon
     can live in the ocean for many years, depending on the species before returning
     to their home stream to spawn.
