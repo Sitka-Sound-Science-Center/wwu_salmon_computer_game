@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using Unity.VisualScripting.YamlDotNet.Core;
+
 
 //using TreeEditor;
 //using UnityEditor.Tilemaps;
@@ -26,6 +28,15 @@ public class PlayerController : MonoBehaviour
     float lastflip = 0;
     private Rigidbody2D rb;
     private Vector3 move;
+
+    //hunger meter elements
+    public GameObject HungerMeter;
+    private RectTransform rt;
+    private float MaxFill = 550; // actual width of parent container
+    private float ActualRestore;
+
+    [SerializeField]
+    GameObject DeathScreenParent;
     private void Awake()
     {
         playerInput = new Player();
@@ -46,6 +57,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
        scale = transform.localScale;
+       HungerMeter = GameObject.FindWithTag("HMeter");
+       rt = HungerMeter.GetComponent<RectTransform>();
     }
 
     private void FixedUpdate()
@@ -132,15 +145,29 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.CompareTag("Predator"))
+
+        if (other.gameObject.CompareTag("Predator"))
         {
-            print("outch");
-            //signal health/food progress bar -
+            ActualRestore = other.gameObject.GetComponent<DeathReason>().ac;
+            float curWidth = rt.rect.width;
+            float nextWidth = curWidth - ActualRestore;
+            if (nextWidth <= 0)
+            {
+                UnityEngine.Time.timeScale = 0;
+                string reason = other.gameObject.GetComponent<DeathReason>().reason;
+                print (reason);
+                
+                GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true);
+
+                
+            }
+            else
+            {
+                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+            }
         }
     }
-
-
 
 }
