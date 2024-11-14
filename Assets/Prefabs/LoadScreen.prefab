@@ -819,7 +819,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 54.3}
-  m_SizeDelta: {x: 606.0394, y: 142.9652}
+  m_SizeDelta: {x: 553.02, y: 142.9652}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4189515515784976448
 CanvasRenderer:
@@ -850,7 +850,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "We are on Ling\xEDt Aan\xED \u2014 Tlingit Land. The Tlingit people\r\nhave
-    been indigenous to this land for over 10,000 years,\r\nliving their culture and
+    been Indigenous to this land for over 10,000 years,\r\nliving their culture and
     tribal values. Gunalch\xE9esh to the\r\nTlingit people for their stewardship
     of Ling\xEDt Aan\xED since\r\ntime immemorial and today."
   m_isRightToLeft: 0
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

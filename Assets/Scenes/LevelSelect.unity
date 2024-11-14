@@ -10510,6 +10510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 46258051936871726, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423837052305153977, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_Name
       value: LoadScreen
@@ -10517,6 +10521,10 @@ PrefabInstance:
     - target: {fileID: 423837052305153977, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820727249849663847, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3276456654722577338, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_Pivot.x
@@ -10596,6 +10604,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276456654722577338, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330519693108203036, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
