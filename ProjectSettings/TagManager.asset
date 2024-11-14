@@ -17,6 +17,7 @@ TagManager:
   - Food
   - Predator
   - Spawner
+  - Crusher
   layers:
   - Default
   - TransparentFX
