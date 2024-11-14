@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Coho
+  Fishname: 
   icon: {fileID: 892415615}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  Fishname: 
   icon: {fileID: 0}
   infoScreen: {fileID: 1288838179}
   highlight: {fileID: 261291308}
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  Fishname: 
   icon: {fileID: 0}
   infoScreen: {fileID: 2089687548}
   highlight: {fileID: 1634367593}
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  Fishname: 
   icon: {fileID: 0}
   infoScreen: {fileID: 902165326}
   highlight: {fileID: 1719358747}
@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Chum
+  Fishname: 
   icon: {fileID: 308027895}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -5584,7 +5584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  Fishname: 
   icon: {fileID: 0}
   infoScreen: {fileID: 1750905551}
   highlight: {fileID: 1527196761}
@@ -7630,7 +7630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  Fishname: 
   icon: {fileID: 0}
   infoScreen: {fileID: 474622273}
   highlight: {fileID: 1280416914}
@@ -8690,7 +8690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Pink
+  Fishname: 
   icon: {fileID: 1787134320}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -8936,7 +8936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Sockeye
+  Fishname: 
   icon: {fileID: 1005104854}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -9532,7 +9532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c17d47239837394f9bd1c6c69276337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Chinook
+  Fishname: 
   icon: {fileID: 516342097}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -10514,6 +10514,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 46258051936871726, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 423837052305153977, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_Name
       value: LoadScreen
@@ -10521,6 +10525,10 @@ PrefabInstance:
     - target: {fileID: 423837052305153977, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2820727249849663847, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3276456654722577338, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_Pivot.x
@@ -10600,6 +10608,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276456654722577338, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330519693108203036, guid: 6d1d4e3dea5852a46af681cf46028d8d, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
