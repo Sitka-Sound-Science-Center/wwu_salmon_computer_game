@@ -28,6 +28,10 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void ReturnToMenu() {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
     public void Exit() {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
