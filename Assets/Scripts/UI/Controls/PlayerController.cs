@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using Unity.VisualScripting.YamlDotNet.Core;
-
-
 //using TreeEditor;
 //using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-
 
 public class PlayerController : MonoBehaviour
 {
@@ -95,9 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             flip = 1;
  
-        }
-
-        
+        }    
 
         Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
         if (lastflip != flip)
@@ -110,14 +104,6 @@ public class PlayerController : MonoBehaviour
 
         transform.localScale = new Vector3(scale.x, scale.y * flip, scale.z);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
-        
-        
-
-
-
-        
-
-
 
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && groundedPlayer)
@@ -135,36 +121,34 @@ public class PlayerController : MonoBehaviour
         return playerSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Food"))
-        {
-            Destroy(collision.gameObject);
-            //signal food progress bar +
-            
+    // Handle food interactions: increase health bar and destroy food obj
+    private void OnTriggerEnter2D(Collider2D collision) {
+        GameObject other = collision.gameObject;
+        if (other.CompareTag("Food") && rt.rect.width!=MaxFill) {
+            EatableObject FoodScript = other.GetComponent<EatableObject>();
+            float curWidth = rt.rect.width;
+            float ActualRestore = FoodScript.GetActualRestore();
+            // Cap hunger at max length of parent container
+            float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
+            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+            FoodScript.Spawner.GetComponent<FoodController>().FoodObjectCount--;
+            Destroy(other);
         }
-
     }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
 
-        if (other.gameObject.CompareTag("Predator"))
-        {
+    // Handle predator interactions: die and display death screen
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Predator")) {
             ActualRestore = other.gameObject.GetComponent<DeathReason>().ac;
             float curWidth = rt.rect.width;
             float nextWidth = curWidth - ActualRestore;
-            if (nextWidth <= 0)
-            {
+            if (nextWidth <= 0) {
                 UnityEngine.Time.timeScale = 0;
                 string reason = other.gameObject.GetComponent<DeathReason>().reason;
-                print (reason);
-                
-                GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true);
-
-                
+                print (reason); 
+                GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true); 
             }
-            else
-            {
+            else {
                 rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
             }
         }
