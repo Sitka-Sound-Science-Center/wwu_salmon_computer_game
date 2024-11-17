@@ -6,28 +6,16 @@ public class EatableObject : MonoBehaviour
 {
     [SerializeField]
     private float RestoreValue=0.125F; // what proportion of the meter is refilled, in [0,1]
-    [SerializeField]
-    public GameObject HungerMeter; 
     public GameObject Spawner;
-    private RectTransform rt;
     private float MaxFill=550; // actual width of parent container
     private float ActualRestore;
 
-    void Start() {
-        HungerMeter = GameObject.FindWithTag("HMeter");
-        Spawner = GameObject.FindWithTag("Spawner");
-        ActualRestore = RestoreValue*MaxFill;
-        rt = HungerMeter.GetComponent<RectTransform>();
+    public float GetActualRestore() {
+        return ActualRestore;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player") && rt.rect.width!=MaxFill) {
-            float curWidth = rt.rect.width;
-            // Cap hunger at max length of parent container
-            float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
-            Spawner.GetComponent<FoodController>().FoodObjectCount--;    
-        }
-        Destroy(gameObject);
+    void Start() {
+        Spawner = GameObject.FindWithTag("Spawner");
+        ActualRestore = RestoreValue*MaxFill;
     }
 }
