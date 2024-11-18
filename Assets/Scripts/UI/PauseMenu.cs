@@ -25,6 +25,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Restart() {
+        //added because death screens restarted paused
+        UnityEngine.Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

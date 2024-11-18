@@ -25,7 +25,6 @@ public class FoodSpawner : MonoBehaviour
             float randX = Random.Range(x_min, x_max);
             Vector3 newPos = new Vector3(randX, transform.position.y, transform.position.z);
             GameObject food = Instantiate(FoodPrefab, transform.position, transform.rotation);   
-            food.GetComponent<EatableObject>().HungerMeter = HungerMeter;
             food.GetComponent<EatableObject>().Spawner = gameObject;
             FoodObjectCount++;
             timer=0F;
