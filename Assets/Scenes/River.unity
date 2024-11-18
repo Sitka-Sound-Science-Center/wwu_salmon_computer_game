@@ -17275,7 +17275,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.478182, y: 0.09066677}
@@ -18824,7 +18824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6837794153750923978, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
-      value: 64
+      value: 1088
       objectReference: {fileID: 0}
     - target: {fileID: 7959554770608443229, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
@@ -24620,7 +24620,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.5396778}
