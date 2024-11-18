@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,6 +16,7 @@ public class PredatorMovement : MonoBehaviour
     float yMax;
     Vector3 position;
     int counter;
+    Vector3 scaleFactor;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class PredatorMovement : MonoBehaviour
         xMax = rectX + area.x;
         yMin = rectY;
         yMax = rectY + area.y;
+        scaleFactor = transform.localScale;
     }
 
     // Update is called once per frame
@@ -37,6 +40,8 @@ public class PredatorMovement : MonoBehaviour
         {
             //pick a random spot in the rect transform
             position = newPosition();
+            setSpriteOrientation(position);
+
             counter = 0;
         }
 
@@ -49,5 +54,19 @@ public class PredatorMovement : MonoBehaviour
     {
         position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0f);
         return position;
+    }
+
+    private void setSpriteOrientation(Vector3 position)
+    {
+        if (position.x < transform.position.x)
+        {
+            //face sprite to the right
+            transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
+        }
+        else
+        {
+            //face sprite to the left
+            transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
+        }
     }
 }
