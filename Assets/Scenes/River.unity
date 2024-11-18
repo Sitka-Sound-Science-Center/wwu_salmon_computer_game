@@ -17144,9 +17144,9 @@ GameObject:
   - component: {fileID: 1457966988}
   - component: {fileID: 1457966991}
   - component: {fileID: 1457966990}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SalmonShark
-  m_TagString: Untagged
+  m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24489,9 +24489,9 @@ GameObject:
   - component: {fileID: 2084937399}
   - component: {fileID: 2084937402}
   - component: {fileID: 2084937401}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eagle
-  m_TagString: Untagged
+  m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
