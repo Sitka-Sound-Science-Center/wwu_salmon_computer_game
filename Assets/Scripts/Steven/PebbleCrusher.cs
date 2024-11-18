@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class PebbleCrusher : MonoBehaviour
 {
+    bool crushing;
+    [SerializeField]
+    private int crushTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +34,29 @@ public class PebbleCrusher : MonoBehaviour
             }
             collision.GetComponent<Rigidbody2D>().isKinematic = false;
         }
+        else if (collision.gameObject.CompareTag("Player")){
+            //begin crush timer
+            crushing = true;
+            string reason = this.GetComponent<DeathReason>().reason;
+            StartCoroutine(crushTimer(reason, collision.gameObject.GetComponent<PlayerController>()));
+        }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            crushing = false;
+        }
+    }
+
+    private IEnumerator crushTimer(string reason, PlayerController player)
+    {
+        yield return new WaitForSeconds(crushTime);
+        if (crushing)
+        {
+            player.killPlayer(reason);
+            
+        }
+    }
+
 }

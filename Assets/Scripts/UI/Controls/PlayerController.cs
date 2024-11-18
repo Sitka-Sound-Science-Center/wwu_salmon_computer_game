@@ -143,15 +143,20 @@ public class PlayerController : MonoBehaviour
             float curWidth = rt.rect.width;
             float nextWidth = curWidth - ActualRestore;
             if (nextWidth <= 0) {
-                UnityEngine.Time.timeScale = 0;
-                string reason = other.gameObject.GetComponent<DeathReason>().reason;
-                print (reason); 
-                GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true); 
+                
+                string reason = other.gameObject.GetComponent<DeathReason>().reason; 
+                killPlayer(reason);
             }
             else {
                 rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
             }
         }
+    }
+
+    public void killPlayer(string reason) 
+    {
+        UnityEngine.Time.timeScale = 0;
+        GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true);
     }
 
 }

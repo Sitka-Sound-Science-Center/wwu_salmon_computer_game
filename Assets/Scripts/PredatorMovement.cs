@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class PredatorMovement : MonoBehaviour
 {
     [SerializeField]
-    float frequency;
+    int frequency;
     [SerializeField]
     float speed;
     float xMin;
@@ -18,6 +18,7 @@ public class PredatorMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        counter = frequency;
         RectTransform MoveableArea = GetComponentInParent<RectTransform>();
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
         float rectY = MoveableArea.rect.y + MoveableArea.position.y; //bottom edge of transform

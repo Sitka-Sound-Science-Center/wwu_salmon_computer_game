@@ -18,41 +18,11 @@ public class WaysToDie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void killPlayer()
     {
-        
-        //Boot Crusher collider
-        if (collision.gameObject.CompareTag("Crusher"))
-        {
-            print("CrusherDetected");
-            timedOut = false;
-            beingCrushed = true;
-            StartCoroutine("crushTimer");
-            if (timedOut && beingCrushed)
-            {
-                print("Show Kill Screen");
-                
-                print("Cause Of Death" + collision.gameObject.name);
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Crusher"))
-        {
-            beingCrushed = false;
-        }   
-    }
-
-    IEnumerable crushTimer()
-    {
-        print("waiting...)");
-        yield return new WaitForSeconds(crushTime);
-        timedOut = true;
-        print("returning");
+        //kills the player, allows for other objects to send a kill command
     }
 }

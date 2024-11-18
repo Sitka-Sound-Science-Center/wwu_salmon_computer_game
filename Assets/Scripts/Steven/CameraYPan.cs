@@ -9,6 +9,8 @@ public class CameraYPan : MonoBehaviour
     RectTransform rectTransform;
     [SerializeField]
     Camera cam;
+    [SerializeField]
+    bool useOffset;
     private Vector3 camPos;
     private Quaternion camRot;
     
@@ -17,11 +19,16 @@ public class CameraYPan : MonoBehaviour
     private float xMax;
     private float yMin;
     private float yMax;
+
+    float rectOffset;
     
     // Start is called before the first frame update
     void Start()
     {
+        rectOffset = GameObject.Find("CameraYPanner").GetComponent<RectTransform>().sizeDelta.y;
+        print(this.name + ":  " + rectOffset);
         camPos = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+
         float rectX = this.GetComponent<RectTransform>().rect.x + this.GetComponent<RectTransform>().position.x; //left edge of transform
         float rectY = this.GetComponent<RectTransform>().rect.y + this.GetComponent<RectTransform>().position.y; //bottom edge of transform
         Vector2 area = this.GetComponent<RectTransform>().sizeDelta;
@@ -41,6 +48,10 @@ public class CameraYPan : MonoBehaviour
             float x2 = xMax - xMin;
             camPos.x = cam.transform.position.x;
             camPos.y = (x1 * y2) / x2;
+            if (useOffset)
+            {
+                camPos.y += rectOffset;
+            }
             cam.transform.SetPositionAndRotation(camPos, camRot);
         }
     }
