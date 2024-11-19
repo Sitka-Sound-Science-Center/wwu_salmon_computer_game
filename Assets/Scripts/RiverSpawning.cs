@@ -4,22 +4,9 @@ using UnityEngine;
 
 public class RiverSpawning : MonoBehaviour
 {
-    public GameObject AlevinSpawn;
     public GameObject FrySpawn;
     public GameObject SmoltSpawn;
     public GameObject Player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Spawn(string stage) {
         GameObject active;
