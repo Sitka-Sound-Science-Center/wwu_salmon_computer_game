@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void ReturnToMenu() {
+        UnityEngine.Time.timeScale = 1;
         SceneManager.LoadScene("LevelSelect");
     }
 
