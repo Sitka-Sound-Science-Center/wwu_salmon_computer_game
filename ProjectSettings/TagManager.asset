@@ -18,6 +18,8 @@ TagManager:
   - Predator
   - Spawner
   - Crusher
+  - RiverSpawns
+  - Camera
   layers:
   - Default
   - TransparentFX
