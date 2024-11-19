@@ -31,9 +31,23 @@ public class LevelSelect : MonoBehaviour
         curSpeciesIcon = fish.icon;
     }
 
+    public string ChooseSelectedStage(string curStage) {
+        if (curStage == "Alevin") {
+            loadScene.stageToLoad = LoadScene.Stage.Alevin;
+        }
+        if (curStage == "Fry") {
+            loadScene.stageToLoad = LoadScene.Stage.Fry;
+        }
+        if (curStage == "Smolt") {
+            loadScene.stageToLoad = LoadScene.Stage.Smolt;
+        }
+        return loadScene.stageToLoad.ToString();
+    }
+
     public string ChooseSelectedLevel(string curStage) {
         if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
-            loadScene.sceneToLoad = LoadScene.Level.River;
+            loadScene.sceneToLoad = LoadScene.Level.River; 
+            ChooseSelectedStage(curStage);
         } 
         else if (curStage == "Adult") {
             loadScene.sceneToLoad = LoadScene.Level.Ocean;

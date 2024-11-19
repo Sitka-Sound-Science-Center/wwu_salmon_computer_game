@@ -9,25 +9,29 @@ public class RiverSpawning : MonoBehaviour
     public GameObject SmoltSpawn;
     public GameObject Player;
 
+    // WARNING -- STINKY CODE //
     public Vector3 Spawn(string stage) {
         GameObject active;
-        Vector3 SpawnPos;
-        if (stage=="Alevin") {
-            active = Player.transform.GetChild(0).gameObject;
-            SpawnPos = gameObject.transform.GetChild(0).position; 
-        }
-        
+        Vector3 PlayerPos, SpawnPos;
+        active = Player.transform.GetChild(0).gameObject;
+        SpawnPos = gameObject.transform.GetChild(0).position; 
+        if (stage=="Alevin")active.SetActive(true);
+        Player.transform.position = SpawnPos; 
+        PlayerPos = active.transform.position;
         if (stage=="Fry") {
             active = Player.transform.GetChild(1).gameObject;
             SpawnPos = gameObject.transform.GetChild(1).position; 
+            active.SetActive(true);
+            Player.transform.position = SpawnPos; 
+            PlayerPos = active.transform.position;
         }  
-        
-        else {
+        if (stage=="Smolt") {
             active = Player.transform.GetChild(2).gameObject;
             SpawnPos = gameObject.transform.GetChild(2).position; 
+            active.SetActive(true);
+            Player.transform.position = SpawnPos; 
+            PlayerPos = active.transform.position;
         } 
-        active.SetActive(true);
-        Player.transform.position = SpawnPos; 
-        return active.transform.position;
+        return PlayerPos;
     }
 }
