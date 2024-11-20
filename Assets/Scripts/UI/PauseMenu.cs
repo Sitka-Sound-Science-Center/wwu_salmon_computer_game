@@ -7,20 +7,17 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject menu;
 
-    public void Pause()
-    {
+    public void Pause() {
         UnityEngine.Time.timeScale = 0;
         menu.SetActive(true);
     }
 
-    public void Unpause()
-    {
+    public void Unpause() {
         UnityEngine.Time.timeScale = 1;
         menu.SetActive(false);
     }
 
-    public void InfoMenu()
-    {
+    public void InfoMenu() {
         Debug.Log("Opening info menu");
     }
 
