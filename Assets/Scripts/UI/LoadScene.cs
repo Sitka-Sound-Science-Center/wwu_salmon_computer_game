@@ -8,12 +8,9 @@ using TMPro;
 public class LoadScene : MonoBehaviour
 {
     public Level sceneToLoad;
-    public Stage stageToLoad;
     public GameObject loadingScreen;
-    public GameObject Camera;
     public Slider progressBar;
     public TextMeshProUGUI message;
-    public RiverSpawning sp;
     AsyncOperation loadingOperation;
 
     public enum Level {
@@ -23,27 +20,10 @@ public class LoadScene : MonoBehaviour
         Spawning
     }
 
-    public enum Stage {
-        Alevin,
-        Fry,
-        Smolt,
-    }
-
     void Start() {
         if (loadingScreen != null) {
             loadingScreen.SetActive(false);
         }
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        sp = GameObject.FindWithTag("RiverSpawns").GetComponent<RiverSpawning>();
-        Camera = GameObject.FindWithTag("Camera");
-        string stage = stageToLoad.ToString();
-        print(stage);
-        if (scene.name=="River"){
-            Vector3 PlayerPos = sp.Spawn(stage);
-            Camera.transform.position = new Vector3(PlayerPos.x, PlayerPos.y, -10);
-        } 
     }
 
     public void StartLoad() {
@@ -55,10 +35,8 @@ public class LoadScene : MonoBehaviour
         //message = loadingScreen.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
         //progressBar = loadingScreen.transform.GetChild(1).gameObject.GetComponent<Slider>();
         message.text = "LOADING...";
-
         loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad.ToString());
         loadingOperation.allowSceneActivation = false;
-        SceneManager.sceneLoaded+=OnSceneLoaded;
         StartCoroutine(WaitForLoad());
     }
 
