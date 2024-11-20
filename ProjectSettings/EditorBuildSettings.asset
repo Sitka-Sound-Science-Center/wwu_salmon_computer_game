@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Old and Test/River_OLD.unity
     guid: 50b2afdd60b324448937bb807e38d5b5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Ocean.unity
     guid: 9449841af7e1241439dcd29de0bcdcea
   - enabled: 0
