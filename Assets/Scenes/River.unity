@@ -3542,6 +3542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289764894}
+  - component: {fileID: 289764895}
   m_Layer: 0
   m_Name: PhaseTriggers
   m_TagString: Untagged
@@ -3566,6 +3567,18 @@ Transform:
   - {fileID: 839168838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &289764895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289764893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4e544f240f6483d8f0783d6b3b4717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &308097751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9116021012626926140, guid: 63dcbee3e8b1b2642a0aca9a2663a098, type: 3}
