@@ -35,7 +35,9 @@ public class ManagePhase : MonoBehaviour
     public void SetStage(Stage nxt) {
         curStage = nxt;
     }
-    public void NextLevel(string sceneName) {
+
+    public void NextLevel() {
+        string sceneName = SceneManager.GetActiveScene().name;
         if (sceneName == "River") {
             if (curStage == Stage.Alevin) sp.Spawn("Fry");
             else if (curStage == Stage.Fry) sp.Spawn("Smolt");
