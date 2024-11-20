@@ -5883,6 +5883,7 @@ MonoBehaviour:
   curSpecies: {fileID: 1581118114}
   curSpeciesIcon: {fileID: 892415615}
   loadScene: {fileID: 1420605852}
+  mp: {fileID: 0}
   active: {fileID: 0}
 --- !u!114 &1174953728
 MonoBehaviour:
