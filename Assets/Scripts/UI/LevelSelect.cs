@@ -12,8 +12,8 @@ public class LevelSelect : MonoBehaviour
     public GameObject curSpeciesIcon;
 
     public LoadScene loadScene;
+    public ManagePhase mp;
     public FishButton active;
-
     private TouchListener TouchScript;
 
     public void SelectStage(FishButton stage) {
@@ -32,22 +32,16 @@ public class LevelSelect : MonoBehaviour
     }
 
     public string ChooseSelectedStage(string curStage) {
-        if (curStage == "Alevin") {
-            loadScene.stageToLoad = LoadScene.Stage.Alevin;
-        }
-        if (curStage == "Fry") {
-            loadScene.stageToLoad = LoadScene.Stage.Fry;
-        }
-        if (curStage == "Smolt") {
-            loadScene.stageToLoad = LoadScene.Stage.Smolt;
-        }
-        return loadScene.stageToLoad.ToString();
+        if (curStage == "Alevin") mp.SetStage(ManagePhase.Stage.Alevin); 
+        else if (curStage == "Fry") mp.SetStage(ManagePhase.Stage.Fry);
+        else mp.SetStage(ManagePhase.Stage.Smolt);
+        return mp.GetStage().ToString();
     }
 
     public string ChooseSelectedLevel(string curStage) {
         if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
             loadScene.sceneToLoad = LoadScene.Level.River; 
-            ChooseSelectedStage(curStage);
+            ChooseSelectedStage(curStage); // signal load scene to load stage
         } 
         else if (curStage == "Adult") {
             loadScene.sceneToLoad = LoadScene.Level.Ocean;
@@ -62,6 +56,7 @@ public class LevelSelect : MonoBehaviour
 
     void Start() {
         TouchScript = gameObject.GetComponent<TouchListener>();
+        mp = GameObject.FindWithTag("RiverSpawns").GetComponent<ManagePhase>();
         active=fishButtons[0];
         SelectStage(active);
     }
