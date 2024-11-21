@@ -13,6 +13,8 @@ public class ManagePhase : MonoBehaviour
         Alevin,
         Fry,
         Smolt,
+        Adult,
+        Spawning
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -37,16 +39,22 @@ public class ManagePhase : MonoBehaviour
     }
 
     public void NextLevel() {
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "River") {
-            if (curStage == Stage.Alevin) sp.Spawn("Fry");
-            else if (curStage == Stage.Fry) sp.Spawn("Smolt");
-            else SceneManager.LoadScene("Ocean"); 
-        }
-        else if (sceneName == "Ocean") SceneManager.LoadScene("Spawning");
-        else {
+        if (curStage == Stage.Alevin || curStage == Stage.Fry) {
+            curStage = (curStage==Stage.Alevin) ? Stage.Fry : Stage.Smolt;
             SceneManager.LoadScene("River");
-            sp.Spawn("Alevin");
         }
+        else if (curStage == Stage.Smolt){
+            curStage = Stage.Adult;
+            SceneManager.LoadScene("Ocean");
+        } 
+        else if (curStage == Stage.Adult) {
+            curStage = Stage.Spawning;
+            SceneManager.LoadScene("Spawning"); 
+        }
+        else {
+            curStage = Stage.Alevin;
+            SceneManager.LoadScene("River");
+        }
+        UnityEngine.Time.timeScale = 1;
     }
 }
