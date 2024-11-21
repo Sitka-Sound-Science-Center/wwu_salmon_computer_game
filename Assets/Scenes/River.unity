@@ -6855,7 +6855,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4154785405242817466}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Pivot.x
@@ -6958,11 +6958,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
---- !u!224 &745300743 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
-  m_PrefabInstance: {fileID: 745300742}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &745392515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19912,7 +19907,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 32189297}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Pivot.x
@@ -20015,11 +20010,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
---- !u!224 &1955479091 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
-  m_PrefabInstance: {fileID: 1955479090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1982429389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21346,7 +21336,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 11146100}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Pivot.x
@@ -21461,11 +21451,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
---- !u!224 &2087956705 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4154785405491027734, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
-  m_PrefabInstance: {fileID: 2087956704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2089453869
 GameObject:
   m_ObjectHideFlags: 0
@@ -21478,7 +21463,7 @@ GameObject:
   - component: {fileID: 2089453871}
   m_Layer: 0
   m_Name: SpawnPoints
-  m_TagString: RiverSpawns
+  m_TagString: SpawnPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21516,6 +21501,8 @@ MonoBehaviour:
   AlevinSpawn: {fileID: 1415213387}
   FrySpawn: {fileID: 462414311}
   SmoltSpawn: {fileID: 767752416}
+  AdultSpawn: {fileID: 0}
+  SpawningSpawn: {fileID: 0}
   Player: {fileID: 2045549228}
 --- !u!1 &2096577090
 GameObject:
@@ -22536,3 +22523,6 @@ SceneRoots:
   - {fileID: 1766113791}
   - {fileID: 1873836835}
   - {fileID: 2089453870}
+  - {fileID: 745300742}
+  - {fileID: 1955479090}
+  - {fileID: 2087956704}
