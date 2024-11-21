@@ -9,6 +9,11 @@ public class CameraXTrack : MonoBehaviour
     GameObject Player;
     [SerializeField]
     float fryHeight;
+
+    public bool trackY;
+    public float topBound;
+    public float lowBound;
+    public float leftBound;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +23,13 @@ public class CameraXTrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.75f), this.transform.position.y, this.transform.position.z);   
-   
+        float yPos = this.transform.position.y;
+        if (trackY)
+        {
+            yPos = Mathf.Lerp(transform.position.y, Player.transform.position.y, 0.75f);
+            yPos = Mathf.Clamp(yPos, lowBound, topBound);
+        }
+        this.transform.position = new Vector3(Mathf.Lerp(transform.position.x, Player.transform.position.x, 0.75f), yPos, this.transform.position.z);   
     }
 
     public void ChangeToFryPosition()

@@ -44,8 +44,8 @@ public class LevelSelect : MonoBehaviour
             ChooseSelectedStage(curStage); // signal load scene to load stage
         } 
         else if (curStage == "Adult") {
-            //loadScene.sceneToLoad = LoadScene.Level.Ocean;
-            loadScene.sceneToLoad = LoadScene.Level.River;
+            loadScene.sceneToLoad = LoadScene.Level.Ocean;
+            //loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         else if (curStage == "Spawning") {
             //loadScene.sceneToLoad = LoadScene.Level.Spawning;
