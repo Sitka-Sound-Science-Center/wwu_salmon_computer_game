@@ -18,6 +18,7 @@ public class LevelSelect : MonoBehaviour
 
     public void SelectStage(FishButton stage) {
         ChooseSelectedLevel(stage.name);
+        ChooseSelectedStage(stage.name); // signal load scene to load stage
         active.SetSelect(false);
         stage.SetSelect(true);
         active=stage;
@@ -32,16 +33,18 @@ public class LevelSelect : MonoBehaviour
     }
 
     public string ChooseSelectedStage(string curStage) {
+        // modify all of this to use Stage enum?
         if (curStage == "Alevin") mp.SetStage(ManagePhase.Stage.Alevin); 
         else if (curStage == "Fry") mp.SetStage(ManagePhase.Stage.Fry);
-        else mp.SetStage(ManagePhase.Stage.Smolt);
+        else if (curStage == "Smolt") mp.SetStage(ManagePhase.Stage.Smolt);
+        else if (curStage == "Adult") mp.SetStage(ManagePhase.Stage.Adult);
+        else mp.SetStage(ManagePhase.Stage.Spawning);
         return mp.GetStage().ToString();
     }
 
     public string ChooseSelectedLevel(string curStage) {
         if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
             loadScene.sceneToLoad = LoadScene.Level.River; 
-            ChooseSelectedStage(curStage); // signal load scene to load stage
         } 
         else if (curStage == "Adult") {
             loadScene.sceneToLoad = LoadScene.Level.Ocean;
@@ -56,7 +59,7 @@ public class LevelSelect : MonoBehaviour
 
     void Start() {
         TouchScript = gameObject.GetComponent<TouchListener>();
-        mp = GameObject.FindWithTag("RiverSpawns").GetComponent<ManagePhase>();
+        mp = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
         active=fishButtons[0];
         SelectStage(active);
     }
