@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ManagePhase : MonoBehaviour
 {
     private static Stage curStage = Stage.Alevin;
-    private RiverSpawning sp;
+    private SpawnPoints sp;
     private GameObject Camera;
 
     public enum Stage {
@@ -18,8 +18,8 @@ public class ManagePhase : MonoBehaviour
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (scene.name == "River") {
-            sp = GameObject.FindWithTag("RiverSpawns").GetComponent<RiverSpawning>();
+        if (scene.name == "River") { // TODO extend this to work in all three scenes?
+            sp = GameObject.FindWithTag("SpawnPoints").GetComponent<SpawnPoints>();
             Camera = GameObject.FindWithTag("Camera");
             Vector3 PlayerPos = sp.Spawn(curStage.ToString());
             Camera.transform.position = new Vector3(PlayerPos.x, PlayerPos.y, -10);
