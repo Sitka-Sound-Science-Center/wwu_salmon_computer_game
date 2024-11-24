@@ -18,6 +18,7 @@ TagManager:
   - Predator
   - Spawner
   - Crusher
+  - Terrain
   layers:
   - Default
   - TransparentFX

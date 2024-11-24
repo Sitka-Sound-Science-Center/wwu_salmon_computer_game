@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     float lastflip = 0;
     private Rigidbody2D rb;
     private Vector3 move;
+    private float xrot;
 
     //hunger meter elements
     public GameObject HungerMeter;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     GameObject DeathScreenParent;
+
     private void Awake()
     {
         playerInput = new Player();
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        xrot = transform.rotation.x;
        scale = transform.localScale;
        HungerMeter = GameObject.FindWithTag("HMeter");
        rt = HungerMeter.GetComponent<RectTransform>();
@@ -76,8 +79,8 @@ public class PlayerController : MonoBehaviour
         //    playerVelocity.y = 0f;
        /// /}
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        
-        move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
+        move = new Vector3(movementInput.x * playerSpeed, movementInput.y * playerSpeed, 0f);
+
         
 
         float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
@@ -93,7 +96,7 @@ public class PlayerController : MonoBehaviour
  
         }    
 
-        Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
+        Quaternion rotation = Quaternion.Euler(xrot, 0, tiltAroundZ - 180 + (flip * 180));
         if (lastflip != flip)
         {
             transform.rotation = rotation;

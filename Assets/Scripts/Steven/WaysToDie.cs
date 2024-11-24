@@ -21,8 +21,21 @@ public class WaysToDie : MonoBehaviour
 
     }
 
-    public void killPlayer()
+    public void killPlayer(string reason)
     {
         //kills the player, allows for other objects to send a kill command
+        print("killed by" + reason);
+        //pause the game
+        //enable relevant death screen
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            string reason = this.gameObject.name;
+            killPlayer(reason);
+        }
     }
 }
