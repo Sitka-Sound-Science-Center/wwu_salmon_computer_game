@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 261.8995, g: 324.45413, b: 429.43256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1383,7 +1383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 107.00002, y: 99.999985}
+  m_AnchoredPosition: {x: 107, y: 100}
   m_SizeDelta: {x: 208.275, y: 193.834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76661959
@@ -5293,7 +5293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 291.16, y: 116}
+  m_AnchoredPosition: {x: 291.16003, y: 116}
   m_SizeDelta: {x: 180.471, y: 128.196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567323694
@@ -7362,7 +7362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 107.00002, y: 99.999985}
+  m_AnchoredPosition: {x: 107, y: 100}
   m_SizeDelta: {x: 208.275, y: 193.834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &732614070
@@ -8871,7 +8871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 291.16016, y: 116.00001}
+  m_AnchoredPosition: {x: 291.16016, y: 116}
   m_SizeDelta: {x: 180.471, y: 128.196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831336397
@@ -14437,7 +14437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 291.16016, y: 116.00001}
+  m_AnchoredPosition: {x: 291.16016, y: 116}
   m_SizeDelta: {x: 180.471, y: 128.196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409354923
@@ -15545,7 +15545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 291.16016, y: 116.00001}
+  m_AnchoredPosition: {x: 291.16016, y: 116}
   m_SizeDelta: {x: 180.471, y: 128.196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479147311
@@ -20576,7 +20576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 107.00002, y: 99.999985}
+  m_AnchoredPosition: {x: 107, y: 100}
   m_SizeDelta: {x: 208.275, y: 193.834}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888775115
@@ -22979,6 +22979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089453870}
   - component: {fileID: 2089453871}
+  - component: {fileID: 2089453872}
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: SpawnPoints
@@ -23022,6 +23023,18 @@ MonoBehaviour:
   AdultSpawn: {fileID: 0}
   SpawningSpawn: {fileID: 0}
   Player: {fileID: 2045549228}
+--- !u!114 &2089453872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089453869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4e544f240f6483d8f0783d6b3b4717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2096577090
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,10 +11,11 @@ public class PhaseController : MonoBehaviour
     [SerializeField]
     private GameObject PlayerCamera;
     private GameObject CurrentPhase;
+    private ManagePhase mp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        mp = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
     }
 
     // Update is called once per frame
@@ -36,9 +37,11 @@ public class PhaseController : MonoBehaviour
                 print("Changing to Fry");
                 setPhase("Fry");
                 PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
+                mp.SetStage(ManagePhase.Stage.Fry);
                 break;
             case "Smolt":
                 setPhase("Smolt");
+                mp.SetStage(ManagePhase.Stage.Smolt);
                 break;
             default:
                 print("something went wrong in phase changer");
