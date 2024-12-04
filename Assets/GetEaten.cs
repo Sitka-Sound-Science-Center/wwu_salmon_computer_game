@@ -26,6 +26,7 @@ public class GetEaten : MonoBehaviour
             //other.attachedRigidbody.velocity = Vector3.zero;
             other.attachedRigidbody.isKinematic = true;
             other.transform.SetPositionAndRotation(mouthPosition.transform.position, Quaternion.identity);
+            
         }
     }
 }

@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -776,8 +776,8 @@ Transform:
   m_GameObject: {fileID: 692925931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2332.49, y: 994.47, z: -1282.8103}
-  m_LocalScale: {x: 5, y: 1, z: 4}
+  m_LocalPosition: {x: -2273.6, y: 994.47, z: -1282.8103}
+  m_LocalScale: {x: 169.82816, y: 1, z: 44.531635}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1806126693}
@@ -844,17 +844,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f6fd535518f5540b4bcc3099582f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceType: 0
-  geometryType: 2
+  surfaceType: 1
+  geometryType: 0
   mesh: {fileID: 0}
-  cpuSimulation: 0
+  cpuSimulation: 1
   cpuFullResolution: 0
-  cpuEvaluateRipples: 0
+  cpuEvaluateRipples: 1
   timeMultiplier: 1
-  repetitionSize: 500
+  repetitionSize: 150
   largeWindSpeed: 30
   largeWindOrientationValue: 0
-  largeCurrentSpeedValue: 0
+  largeCurrentSpeedValue: 12
   largeCurrentOrientationValue: 0
   largeChaos: 0.8
   largeBand0Multiplier: 1
@@ -866,7 +866,7 @@ MonoBehaviour:
   largeBand1FadeStart: 300
   largeBand1FadeDistance: 800
   ripples: 1
-  ripplesWindSpeed: 8
+  ripplesWindSpeed: 3.59
   ripplesWindOrientationMode: 0
   ripplesWindOrientationValue: 0
   ripplesCurrentMode: 0
@@ -881,10 +881,10 @@ MonoBehaviour:
   endSmoothness: 0.85
   smoothnessFadeStart: 100
   smoothnessFadeDistance: 500
-  refractionColor: {r: 0, g: 0.45, b: 0.65, a: 1}
+  refractionColor: {r: 0.8851015, g: 0.9595237, b: 0.9622642, a: 1}
   maxRefractionDistance: 1
   absorptionDistance: 5
-  scatteringColor: {r: 0, g: 0.27, b: 0.23, a: 1}
+  scatteringColor: {r: 0.45710218, g: 0.87431943, b: 0.9056604, a: 1}
   ambientScattering: 0.1
   heightScattering: 0.1
   displacementScattering: 0.3
@@ -897,7 +897,7 @@ MonoBehaviour:
   causticsBand: 1
   virtualPlaneDistance: 5
   foam: 1
-  simulationFoamAmount: 0.3
+  simulationFoamAmount: 0.491
   simulationFoamDrag: 0
   simulationFoamSmoothness: 1
   foamMask: {fileID: 0}
