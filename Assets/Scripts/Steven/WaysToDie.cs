@@ -26,7 +26,9 @@ public class WaysToDie : MonoBehaviour
         //kills the player, allows for other objects to send a kill command
         print("killed by" + reason);
         //pause the game
+        Time.timeScale = 0;
         //enable relevant death screen
+
 
     }
 

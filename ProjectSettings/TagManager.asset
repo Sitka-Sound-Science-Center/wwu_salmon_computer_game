@@ -18,6 +18,8 @@ TagManager:
   - Predator
   - Spawner
   - Crusher
+  - Camera
+  - SpawnPoints
   - Terrain
   layers:
   - Default

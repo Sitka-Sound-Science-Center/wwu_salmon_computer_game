@@ -7,20 +7,17 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject menu;
 
-    public void Pause()
-    {
+    public void Pause() {
         UnityEngine.Time.timeScale = 0;
         menu.SetActive(true);
     }
 
-    public void Unpause()
-    {
+    public void Unpause() {
         UnityEngine.Time.timeScale = 1;
         menu.SetActive(false);
     }
 
-    public void InfoMenu()
-    {
+    public void InfoMenu() {
         Debug.Log("Opening info menu");
     }
 
@@ -28,6 +25,11 @@ public class PauseMenu : MonoBehaviour
         //added because death screens restarted paused
         UnityEngine.Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ReturnToMenu() {
+        UnityEngine.Time.timeScale = 1;
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void Exit() {
