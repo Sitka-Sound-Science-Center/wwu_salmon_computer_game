@@ -1,11 +1,10 @@
 using UnityEngine;
 
-[RequireComponent(typeof(string))]
+//[RequireComponent(typeof(string))]
 
 public class PhaseController : MonoBehaviour
 {
-    [SerializeField]
-    private string phaseCurrent;
+    public string phaseCurrent;
     [SerializeField]
     private GameObject PlayerCamera;
     //private GameObject CurrentPhase;

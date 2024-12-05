@@ -383,5 +383,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4624f5251bdb83419e8479b672a2932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reason: SlimySkulpin
+  reason: SlimySculpin
   ac: 20
