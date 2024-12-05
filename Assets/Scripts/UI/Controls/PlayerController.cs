@@ -1,31 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
-using Unity.VisualScripting.YamlDotNet.Core;
-//using TreeEditor;
-//using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     private Player playerInput;
-    //private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+
     [SerializeField]
     private float playerSpeed = 11f;
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = 0f;
+
     Vector3 scale;
     float smooth = 5.0f;
     float flip = 0;
     float lastflip = 0;
+
     private Rigidbody2D rb;
     private Vector3 move;
 
-    //hunger meter elements
+    // hunger meter elements
     public GameObject HungerMeter;
     private RectTransform rt;
     private float MaxFill = 550; // actual width of parent container
@@ -33,10 +28,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     GameObject DeathScreenParent;
+
     private void Awake()
     {
         playerInput = new Player();
-        //controller = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -65,7 +60,6 @@ public class PlayerController : MonoBehaviour
     private void HandleMove()
     {
         rb.AddForce(move, ForceMode2D.Impulse);
-        
     }
 
     void Update()
@@ -78,7 +72,6 @@ public class PlayerController : MonoBehaviour
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
         
         move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
-        
 
         float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
         //print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
@@ -90,7 +83,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             flip = 1;
- 
         }    
 
         Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
@@ -100,7 +92,6 @@ public class PlayerController : MonoBehaviour
         }
 
         lastflip = flip;
-
 
         transform.localScale = new Vector3(scale.x, scale.y * flip, scale.z);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
@@ -128,6 +119,7 @@ public class PlayerController : MonoBehaviour
             EatableObject FoodScript = other.GetComponent<EatableObject>();
             float curWidth = rt.rect.width;
             float ActualRestore = FoodScript.GetActualRestore();
+
             // Cap hunger at max length of parent container
             float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
@@ -143,7 +135,6 @@ public class PlayerController : MonoBehaviour
             float curWidth = rt.rect.width;
             float nextWidth = curWidth - ActualRestore;
             if (nextWidth <= 0) {
-                
                 string reason = other.gameObject.GetComponent<DeathReason>().reason; 
                 killPlayer(reason);
             }

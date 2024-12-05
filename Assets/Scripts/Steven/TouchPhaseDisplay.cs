@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +8,6 @@ public class TouchPhaseDisplay : MonoBehaviour
     private float timeTouchEnded;
     private float displayTime = 5.0f;
 
-
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.touchCount > 0)

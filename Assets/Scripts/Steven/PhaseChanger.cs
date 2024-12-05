@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(string))]
 [RequireComponent(typeof(GameObject))]
+
 public class PhaseChanger : MonoBehaviour
 {
     [SerializeField]
@@ -12,18 +11,6 @@ public class PhaseChanger : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private GameObject textBox;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,7 +22,6 @@ public class PhaseChanger : MonoBehaviour
             // update phase and disable trigger so you cant go back in time?
             //enable textbox
             textBox.SetActive(true);
-
         }
     }
 }

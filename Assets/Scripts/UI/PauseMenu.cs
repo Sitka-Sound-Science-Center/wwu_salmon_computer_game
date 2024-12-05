@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,7 +20,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Restart() {
-        //added because death screens restarted paused
         UnityEngine.Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -33,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Exit() {
+        // quit editor or exit application
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
