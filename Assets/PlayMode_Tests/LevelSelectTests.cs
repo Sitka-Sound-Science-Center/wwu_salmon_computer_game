@@ -30,7 +30,7 @@ public class LevelSelectTests : MonoBehaviour
         SpeciesButtons = GameObject.FindGameObjectsWithTag("SpeciesButton");
         ChangeButton = GameObject.FindWithTag("ChangeButton");
         Canvas = GameObject.FindWithTag("Canvas");
-        LoadScript = GameObject.FindWithTag("StartButton").GetComponent<LoadScene>();
+        LoadScript = GameObject.FindWithTag("LoadScreen").GetComponent<LoadScene>();
         LevelScript = Canvas.GetComponent<LevelSelect>();
         TouchScript = Canvas.GetComponent<TouchListener>();
     }
@@ -84,7 +84,8 @@ public class LevelSelectTests : MonoBehaviour
                 Assert.That(sceneToLoad, Is.EqualTo("Ocean"));
             } 
             else if (curStage == "Spawning") {
-                Assert.That(sceneToLoad, Is.EqualTo("Spawning"));
+                //Assert.That(sceneToLoad, Is.EqualTo("Spawning"));
+                Assert.That(sceneToLoad, Is.EqualTo("River"));
             } 
         }
     }

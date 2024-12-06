@@ -20,6 +20,7 @@ TagManager:
   - Crusher
   - Camera
   - SpawnPoints
+  - LoadScreen
   layers:
   - Default
   - TransparentFX
