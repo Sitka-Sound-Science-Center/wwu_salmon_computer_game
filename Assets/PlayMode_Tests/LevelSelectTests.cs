@@ -13,13 +13,13 @@ public class LevelSelectTests : MonoBehaviour
     public LoadScene LoadScript;
     public LevelSelect LevelScript;
     public TouchListener TouchScript;
+    public ManagePhase PhaseScript;
     public Animator animator;
     public GameObject ChangeButton;
     public GameObject Canvas;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
     public bool loaded=false;
-    private string ClipName;
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         loaded = true;
@@ -31,6 +31,7 @@ public class LevelSelectTests : MonoBehaviour
         ChangeButton = GameObject.FindWithTag("ChangeButton");
         Canvas = GameObject.FindWithTag("Canvas");
         LoadScript = GameObject.FindWithTag("LoadScreen").GetComponent<LoadScene>();
+        PhaseScript = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
         LevelScript = Canvas.GetComponent<LevelSelect>();
         TouchScript = Canvas.GetComponent<TouchListener>();
     }
@@ -44,7 +45,6 @@ public class LevelSelectTests : MonoBehaviour
         SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
     } 
 
-    // TODO MAKE TEARDOWN FOR THIS TEST SUITE?? //
 
     [UnityTest]
     public IEnumerator TestNextState() {
@@ -70,12 +70,11 @@ public class LevelSelectTests : MonoBehaviour
     }
 
     [UnityTest]
-    public IEnumerator TestLevelSelect() {
+    public IEnumerator TestSceneToLoad() {
         yield return new WaitWhile(() => loaded == false);
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             string curStage = fish.name;
-            // Start button doesnt have loadscene script attached fix this
             string sceneToLoad = LoadScript.sceneToLoad.ToString();
             if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
                 Assert.That(sceneToLoad, Is.EqualTo("River"));
@@ -84,7 +83,7 @@ public class LevelSelectTests : MonoBehaviour
                 Assert.That(sceneToLoad, Is.EqualTo("Ocean"));
             } 
             else if (curStage == "Spawning") {
-                //Assert.That(sceneToLoad, Is.EqualTo("Spawning"));
+                // TODO: Update this back to "Spawning" when the spawning branch gets merged
                 Assert.That(sceneToLoad, Is.EqualTo("River"));
             } 
         }
@@ -95,8 +94,19 @@ public class LevelSelectTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         ChangeButton.GetComponent<Button>().onClick.Invoke();
         GameObject SpeciesScreen = GameObject.FindWithTag("SpeciesScreen");
-        Assert.That((SpeciesScreen != null), Is.EqualTo(true));
+        Assert.That((SpeciesScreen != null), Is.True);
         SpeciesScreen.SetActive(false);
+    }
+
+    [UnityTest]
+    public IEnumerator TestBackButton() {
+        yield return new WaitWhile(() => loaded == false);
+        ChangeButton.GetComponent<Button>().onClick.Invoke();
+        GameObject BackButton = GameObject.FindWithTag("BackButton");
+        Assert.That(BackButton!=null, Is.True);
+        BackButton.GetComponent<Button>().onClick.Invoke();
+        GameObject SpeciesScreen = GameObject.FindWithTag("SpeciesScreen");
+        Assert.That(SpeciesScreen==null, Is.True);
     }
 
     [UnityTest]
@@ -115,5 +125,16 @@ public class LevelSelectTests : MonoBehaviour
             SpeciesScreen.SetActive(true);
         }
         SpeciesScreen.SetActive(false);
+    }
+
+    [UnityTest]
+    public IEnumerator TestStageUpdate() {
+        yield return new WaitWhile(() => loaded == false);
+        foreach (GameObject fish in FishButtons) {
+            fish.GetComponent<Button>().onClick.Invoke();
+            string curStage = fish.name;
+            string activeStage = PhaseScript.GetStage().ToString();
+            Assert.That(activeStage, Is.EqualTo(curStage));
+        }
     }
 }

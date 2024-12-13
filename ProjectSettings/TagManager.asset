@@ -21,6 +21,7 @@ TagManager:
   - Camera
   - SpawnPoints
   - LoadScreen
+  - BackButton
   layers:
   - Default
   - TransparentFX
