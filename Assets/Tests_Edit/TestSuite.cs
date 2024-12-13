@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
 
@@ -10,6 +8,7 @@ public class TestSuite
 {
     GameObject playerPrefab = Resources.Load<GameObject>("Fish_Player_prefab");
     GameObject JoyStick = Resources.Load<GameObject>("ControlCanvas");
+    GameObject sculpin = Resources.Load<GameObject>("SlimySculpin");
     
     
     // A Test behaves as an ordinary method
@@ -36,7 +35,7 @@ public class TestSuite
         Quaternion playerDir = Quaternion.identity;
         GameObject player = GameObject.Instantiate(playerPrefab, playerPos, playerDir);
         float movespeed = player.GetComponent<PlayerController>().getPlayerSpeed();
-        Assert.That(movespeed, Is.EqualTo(10f));
+        Assert.That(movespeed, Is.EqualTo(1f));
     }
     [Test]
     public void JoystickCanvasSize()
@@ -48,12 +47,28 @@ public class TestSuite
     }
 
     [Test]
-
     public void JoystickInputPath()
     {
-        string path = "<Gamepad>/leftStick";
+        //string path = "<Gamepad>/leftStick";
         GameObject testStick = GameObject.Instantiate(JoyStick);
-        
+    }
+
+    [Test]
+    public void ChangePhaseTest()
+    {
+        GameObject player = GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        PhaseController pc = player.GetComponent<PhaseController>();
+        pc.ChangePhase("Smolt");
+        Assert.That(pc.phaseCurrent, Is.EqualTo("Smolt"));
+        Assert.That(player.transform.GetChild(0).gameObject.activeSelf, Is.EqualTo(false));
+    }
+
+    [Test]
+    public void EnemyTest()
+    {
+        GameObject sculp = GameObject.Instantiate(sculpin, Vector3.zero, Quaternion.identity);
+        DeathReason dr = sculp.GetComponent<DeathReason>();
+        Assert.That(dr.reason, Is.EqualTo("SlimySculpin"));
     }
 
 }

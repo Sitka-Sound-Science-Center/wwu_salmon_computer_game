@@ -1,6 +1,4 @@
-
 using UnityEngine;
-
 
 [RequireComponent(typeof(RectTransform))]
 public class CameraYPan : MonoBehaviour
@@ -14,7 +12,6 @@ public class CameraYPan : MonoBehaviour
     private Vector3 camPos;
     private Quaternion camRot;
     
-    private bool firstEntry = true;
     private float xMin;
     private float xMax;
     private float yMin;
@@ -22,23 +19,24 @@ public class CameraYPan : MonoBehaviour
 
     float rectOffset;
     
-    // Start is called before the first frame update
     void Start()
     {
         rectOffset = GameObject.Find("CameraYPanner").GetComponent<RectTransform>().sizeDelta.y;
-        print(this.name + ":  " + rectOffset);
+        print(name + ":  " + rectOffset);
         camPos = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z);
 
-        float rectX = this.GetComponent<RectTransform>().rect.x + this.GetComponent<RectTransform>().position.x; //left edge of transform
-        float rectY = this.GetComponent<RectTransform>().rect.y + this.GetComponent<RectTransform>().position.y; //bottom edge of transform
-        Vector2 area = this.GetComponent<RectTransform>().sizeDelta;
+        //left edge of transform
+        float rectX = GetComponent<RectTransform>().rect.x + GetComponent<RectTransform>().position.x;
+        //bottom edge of transform
+        float rectY = GetComponent<RectTransform>().rect.y + GetComponent<RectTransform>().position.y;
+
+        Vector2 area = GetComponent<RectTransform>().sizeDelta;
         xMin = rectX;
         xMax = rectX + area.x;
         yMin = rectY;
         yMax = rectY + area.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if( cam.transform.position.x > xMin && cam.transform.position.x < xMax)
@@ -54,11 +52,5 @@ public class CameraYPan : MonoBehaviour
             }
             cam.transform.SetPositionAndRotation(camPos, camRot);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-  
-        
     }
 }

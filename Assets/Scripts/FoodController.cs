@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Android;
 
 public class FoodController : MonoBehaviour
 {
@@ -22,33 +19,33 @@ public class FoodController : MonoBehaviour
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
         float rectY = MoveableArea.rect.y + MoveableArea.position.y; //bottom edge of transform
         Vector2 area = MoveableArea.sizeDelta;
+
         xMin = rectX;
         xMax = rectX + area.x;
         yMin = rectY;
         yMax = rectY + area.y;
-        //FoodPrefab = Resources.Load<GameObject>("plankton");
     }
 
     // Update is called once per frame
     void Update() {
         if(FoodObjectCount < MaxFoodObjects && counter>=spawndelay) {
             FoodObjectCount++;
-            GameObject food = Instantiate(FoodPrefab, newPosition(), Quaternion.identity,this.transform);
+            GameObject food = Instantiate(FoodPrefab, NewPosition(), Quaternion.identity,this.transform);
             counter=0;
         }
-        countChildren();
+        CountChildren();
     }
 
     private void FixedUpdate() {
-        counter+=Time.deltaTime;
+        counter += Time.deltaTime;
     }
 
-    private Vector3 newPosition() {
+    private Vector3 NewPosition() {
         position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
         return position;
     }
 
-    private void countChildren() {
+    private void CountChildren() {
         FoodObjectCount = GetComponentsInChildren<Transform>().Length -1;
     }
 }

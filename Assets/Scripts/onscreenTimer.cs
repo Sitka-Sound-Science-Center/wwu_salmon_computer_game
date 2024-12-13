@@ -1,30 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //perhaps change this to a despawn trigger instead of a static timer?
-public class onscreenTimer : MonoBehaviour
+public class OnscreenTimer : MonoBehaviour
 {
-    [SerializeField]
-    float TimeOnScreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float timeOnScreen;
+
     void Awake()
     {
-        StartCoroutine(textboxDespawnDelay());
+        StartCoroutine(TextboxDespawnDelay());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator TextboxDespawnDelay()
     {
-        
-    }
-    private IEnumerator textboxDespawnDelay()
-    {
-        yield return new WaitForSecondsRealtime(TimeOnScreen);
+        yield return new WaitForSecondsRealtime(timeOnScreen);
         this.gameObject.SetActive(false);
     }
 }

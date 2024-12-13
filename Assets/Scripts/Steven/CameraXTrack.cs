@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class CameraXTrack : MonoBehaviour
 {
@@ -14,13 +11,7 @@ public class CameraXTrack : MonoBehaviour
     public float topBound;
     public float lowBound;
     public float leftBound;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+ 
     void Update()
     {
         float yPos = this.transform.position.y;
