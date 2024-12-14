@@ -22,6 +22,8 @@ TagManager:
   - SpawnPoints
   - LoadScreen
   - BackButton
+  - PredatorsParent
+  - DeathScreens
   layers:
   - Default
   - TransparentFX
