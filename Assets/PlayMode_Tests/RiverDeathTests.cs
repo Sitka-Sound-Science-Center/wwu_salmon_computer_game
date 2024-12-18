@@ -8,12 +8,15 @@ using UnityEngine.TestTools;
 using NUnit.Framework;
 
 [TestFixture]
-public class RiverDeathTests : MonoBehaviour
+public class RiverDeathTests : MonoBehaviour 
 {
+    // TODO rename this to be a player controller test suite
     public GameObject Player;
     public GameObject HungerMeter;
-    private RectTransform rt;
+    public GameObject FoodSpawner;
+    public RectTransform rt;
     public PlayerController PlayerScript;
+    public FoodController FoodScript;
     public bool loaded=false;
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -24,6 +27,9 @@ public class RiverDeathTests : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         PlayerScript = Player.GetComponent<PlayerController>();
         HungerMeter = GameObject.FindWithTag("HMeter");
+        FoodSpawner = GameObject.FindWithTag("Spawner"); // this should be the Plankton spawner 
+        FoodScript = FoodSpawner.GetComponent<FoodController>(); // so we can access the actual food 
+        FoodScript.MaxFoodObjects=1;
         rt = HungerMeter.GetComponent<RectTransform>();
     }
 
@@ -52,10 +58,15 @@ public class RiverDeathTests : MonoBehaviour
     [UnityTest]
     public IEnumerator TestFoodCollision() {
         yield return new WaitWhile(() => loaded == false);
-        // instantiate food object
-        // move player to food object
-        // collide
-        // check food object count
-        // check width of health bar
+        float curWidth = rt.rect.width;
+        Player.transform.position = FoodSpawner.transform.GetChild(0).position; // move player to food object
+        yield return new WaitForFixedUpdate();
+        Assert.That(FoodScript.FoodObjectCount, Is.EqualTo(0)); // check food object count
+        Assert.That(rt.rect.width, Is.GreaterThan(curWidth)); // check width of health bar
+        FoodScript.MaxFoodObjects=10; // reset changes made during test
     }
+
+    // TODO TEST FOR THE SECOND COLLISION METHOD FOR PREDATORS
+
+    // TODO MAKE TEST SUITE TEARDOWNS SO WE CAN USE "RUN ALL" IN THE TEST RUNNER WINDOW
 }
