@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class FoodController : MonoBehaviour
 {
-    [SerializeField]
-    private int MaxFoodObjects=10;
-    [SerializeField]
-    private float spawndelay;
+    public int MaxFoodObjects=10;
+    public float spawndelay;
     public GameObject FoodPrefab;
     public GameObject HungerMeter;
-    private float xMin, xMax, yMin, yMax;
-    private Vector3 position;
     public int FoodObjectCount=0;
     private float counter;
+    private float xMin, xMax, yMin, yMax;
+    private Vector3 position;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,7 +31,7 @@ public class FoodController : MonoBehaviour
             GameObject food = Instantiate(FoodPrefab, NewPosition(), Quaternion.identity,this.transform);
             counter=0;
         }
-        CountChildren();
+        CountChildren(); // what? isnt the foodobjectcount++ line doing this? 
     }
 
     private void FixedUpdate() {
