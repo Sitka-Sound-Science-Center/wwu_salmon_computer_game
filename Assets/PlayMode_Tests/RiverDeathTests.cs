@@ -10,6 +10,9 @@ using NUnit.Framework;
 [TestFixture]
 public class RiverDeathTests : MonoBehaviour
 {
+    public GameObject Player;
+    public GameObject HungerMeter;
+    private RectTransform rt;
     public PlayerController PlayerScript;
     public bool loaded=false;
 
@@ -18,7 +21,10 @@ public class RiverDeathTests : MonoBehaviour
     }
 
     void SetTestRefs(Scene scene, LoadSceneMode mode) {
-        PlayerScript = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        Player = GameObject.FindWithTag("Player");
+        PlayerScript = Player.GetComponent<PlayerController>();
+        HungerMeter = GameObject.FindWithTag("HMeter");
+        rt = HungerMeter.GetComponent<RectTransform>();
     }
 
     [OneTimeSetUp]
@@ -41,5 +47,15 @@ public class RiverDeathTests : MonoBehaviour
             Assert.That(sc.activeSelf, Is.True);
         }
         UnityEngine.Time.timeScale = 1;
+    }
+
+    [UnityTest]
+    public IEnumerator TestFoodCollision() {
+        yield return new WaitWhile(() => loaded == false);
+        // instantiate food object
+        // move player to food object
+        // collide
+        // check food object count
+        // check width of health bar
     }
 }
