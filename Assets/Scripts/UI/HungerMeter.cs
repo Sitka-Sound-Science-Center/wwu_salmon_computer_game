@@ -16,13 +16,13 @@ public class HungerMeter : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        float curWidth = rt.rect.width;
+        //float curWidth = rt.rect.width;
         timer+=Time.deltaTime;
-        if (curWidth>=0) { // no underflow on resources
-            float nextWidth = System.Math.Max(0,curWidth-(MaxFill*(Time.deltaTime/EmptyTime)));
+        //if (curWidth>=0) { // no underflow on resources
+        //    float nextWidth = System.Math.Max(0,curWidth-(MaxFill*(Time.deltaTime/EmptyTime)));
             // why cant it just be as simple as calling max() ???
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
-        }
+        //    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+        //}
         if (timer>=2.5F) {
             print("Current width: " + rt.rect.width);
             timer=0F;
