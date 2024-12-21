@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     public GameObject HungerMeter;
     private RectTransform rt;
     private float MaxFill = 550; // actual width of parent container
-    private float ActualRestore;
+    private float ActualDamage;
 
     [SerializeField]
     GameObject DeathScreenParent;
@@ -131,9 +131,10 @@ public class PlayerController : MonoBehaviour
     // Handle predator interactions: die and display death screen
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Predator")) {
-            ActualRestore = other.gameObject.GetComponent<DeathReason>().ac;
+            print("Enemy collision");
+            ActualDamage = other.gameObject.GetComponent<DeathReason>().ac;
             float curWidth = rt.rect.width;
-            float nextWidth = curWidth - ActualRestore;
+            float nextWidth = curWidth - ActualDamage;
             if (nextWidth <= 0) {
                 string reason = other.gameObject.GetComponent<DeathReason>().reason; 
                 killPlayer(reason);
