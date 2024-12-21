@@ -15283,7 +15283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reason: SalmonShark
-  ac: 0
+  ac: 150
 --- !u!61 &1457966991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22623,7 +22623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reason: BaldEagle
-  ac: 0
+  ac: 999
 --- !u!58 &2084937402
 CircleCollider2D:
   m_ObjectHideFlags: 0
