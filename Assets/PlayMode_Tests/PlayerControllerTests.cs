@@ -8,9 +8,8 @@ using UnityEngine.TestTools;
 using NUnit.Framework;
 
 [TestFixture]
-public class RiverDeathTests : MonoBehaviour 
+public class PlayerControllerTests : MonoBehaviour 
 {
-    // TODO rename this to be a player controller test suite
     public GameObject Player;
     public GameObject HungerMeter;
     public GameObject FoodSpawner;
