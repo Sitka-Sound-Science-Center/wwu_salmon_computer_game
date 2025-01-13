@@ -22,10 +22,14 @@ public class ManagePhase : MonoBehaviour
             Vector3 PlayerPos = sp.Spawn(curStage.ToString());
             Camera.transform.position = new Vector3(PlayerPos.x, PlayerPos.y, -10);
         }
+        if (scene.name == "Ocean")
+        {
+            curStage = Stage.Adult;
+        }
     }
 
     void Start() {
-        SceneManager.sceneLoaded+=OnSceneLoaded; 
+        SceneManager.sceneLoaded+=OnSceneLoaded;
     }
 
     public Stage GetStage() {
