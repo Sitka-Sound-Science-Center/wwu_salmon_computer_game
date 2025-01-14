@@ -47,11 +47,19 @@ public class LevelSelectTests : MonoBehaviour
 
 
     [UnityTest]
-    public IEnumerator TestNextState() {
+    public IEnumerator TestFishButtons() {
         yield return new WaitWhile(() => loaded == false);
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             Assert.That(LevelScript.active, Is.EqualTo(fish.GetComponent<FishButton>()));
+        }
+    }
+
+    [UnityTest]
+    public IEnumerator TestNextState() {
+        yield return new WaitWhile(() => loaded == false);
+        foreach (GameObject fish in FishButtons) {
+            fish.GetComponent<Button>().onClick.Invoke();
             int prev = TouchScript.HighlightState;
             TouchScript.GetNextAnimationState();
             Assert.That(TouchScript.HighlightState, Is.EqualTo((prev+1)%5));
@@ -137,4 +145,10 @@ public class LevelSelectTests : MonoBehaviour
             Assert.That(activeStage, Is.EqualTo(curStage));
         }
     }
+
+    //[OneTimeTearDown]
+    //public void TearDown() {
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //    SceneManager.sceneLoaded -= SetLevelSelectTestRefs;
+    //}
 }
