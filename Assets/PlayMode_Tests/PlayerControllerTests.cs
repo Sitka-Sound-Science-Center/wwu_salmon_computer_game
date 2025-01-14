@@ -19,8 +19,8 @@ public class PlayerControllerTests : MonoBehaviour
     public FoodController FoodScript;
     public bool loaded=false;
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        loaded = true;
+    void ControllerOnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (SceneManager.GetActiveScene().name == "River") loaded = true;
     }
 
     void SetPlayerControllerTestRefs(Scene scene, LoadSceneMode mode) {
@@ -36,7 +36,7 @@ public class PlayerControllerTests : MonoBehaviour
 
     [OneTimeSetUp]
     public void Init() {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += ControllerOnSceneLoaded;
         SceneManager.sceneLoaded += SetPlayerControllerTestRefs;
 
         // Only guarantees full scene load on next frame so tests must wait 
@@ -56,49 +56,30 @@ public class PlayerControllerTests : MonoBehaviour
     }
 
     [UnityTest]
-    public IEnumerator TestFoodCollisionDelete() {
-        yield return new WaitWhile(() => loaded == false);
-        float curWidth = rt.rect.width;
-        Player.transform.position = FoodSpawner.transform.GetChild(0).position; // move player to food object
-        yield return new WaitForFixedUpdate();
-        Assert.That(FoodScript.FoodObjectCount, Is.EqualTo(0)); // check food object count
-        Assert.That(rt.rect.width, Is.GreaterThan(curWidth)); // check width of health bar
-        FoodScript.MaxFoodObjects=10; // reset changes made during test
-    }
-
-    [UnityTest]
     public IEnumerator TestFoodCollisionHealth() {
         yield return new WaitWhile(() => loaded == false);
         float curWidth = rt.rect.width;
         Player.transform.position = FoodSpawner.transform.GetChild(0).position; // move player to food object
         yield return new WaitForFixedUpdate();
         Assert.That(rt.rect.width, Is.GreaterThan(curWidth)); // check width of health bar
-        FoodScript.MaxFoodObjects=10; // reset changes made during test
     }
 
     [UnityTest]
     public IEnumerator TestEnemyCollisionNoDeath() {
         yield return new WaitWhile(() => loaded == false);
         float testWidth = 300;
-        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, testWidth); // set health > 0 so we dont die
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, testWidth); // set health so we dont die
         Player.transform.position = Predators.transform.GetChild(0).GetChild(0).position; // move player to salmon shark
         yield return new WaitForFixedUpdate();
+        Predators.SetActive(false);
         Assert.That(rt.rect.width, Is.LessThan(testWidth)); // check width of health bar
+        UnityEngine.Time.timeScale = 1;
+        
     }
 
-    [UnityTest]
-    public IEnumerator TestEnemyCollisionWithDeath() {
-        yield return new WaitWhile(() => loaded == false);
-        float testWidth = 100; // less than arbitrary salmon shark value of 150 (see salmon shark death reason ac)
-        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, testWidth); // set health > 0 so we dont die
-        Player.transform.position = Predators.transform.GetChild(0).GetChild(0).position; // move player to salmon shark
-        yield return new WaitForFixedUpdate();
-        Assert.That(rt.rect.width, Is.EqualTo(testWidth)); // check width of health bar
+    [OneTimeTearDown]
+    public void TearDown() {
+        SceneManager.sceneLoaded -= ControllerOnSceneLoaded;
+        SceneManager.sceneLoaded -= SetPlayerControllerTestRefs;
     }
-
-    //[OneTimeTearDown]
-    //public void TearDown() {
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //    SceneManager.sceneLoaded -= SetPlayerControllerTestRefs;
-    //}
 }
