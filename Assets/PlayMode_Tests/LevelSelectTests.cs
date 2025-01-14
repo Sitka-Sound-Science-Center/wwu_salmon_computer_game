@@ -14,15 +14,14 @@ public class LevelSelectTests : MonoBehaviour
     public LevelSelect LevelScript;
     public TouchListener TouchScript;
     public ManagePhase PhaseScript;
-    public Animator animator;
     public GameObject ChangeButton;
     public GameObject Canvas;
     public GameObject[] FishButtons;
     public GameObject[] SpeciesButtons;
     public bool loaded=false;
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        loaded = true;
+    void MenuOnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (SceneManager.GetActiveScene().name == "LevelSelect") loaded = true;
     }
 
     void SetLevelSelectTestRefs(Scene scene, LoadSceneMode mode) {
@@ -38,7 +37,7 @@ public class LevelSelectTests : MonoBehaviour
 
     [OneTimeSetUp]
     public void Init() {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += MenuOnSceneLoaded;
         SceneManager.sceneLoaded += SetLevelSelectTestRefs;
 
         // Only guarantees full scene load on next frame so tests must wait 
@@ -144,11 +143,12 @@ public class LevelSelectTests : MonoBehaviour
             string activeStage = PhaseScript.GetStage().ToString();
             Assert.That(activeStage, Is.EqualTo(curStage));
         }
+        PhaseScript.SetStage(ManagePhase.Stage.Alevin); // reset
     }
 
-    //[OneTimeTearDown]
-    //public void TearDown() {
-    //    SceneManager.sceneLoaded -= OnSceneLoaded;
-    //    SceneManager.sceneLoaded -= SetLevelSelectTestRefs;
-    //}
+    [OneTimeTearDown]
+    public void TearDown() {
+        SceneManager.sceneLoaded -= MenuOnSceneLoaded;
+        SceneManager.sceneLoaded -= SetLevelSelectTestRefs;
+    }
 }
