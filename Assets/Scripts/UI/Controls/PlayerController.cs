@@ -131,7 +131,6 @@ public class PlayerController : MonoBehaviour
     // Handle predator interactions: die and display death screen
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Predator")) {
-            print("Enemy collision");
             ActualDamage = other.gameObject.GetComponent<DeathReason>().ac;
             float curWidth = rt.rect.width;
             float nextWidth = curWidth - ActualDamage;
