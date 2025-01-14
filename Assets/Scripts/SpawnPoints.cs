@@ -11,6 +11,7 @@ public class SpawnPoints : MonoBehaviour
     private string[] stages = {"Alevin", "Fry", "Smolt", "Adult", "Spawning"}; // change to use the Stage enum?
 
     public Vector3 Spawn(string stage) { // take Stage enum as param?
+        print(stage);
         int idx = System.Array.IndexOf(stages,stage); // mod player transform #childs eg adult prefab will only have one child
         GameObject active = Player.transform.GetChild(idx).gameObject;
         Vector3 PlayerPos, SpawnPos;
