@@ -15,21 +15,17 @@ public class ManagePhase : MonoBehaviour
         Spawning
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+    void PhaseOnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.name == "River") { // TODO extend this to work in all three scenes?
             sp = GameObject.FindWithTag("SpawnPoints").GetComponent<SpawnPoints>();
             Camera = GameObject.FindWithTag("Camera");
             Vector3 PlayerPos = sp.Spawn(curStage.ToString());
             Camera.transform.position = new Vector3(PlayerPos.x, PlayerPos.y, -10);
         }
-        if (scene.name == "Ocean")
-        {
-            curStage = Stage.Adult;
-        }
     }
 
     void Start() {
-        SceneManager.sceneLoaded+=OnSceneLoaded;
+        SceneManager.sceneLoaded+=PhaseOnSceneLoaded;
     }
 
     public Stage GetStage() {
