@@ -4492,14 +4492,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: 'Touch and drag the joystick in the lower left corner to move
+      value: 'Touch and drag the joystick in the corner to move
 
-        Tap
-        the button in the upper left corner to pause
+        Tap the
+        button in the upper left corner to pause
 
 
-        Make your way along
-        the river, and avoid obstacles!'
+        Survive ocean life by
+        avoiding predation and fishermen!'
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
