@@ -9,23 +9,29 @@ public class EnemyFOV : MonoBehaviour
     public LayerMask ObjectsMask;
     public LayerMask PlayerMask; // layer that only has player object on it
 
+    // Helper method to vectors and angles
     public Vector3 DirectionFromAngle(float angle) {
         return new Vector3(Mathf.Cos(angle),Mathf.Sin(angle),0); // should this be vec2 or have trig values swapped?
     }
 
+    // Check if player object is within the vision radius
     public bool IsPlayerInRadius() {
         Collider2D PlayerCollider = Physics2D.OverlapCircle(gameObject.transform.position, DetectionRadius, PlayerMask);
         return PlayerCollider == null;
     }
 
-    public bool IsPlayerVisible(Vector3 ToPlayer) {
+    // Check if player object is inside the vision cone and enemy has line of sight to player
+    public bool IsPlayerVisible() {
         if (!IsPlayerInRadius()) return false;
-        Collider2D[] ObjectsInViewRadius = Physics2D.OverlapCircleAll(gameObject.transform.position, DetectionRadius, ObjectsMask);
-        
-
-        // ignore occlusion -- check if ray hits something else before player
-        // if vector to player is facing away from vision cone return false
-        // if vector to player is outside of vision cone return false
-        // otherwise return true 
+        GameObject Player = GameObject.FindWithTag("Player");
+        Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
+        DirectionToPlayer.Normalize();
+        // Check if player object is inside of the enemy's vision cone
+        float AngleToPlayer = Vector3.Angle(gameObject.transform.position.forward, DirectionToPlayer);
+        AngleToPlayer *= Mathf.Deg2Rad;
+        if (AngleToPlayer > ViewAngle/2) return false;
+        // Do a ray cast to check if player is occluded by something ? 
+        print("Player in cone");
+        return true;
     }
 }
