@@ -6,16 +6,15 @@ public class PredatorMovement : MonoBehaviour
     int frequency;
     [SerializeField]
     float speed;
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
-    Vector3 position;
+    float xMin, xMax, yMin, yMax;
     int counter;
+    Vector3 position;
     Vector3 scaleFactor;
+    EnemyFOV VisionScript = null;
 
     void Start()
     {
+        VisionScript = gameObject.GetComponent<EnemyFOV>();
         counter = frequency;
         RectTransform MoveableArea = GetComponentInParent<RectTransform>();
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
@@ -30,6 +29,8 @@ public class PredatorMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        bool playerVision = VisionScript.IsPlayerVisible();
+        //print(playerVision);
         counter++;
         if (counter > frequency)
         {
