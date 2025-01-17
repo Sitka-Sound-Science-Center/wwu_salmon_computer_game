@@ -451,6 +451,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
+--- !u!1 &86102413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029886926602422979, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+  m_PrefabInstance: {fileID: 874108675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &107047310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,7 +3284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 210.2664
+      value: 209.47
       objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3320,7 +3325,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2029886926602422979, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213953632}
   m_SourcePrefab: {fileID: 100100000, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
 --- !u!224 &885545878 stripped
 RectTransform:
@@ -4091,6 +4099,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
   m_PrefabInstance: {fileID: 874108675}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1213953632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86102413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectionRadius: 150
+  ViewAngle: 90
+  ObjectsMask:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &1255359058
 GameObject:
   m_ObjectHideFlags: 0
