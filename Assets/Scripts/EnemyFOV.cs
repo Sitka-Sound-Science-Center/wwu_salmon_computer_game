@@ -10,8 +10,12 @@ public class EnemyFOV : MonoBehaviour
     public LayerMask PlayerMask; // layer that only has player object on it
 
     // Helper method to vectors and angles
-    public Vector3 DirectionFromAngle(float angle) {
-        return new Vector3(Mathf.Cos(angle),Mathf.Sin(angle),0); // should this be vec2 or have trig values swapped?
+    public Vector3 DirectionFromAngle(float angleInDegrees) {
+        float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1;
+        angleInDegrees *= Mathf.Deg2Rad;
+        Vector3 direction = new Vector3(Mathf.Cos(angleInDegrees),Mathf.Sin(angleInDegrees),0);
+        direction = Vector3.Normalize(direction);
+        return direction * orientation;
     }
 
     // Check if player object is within the vision radius
