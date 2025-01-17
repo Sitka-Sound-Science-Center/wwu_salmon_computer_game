@@ -24,7 +24,7 @@ public class HungerMeter : MonoBehaviour
         //    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
         //}
         if (timer>=2.5F) {
-            print("Current width: " + rt.rect.width);
+            // print("Current width: " + rt.rect.width);
             timer=0F;
         }
     }
