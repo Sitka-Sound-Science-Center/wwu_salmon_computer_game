@@ -1,42 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
-//using TreeEditor;
-//using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     private Player playerInput;
-    //private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+
     [SerializeField]
     private float playerSpeed = 11f;
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = 0f;
+
     Vector3 scale;
     float smooth = 5.0f;
     float flip = 0;
     float lastflip = 0;
+
     private Rigidbody2D rb;
     private Vector3 move;
-    private float xrot;
 
-    //hunger meter elements
+    // hunger meter elements
     public GameObject HungerMeter;
     private RectTransform rt;
     private float MaxFill = 550; // actual width of parent container
-    private float ActualRestore;
+    private float ActualDamage;
 
     [SerializeField]
     GameObject DeathScreenParent;
 
+
     private void Awake()
     {
         playerInput = new Player();
-        //controller = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -52,7 +48,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        xrot = transform.rotation.x;
        scale = transform.localScale;
        HungerMeter = GameObject.FindWithTag("HMeter");
        rt = HungerMeter.GetComponent<RectTransform>();
@@ -66,7 +61,6 @@ public class PlayerController : MonoBehaviour
     private void HandleMove()
     {
         rb.AddForce(move, ForceMode2D.Impulse);
-        
     }
 
     void Update()
@@ -77,9 +71,8 @@ public class PlayerController : MonoBehaviour
         //    playerVelocity.y = 0f;
        /// /}
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        move = new Vector3(movementInput.x * playerSpeed, movementInput.y * playerSpeed, 0f);
-
         
+        move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
 
         float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
         //print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
@@ -91,17 +84,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             flip = 1;
- 
         }    
 
-        Quaternion rotation = Quaternion.Euler(xrot, 0, tiltAroundZ - 180 + (flip * 180));
+        Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
         if (lastflip != flip)
         {
             transform.rotation = rotation;
         }
 
         lastflip = flip;
-
 
         transform.localScale = new Vector3(scale.x, scale.y * flip, scale.z);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
@@ -129,6 +120,7 @@ public class PlayerController : MonoBehaviour
             EatableObject FoodScript = other.GetComponent<EatableObject>();
             float curWidth = rt.rect.width;
             float ActualRestore = FoodScript.GetActualRestore();
+
             // Cap hunger at max length of parent container
             float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
@@ -140,11 +132,10 @@ public class PlayerController : MonoBehaviour
     // Handle predator interactions: die and display death screen
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Predator")) {
-            ActualRestore = other.gameObject.GetComponent<DeathReason>().ac;
+            ActualDamage = other.gameObject.GetComponent<DeathReason>().ac;
             float curWidth = rt.rect.width;
-            float nextWidth = curWidth - ActualRestore;
+            float nextWidth = curWidth - ActualDamage;
             if (nextWidth <= 0) {
-                
                 string reason = other.gameObject.GetComponent<DeathReason>().reason; 
                 killPlayer(reason);
             }
