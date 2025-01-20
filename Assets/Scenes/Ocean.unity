@@ -4112,7 +4112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectionRadius: 150
-  ViewAngle: 90
+  ViewAngle: 60
   ObjectsMask:
     serializedVersion: 2
     m_Bits: 0
