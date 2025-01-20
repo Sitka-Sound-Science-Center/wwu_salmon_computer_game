@@ -4,16 +4,25 @@ using UnityEngine;
 //perhaps change this to a despawn trigger instead of a static timer?
 public class OnscreenTimer : MonoBehaviour
 {
+    public bool shown;
     public float timeOnScreen;
 
-    void Start()
+    private void OnEnable()
     {
-        StartCoroutine(TextboxDespawnDelay());
+        if (!shown)
+        {
+            StartCoroutine(TextboxDespawnDelay());
+        } else
+        {
+            gameObject.SetActive(false);
+        }
+
     }
 
     private IEnumerator TextboxDespawnDelay()
     {
         yield return new WaitForSecondsRealtime(timeOnScreen);
-        this.gameObject.SetActive(false);
+        shown = true;
+        gameObject.SetActive(false);
     }
 }
