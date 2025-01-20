@@ -27,12 +27,14 @@ public class EnemyFOV : MonoBehaviour
     // Check if player object is inside the vision cone and enemy has line of sight to player
     public bool IsPlayerVisible() {
         if (!IsPlayerInRadius()) return false;
-        print("Player entered radius: " + gameObject.name);
+        //print("Player entered radius: " + gameObject.name);
         GameObject Player = GameObject.FindWithTag("Player");
         Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
+        Vector3 EnemyLookDirection = (gameObject.transform.localScale.x < 0) ? Vector3.left : Vector3.right;
         DirectionToPlayer.Normalize();
         // Check if player object is inside of the enemy's vision cone
-        float AngleToPlayer = Vector3.Angle(gameObject.transform.forward, DirectionToPlayer);   
+        float AngleToPlayer = Vector3.Angle(EnemyLookDirection, DirectionToPlayer);   
+        print(AngleToPlayer);
         if (AngleToPlayer > ViewAngle/2) return false;
         // Do a ray cast to check if player is occluded by something ? 
         print("Player in cone");
