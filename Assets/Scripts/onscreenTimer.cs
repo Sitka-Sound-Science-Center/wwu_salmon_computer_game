@@ -6,7 +6,7 @@ public class OnscreenTimer : MonoBehaviour
 {
     public float timeOnScreen;
 
-    void Awake()
+    void Start()
     {
         StartCoroutine(TextboxDespawnDelay());
     }
