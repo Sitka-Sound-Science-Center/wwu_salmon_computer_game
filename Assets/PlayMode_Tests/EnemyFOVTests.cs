@@ -34,7 +34,6 @@ public class EnemyFOVTests : MonoBehaviour
         SceneManager.LoadScene("Ocean", LoadSceneMode.Single);
     } 
 
-
     [UnityTest]
     public IEnumerator TestInDetectionRadius() {
         yield return new WaitWhile(() => loaded == false);
@@ -49,6 +48,33 @@ public class EnemyFOVTests : MonoBehaviour
         Player.transform.position = new Vector3(0,0,0);
         OrcaWhale.transform.position = new Vector3(200,0,0);
         Assert.That(FOVScript.IsPlayerInRadius(), Is.False);
+    }
+
+    [UnityTest]
+    public IEnumerator TestNotInDetectionConeTop() {
+        // Position of player for test depends on enemy detection angle
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(0,100,0);
+        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Assert.That(FOVScript.IsPlayerVisible(), Is.False);
+    }
+
+    [UnityTest]
+    public IEnumerator TestNotInDetectionConeBottom() {
+        // Position of player for test depends on enemy detection angle
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(0,-100,0);
+        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Assert.That(FOVScript.IsPlayerVisible(), Is.False);
+    }
+
+    [UnityTest]
+    public IEnumerator TestInDetectionCone() {
+        // Position of player for test depends on enemy detection angle
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(0,0,0);
+        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Assert.That(FOVScript.IsPlayerVisible(), Is.True);
     }
 
     [OneTimeTearDown]
