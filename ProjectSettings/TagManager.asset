@@ -20,14 +20,11 @@ TagManager:
   - Crusher
   - Camera
   - SpawnPoints
-<<<<<<< HEAD
-  - Terrain
-=======
   - LoadScreen
   - BackButton
   - PredatorsParent
   - DeathScreens
->>>>>>> ee9d0026abf4b84e368dd1073fff51c71b3bb709
+  - Terrain
   layers:
   - Default
   - TransparentFX
