@@ -21,20 +21,15 @@ public class EnemyFOV : MonoBehaviour
     // Check if player object is within the vision radius
     public bool IsPlayerInRadius() {
         Collider2D PlayerCollider = Physics2D.OverlapCircle(gameObject.transform.position, DetectionRadius, PlayerMask);
-        return PlayerCollider != null;
+        return PlayerCollider!=null;
     }
 
     // Check if player object is inside the vision cone and enemy has line of sight to player
     public bool IsPlayerVisible() {
-        print(gameObject.name);
-        if (!IsPlayerInRadius()) {
-            print("Player not in radius");
-            return false;
-        } 
+        if (!IsPlayerInRadius()) return false;
         print("Player entered radius: " + gameObject.name);
         GameObject Player = GameObject.FindWithTag("Player");
         Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
-        print("Distance to player: " + DirectionToPlayer.magnitude + "(" + gameObject.name + ")");
         DirectionToPlayer.Normalize();
         // Check if player object is inside of the enemy's vision cone
         float AngleToPlayer = Vector3.Angle(gameObject.transform.forward, DirectionToPlayer);   
