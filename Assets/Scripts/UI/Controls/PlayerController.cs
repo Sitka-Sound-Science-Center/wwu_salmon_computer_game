@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject DeathScreenParent;
 
-
     private void Awake()
     {
         playerInput = new Player();

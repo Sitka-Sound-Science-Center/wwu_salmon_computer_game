@@ -33,7 +33,6 @@ public class LevelSelect : MonoBehaviour
     }
 
     public string ChooseSelectedStage(string curStage) {
-        // modify all of this to use Stage enum?
         if (curStage == "Alevin") mp.SetStage(ManagePhase.Stage.Alevin); 
         else if (curStage == "Fry") mp.SetStage(ManagePhase.Stage.Fry);
         else if (curStage == "Smolt") mp.SetStage(ManagePhase.Stage.Smolt);
@@ -48,11 +47,9 @@ public class LevelSelect : MonoBehaviour
         } 
         else if (curStage == "Adult") {
             loadScene.sceneToLoad = LoadScene.Level.Ocean;
-            //loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         else if (curStage == "Spawning") {
-            loadScene.sceneToLoad = LoadScene.Level.Spawning;
-            //loadScene.sceneToLoad = LoadScene.Level.River;
+            loadScene.sceneToLoad = LoadScene.Level.River;
         } 
         return loadScene.sceneToLoad.ToString();
     }

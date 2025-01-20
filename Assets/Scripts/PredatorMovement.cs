@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PredatorMovement : MonoBehaviour
@@ -15,7 +13,7 @@ public class PredatorMovement : MonoBehaviour
     Vector3 position;
     int counter;
     Vector3 scaleFactor;
-    // Start is called before the first frame update
+
     void Start()
     {
         counter = frequency;
@@ -30,31 +28,30 @@ public class PredatorMovement : MonoBehaviour
         scaleFactor = transform.localScale;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         counter++;
         if (counter > frequency)
         {
             //pick a random spot in the rect transform
-            position = newPosition();
-            setSpriteOrientation(position);
+            position = NewPosition();
+            SetSpriteOrientation(position);
 
             counter = 0;
         }
 
         transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * speed);
         //this is moving too fast on long distances
-        //not actauly linear speed... 
+        //not actually linear speed... 
     }
 
-    private Vector3 newPosition()
+    private Vector3 NewPosition()
     {
         position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0f);
         return position;
     }
 
-    private void setSpriteOrientation(Vector3 position)
+    private void SetSpriteOrientation(Vector3 position)
     {
         if (position.x < transform.position.x)
         {

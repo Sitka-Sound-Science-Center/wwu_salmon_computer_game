@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +15,7 @@ public class ManagePhase : MonoBehaviour
         Spawning
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+    void PhaseOnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.name == "River") { // TODO extend this to work in all three scenes?
             sp = GameObject.FindWithTag("SpawnPoints").GetComponent<SpawnPoints>();
             Camera = GameObject.FindWithTag("Camera");
@@ -27,7 +25,7 @@ public class ManagePhase : MonoBehaviour
     }
 
     void Start() {
-        SceneManager.sceneLoaded+=OnSceneLoaded; 
+        SceneManager.sceneLoaded+=PhaseOnSceneLoaded;
     }
 
     public Stage GetStage() {
