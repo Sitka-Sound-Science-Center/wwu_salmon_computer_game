@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6147787801489157162}
   - component: {fileID: 5861531575331547191}
   - component: {fileID: 2662385038172951902}
+  - component: {fileID: 6682118684856895871}
   m_Layer: 10
   m_Name: Seal
   m_TagString: Predator
@@ -234,3 +235,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 200
   speed: 0.1
+--- !u!114 &6682118684856895871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884110306819388496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectionRadius: 10
+  ViewAngle: 90
+  ObjectsMask:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 2048

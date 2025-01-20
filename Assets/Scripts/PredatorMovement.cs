@@ -6,16 +6,15 @@ public class PredatorMovement : MonoBehaviour
     int frequency;
     [SerializeField]
     float speed;
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
-    Vector3 position;
+    float xMin, xMax, yMin, yMax;
     int counter;
+    Vector3 position;
     Vector3 scaleFactor;
+    EnemyFOV VisionScript;
 
     void Start()
     {
+        VisionScript = gameObject.GetComponent<EnemyFOV>();
         counter = frequency;
         RectTransform MoveableArea = GetComponentInParent<RectTransform>();
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
@@ -28,26 +27,27 @@ public class PredatorMovement : MonoBehaviour
         scaleFactor = transform.localScale;
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
+        if (VisionScript != null) {
+            bool playerVision = VisionScript.IsPlayerVisible();
+        }
         counter++;
-        if (counter > frequency)
-        {
+        if (counter > frequency) {
             //pick a random spot in the rect transform
             position = NewPosition();
             SetSpriteOrientation(position);
-
             counter = 0;
         }
-
-        transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * speed);
+        Vector3 NextPosition = Vector3.Lerp(transform.position, position, Time.deltaTime * speed);
+        // Lerp for some reason is very slowly decreasing the z coordinate when objects need to be on the same plane
+        gameObject.transform.position = new Vector3(NextPosition.x, NextPosition.y, 0); 
         //this is moving too fast on long distances
         //not actually linear speed... 
     }
 
     private Vector3 NewPosition()
     {
-        position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0f);
+        position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0);
         return position;
     }
 
