@@ -10,7 +10,7 @@ public class PredatorMovement : MonoBehaviour
     int counter;
     Vector3 position;
     Vector3 scaleFactor;
-    EnemyFOV VisionScript = null;
+    EnemyFOV VisionScript;
 
     void Start()
     {
@@ -27,28 +27,27 @@ public class PredatorMovement : MonoBehaviour
         scaleFactor = transform.localScale;
     }
 
-    void FixedUpdate()
-    {
-        bool playerVision = VisionScript.IsPlayerVisible();
-        //print(playerVision);
+    void FixedUpdate() {
+        if (VisionScript != null) {
+            bool playerVision = VisionScript.IsPlayerVisible();
+        }
         counter++;
-        if (counter > frequency)
-        {
+        if (counter > frequency) {
             //pick a random spot in the rect transform
             position = NewPosition();
             SetSpriteOrientation(position);
-
             counter = 0;
         }
-
-        transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * speed);
+        Vector3 NextPosition = Vector3.Lerp(transform.position, position, Time.deltaTime * speed);
+        // Lerp for some reason is very slowly decreasing the z coordinate when objects need to be on the same plane
+        gameObject.transform.position = new Vector3(NextPosition.x, NextPosition.y, 0); 
         //this is moving too fast on long distances
         //not actually linear speed... 
     }
 
     private Vector3 NewPosition()
     {
-        position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0f);
+        position = new Vector3(Random.Range(xMin, xMax), this.transform.position.y, 0);
         return position;
     }
 
