@@ -3281,6 +3281,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcaWhale
       objectReference: {fileID: 0}
+    - target: {fileID: 3839784994744983620, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839784994744983620, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+      propertyPath: frequency
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.x
       value: 209.47
@@ -4110,8 +4118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionRadius: 150
-  ViewAngle: 60
+  DetectionRadius: 180
+  ViewAngle: 45
   ObjectsMask:
     serializedVersion: 2
     m_Bits: 0
