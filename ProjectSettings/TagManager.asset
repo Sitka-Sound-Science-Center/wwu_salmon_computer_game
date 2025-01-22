@@ -24,6 +24,7 @@ TagManager:
   - BackButton
   - PredatorsParent
   - DeathScreens
+  - Terrain
   layers:
   - Default
   - TransparentFX

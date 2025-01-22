@@ -49,7 +49,7 @@ public class LevelSelect : MonoBehaviour
             loadScene.sceneToLoad = LoadScene.Level.Ocean;
         } 
         else if (curStage == "Spawning") {
-            loadScene.sceneToLoad = LoadScene.Level.River;
+            loadScene.sceneToLoad = LoadScene.Level.Spawning;
         } 
         return loadScene.sceneToLoad.ToString();
     }
