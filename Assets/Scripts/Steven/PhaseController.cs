@@ -16,14 +16,17 @@ public class PhaseController : MonoBehaviour
         {
             case "Alevin":
                 print("why are you changing to alevin...?");
+                PlayerCamera.GetComponent<Camera>().orthographicSize = 35;
                 break;
             case "Fry":
                 print("Changing to Fry");
                 SetPhase("Fry");
-                PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
+                //PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
+                PlayerCamera.GetComponent<Camera>().orthographicSize = 50;
                 break;
             case "Smolt":
                 SetPhase("Smolt");
+                PlayerCamera.GetComponent<Camera>().orthographicSize = 70;
                 break;
             default:
                 print("something went wrong in phase changer");
