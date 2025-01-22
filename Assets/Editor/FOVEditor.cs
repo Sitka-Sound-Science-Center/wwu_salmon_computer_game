@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+#if UNITY_EDITOR
 
 [CustomEditor(typeof (EnemyFOV))]
 public class FOVEditor : Editor
@@ -18,3 +19,5 @@ public class FOVEditor : Editor
         Handles.DrawLine(fov.transform.position, Top, 2F);
     }
 }
+
+#endif
