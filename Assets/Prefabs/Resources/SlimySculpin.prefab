@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7634516845495172035}
   - component: {fileID: 8210992189318127669}
   - component: {fileID: 4948480282187963714}
+  - component: {fileID: -3174113218583976578}
   m_Layer: 10
   m_Name: SlimySculpin
   m_TagString: Predator
@@ -385,3 +386,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reason: SlimySculpin
   ac: 20
+--- !u!114 &-3174113218583976578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307876715117581251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DetectionRadius: 0
+  ViewAngle: 0
+  ObjectsMask:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerMask:
+    serializedVersion: 2
+    m_Bits: 0
