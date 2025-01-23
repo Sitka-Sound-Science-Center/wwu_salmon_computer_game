@@ -91,7 +91,7 @@ public class LevelSelectTests : MonoBehaviour
             } 
             else if (curStage == "Spawning") {
                 // TODO: Update this back to "Spawning" when the spawning branch gets merged
-                Assert.That(sceneToLoad, Is.EqualTo("River"));
+                Assert.That(sceneToLoad, Is.EqualTo("Spawning"));
             } 
         }
     }

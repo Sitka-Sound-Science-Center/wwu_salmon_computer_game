@@ -35,6 +35,24 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""processors"": ""StickDeadzone"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SwimUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""ad4fd401-eee2-4fc1-86cc-accdfa4692d2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""cfa9d62e-646f-4545-b245-bffa5c4d5c7f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -103,6 +121,28 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a5460fc-f07f-4db2-a9c7-af989f3d7a8f"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwimUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""686e56b0-d324-459c-8749-bd65d7f51e33"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -112,6 +152,8 @@ public partial class @Player: IInputActionCollection2, IDisposable
         // PlayerMain
         m_PlayerMain = asset.FindActionMap("PlayerMain", throwIfNotFound: true);
         m_PlayerMain_Move = m_PlayerMain.FindAction("Move", throwIfNotFound: true);
+        m_PlayerMain_SwimUp = m_PlayerMain.FindAction("SwimUp", throwIfNotFound: true);
+        m_PlayerMain_Jump = m_PlayerMain.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,11 +216,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerMain;
     private List<IPlayerMainActions> m_PlayerMainActionsCallbackInterfaces = new List<IPlayerMainActions>();
     private readonly InputAction m_PlayerMain_Move;
+    private readonly InputAction m_PlayerMain_SwimUp;
+    private readonly InputAction m_PlayerMain_Jump;
     public struct PlayerMainActions
     {
         private @Player m_Wrapper;
         public PlayerMainActions(@Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_PlayerMain_Move;
+        public InputAction @SwimUp => m_Wrapper.m_PlayerMain_SwimUp;
+        public InputAction @Jump => m_Wrapper.m_PlayerMain_Jump;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMain; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -191,6 +237,12 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @SwimUp.started += instance.OnSwimUp;
+            @SwimUp.performed += instance.OnSwimUp;
+            @SwimUp.canceled += instance.OnSwimUp;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(IPlayerMainActions instance)
@@ -198,6 +250,12 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @SwimUp.started -= instance.OnSwimUp;
+            @SwimUp.performed -= instance.OnSwimUp;
+            @SwimUp.canceled -= instance.OnSwimUp;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(IPlayerMainActions instance)
@@ -218,5 +276,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
     public interface IPlayerMainActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnSwimUp(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
