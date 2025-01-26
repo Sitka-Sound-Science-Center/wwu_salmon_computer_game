@@ -140,10 +140,10 @@ public class LevelSelectTests : MonoBehaviour
         foreach (GameObject fish in FishButtons) {
             fish.GetComponent<Button>().onClick.Invoke();
             string curStage = fish.name;
-            string activeStage = PhaseScript.GetStage().ToString();
+            string activeStage = ManagePhase.GetPhase().ToString();
             Assert.That(activeStage, Is.EqualTo(curStage));
         }
-        PhaseScript.SetStage(ManagePhase.Stage.Alevin); // reset
+        ManagePhase.SetPhase(ManagePhase.Phase.Alevin); // reset
     }
 
     [OneTimeTearDown]

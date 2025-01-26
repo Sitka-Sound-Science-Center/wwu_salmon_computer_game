@@ -6,12 +6,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject menu;
 
     public void Pause() {
-        UnityEngine.Time.timeScale = 0;
+        Time.timeScale = 0;
         menu.SetActive(true);
     }
 
     public void Unpause() {
-        UnityEngine.Time.timeScale = 1;
+        Time.timeScale = 1;
         menu.SetActive(false);
     }
 
@@ -20,12 +20,17 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Restart() {
-        UnityEngine.Time.timeScale = 1;
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void NextLevel()
+    {
+        ManagePhase.NextLevel();
+    }
+
     public void ReturnToMenu() {
-        UnityEngine.Time.timeScale = 1;
+        Time.timeScale = 1;
         SceneManager.LoadScene("LevelSelect");
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FishButton : MonoBehaviour
 {
-    public string Fishname;
+    public ManagePhase.Phase phase;
     public GameObject icon;
     public GameObject infoScreen;
     public GameObject highlight;

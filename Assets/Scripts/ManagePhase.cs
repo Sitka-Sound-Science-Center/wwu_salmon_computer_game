@@ -1,13 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ManagePhase : MonoBehaviour
+public class ManagePhase : ScriptableObject
 {
-    private static Stage curStage = Stage.Alevin;
-    private SpawnPoints sp;
-    private GameObject Camera;
+    public static Phase currentPhase;
 
-    public enum Stage {
+    public enum Phase {
         Alevin,
         Fry,
         Smolt,
@@ -15,42 +13,30 @@ public class ManagePhase : MonoBehaviour
         Spawning
     }
 
-    void PhaseOnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (scene.name == "River") { // TODO extend this to work in all three scenes?
-            sp = GameObject.FindWithTag("SpawnPoints").GetComponent<SpawnPoints>();
-            Camera = GameObject.FindWithTag("Camera");
-            Vector3 PlayerPos = sp.Spawn(curStage.ToString());
-            Camera.transform.position = new Vector3(PlayerPos.x, PlayerPos.y, -10);
-        }
+    public static Phase GetPhase() {
+        return currentPhase;
     }
 
-    void Start() {
-        SceneManager.sceneLoaded+=PhaseOnSceneLoaded;
+    public static void SetPhase(Phase nxt) {
+        currentPhase = nxt;
+        Debug.Log("Phase is now " + nxt.ToString());
     }
 
-    public Stage GetStage() {
-        return curStage;
-    }
-
-    public void SetStage(Stage nxt) {
-        curStage = nxt;
-    }
-
-    public void NextLevel() {
-        if (curStage == Stage.Alevin || curStage == Stage.Fry) {
-            curStage = (curStage==Stage.Alevin) ? Stage.Fry : Stage.Smolt;
+    public static void NextLevel() {
+        if (currentPhase == Phase.Alevin || currentPhase == Phase.Fry) {
+            currentPhase = (currentPhase == Phase.Alevin) ? Phase.Fry : Phase.Smolt;
             SceneManager.LoadScene("River");
         }
-        else if (curStage == Stage.Smolt){
-            curStage = Stage.Adult;
+        else if (currentPhase == Phase.Smolt){
+            currentPhase = Phase.Adult;
             SceneManager.LoadScene("Ocean");
         } 
-        else if (curStage == Stage.Adult) {
-            curStage = Stage.Spawning;
+        else if (currentPhase == Phase.Adult) {
+            currentPhase = Phase.Spawning;
             SceneManager.LoadScene("Spawning"); 
         }
         else {
-            curStage = Stage.Alevin;
+            currentPhase = Phase.Alevin;
             SceneManager.LoadScene("River");
         }
         UnityEngine.Time.timeScale = 1;

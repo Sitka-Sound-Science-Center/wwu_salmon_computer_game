@@ -7697,7 +7697,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289764894}
-  - component: {fileID: 289764895}
   m_Layer: 0
   m_Name: PhaseTriggers
   m_TagString: Untagged
@@ -7724,18 +7723,6 @@ Transform:
   - {fileID: 257373807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &289764895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289764893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4e544f240f6483d8f0783d6b3b4717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &302940756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10868,7 +10855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a93e287d3e67f4187d4d5624ecaf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseName: Fry
+  phase: 1
   player: {fileID: 2045549228}
   textBox: {fileID: 1444149291}
 --- !u!61 &478344740
@@ -11458,6 +11445,7 @@ GameObject:
   - component: {fileID: 527969055}
   - component: {fileID: 527969056}
   - component: {fileID: 527969058}
+  - component: {fileID: 527969059}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Camera
@@ -11561,6 +11549,50 @@ MonoBehaviour:
   lowBound: -35
   leftBound: 0
   rightBound: 1856
+--- !u!114 &527969059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527969054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &530711076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20574,7 +20606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a93e287d3e67f4187d4d5624ecaf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseName: Smolt
+  phase: 2
   player: {fileID: 2045549228}
   textBox: {fileID: 169780952}
 --- !u!61 &839168840
@@ -36864,6 +36896,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3011752693106052073, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 2089453871}
     - target: {fileID: -3011752693106052073, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: PlayerCamera
       value: 

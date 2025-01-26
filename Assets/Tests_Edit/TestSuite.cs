@@ -58,8 +58,8 @@ public class TestSuite
     {
         GameObject player = GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
         PhaseController pc = player.GetComponent<PhaseController>();
-        pc.ChangePhase("Smolt");
-        Assert.That(pc.phaseCurrent, Is.EqualTo("Smolt"));
+        pc.ChangePhase(ManagePhase.Phase.Smolt);
+        Assert.That(ManagePhase.currentPhase.ToString(), Is.EqualTo("Smolt"));
         Assert.That(player.transform.GetChild(0).gameObject.activeSelf, Is.EqualTo(false));
     }
 

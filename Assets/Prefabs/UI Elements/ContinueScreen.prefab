@@ -196,8 +196,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5953123837605528477}
-        m_TargetAssemblyTypeName: ManagePhase, GameAssembly
+      - m_Target: {fileID: 6734826284145810534}
+        m_TargetAssemblyTypeName: PauseMenu, GameAssembly
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
@@ -1208,7 +1208,6 @@ GameObject:
   - component: {fileID: 4154785405491027734}
   - component: {fileID: 3867959376583923172}
   - component: {fileID: 4116549725178689975}
-  - component: {fileID: 5953123837605528477}
   m_Layer: 5
   m_Name: ContinueScreen
   m_TagString: Untagged
@@ -1274,18 +1273,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5953123837605528477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7254376102552273070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4e544f240f6483d8f0783d6b3b4717, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8459918505271408219
 GameObject:
   m_ObjectHideFlags: 0
