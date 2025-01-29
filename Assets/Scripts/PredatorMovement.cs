@@ -49,7 +49,8 @@ public class PredatorMovement : MonoBehaviour
         else if (PlayerVision) {
             Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);       
         }
-        gameObject.transform.position += (Direction * Time.deltaTime * speed);
+        // speed is set reasonably high so movement looks and feels smooth
+        gameObject.transform.position += (Direction * Time.deltaTime * speed); 
     }
 
     void FixedUpdate() {
