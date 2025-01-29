@@ -3,11 +3,16 @@ using UnityEngine;
 public class PredatorMovement : MonoBehaviour
 {
     [SerializeField]
-    int frequency;
+    float DirectionFrequency; // duration between direction change
     [SerializeField]
-    float speed;
+    int VisionFrequency; // how many fixed updates to wait before checking vision cone
+    [SerializeField]
+    float speed; // units to move every second
+    Vector3 Direction;
+    float DirectionTimer;
     float xMin, xMax, yMin, yMax;
     int counter;
+    bool PlayerVision;
     GameObject Player;
     Vector3 position;
     Vector3 scaleFactor;
@@ -15,9 +20,11 @@ public class PredatorMovement : MonoBehaviour
 
     void Start()
     {
+        PlayerVision = false;
         Player = GameObject.FindWithTag("Player");
+        Direction = Vector3.left;
         VisionScript = gameObject.GetComponent<EnemyFOV>();
-        counter = frequency;
+        counter = 0;
         RectTransform MoveableArea = GetComponentInParent<RectTransform>();
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
         float rectY = MoveableArea.rect.y + MoveableArea.position.y; //bottom edge of transform
@@ -29,26 +36,27 @@ public class PredatorMovement : MonoBehaviour
         scaleFactor = transform.localScale;
     }
 
-    void FixedUpdate() {
-        counter++;
-        Vector3 NextPosition;
-        bool playerVision = VisionScript.IsPlayerVisible();
-        if (playerVision) {
-            Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
-            DirectionToPlayer = Vector3.Normalize(DirectionToPlayer);
-            NextPosition = transform.position + (DirectionToPlayer * speed);       
-            gameObject.transform.position = new Vector3(NextPosition.x, NextPosition.y, 0);      
-        }
-        else if (counter > frequency) {
+    void Update() {
+        DirectionTimer+=Time.deltaTime;
+        // Pick a new direction to move in every (DirectionFrequency) seconds
+        if (DirectionTimer >= DirectionFrequency && !PlayerVision) {
+            DirectionTimer=0;
             //pick a random spot in the rect transform
             position = NewPosition();
             SetSpriteOrientation(position);
-            counter = 0;
-            //this is moving too fast on long distances
-            //not actually linear speed... 
-            NextPosition = Vector3.Lerp(gameObject.transform.position, position, Time.deltaTime * speed); 
-            // Lerp for some reason is very slowly decreasing the z coordinate when objects need to be on the same plane
-            gameObject.transform.position = new Vector3(NextPosition.x, NextPosition.y, 0);
+            Direction = Vector3.Normalize(position - gameObject.transform.position);
+        }
+        else if (PlayerVision) {
+            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);       
+        }
+        gameObject.transform.position += (Direction * Time.deltaTime * speed);
+    }
+
+    void FixedUpdate() {
+        counter++;
+        if (counter>VisionFrequency) {
+            PlayerVision = VisionScript.IsPlayerVisible();
+            counter = 0; 
         }
     }
 

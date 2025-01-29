@@ -34,10 +34,15 @@ public class EnemyFOV : MonoBehaviour
         DirectionToPlayer.Normalize();
         // Check if player object is inside of the enemy's vision cone
         float AngleToPlayer = Vector3.Angle(EnemyLookDirection, DirectionToPlayer);   
-        print(AngleToPlayer);
         if (AngleToPlayer > ViewAngle/2) return false;
-        // Do a ray cast to check if player is occluded by something ? 
-        print("Player in cone");
-        return true;
+        // Ray cast for objects that player can hide from enemies in 
+        RaycastHit2D HitInfo;
+        Vector2 DirToPlayer = new Vector2(DirectionToPlayer.x, DirectionToPlayer.y);
+        Vector2 RaycastOrigin = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        HitInfo = Physics2D.Raycast(gameObject.transform.position, DirectionToPlayer, DetectionRadius, PlayerMask);
+        // There should be an easier way to check if the object that the ray cast hits is the player object but apparently
+        // GameObject class doesnt support (GameObject a == GameObject b)?
+        if (HitInfo.collider != null && HitInfo.transform.gameObject.name == "Fish_Player_prefab") return true;
+        return false;
     }
 }
