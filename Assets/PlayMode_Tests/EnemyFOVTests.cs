@@ -13,6 +13,7 @@ public class EnemyFOVTests : MonoBehaviour
     public GameObject Player;
     public GameObject OrcaWhale;
     public EnemyFOV FOVScript;
+    public PredatorMovement MovementScript;
     public bool loaded=false;
 
     void OceanOnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -22,6 +23,7 @@ public class EnemyFOVTests : MonoBehaviour
     void SetEnemyFOVTestRefs(Scene scene, LoadSceneMode mode) {
         Player = GameObject.FindWithTag("Player");
         OrcaWhale = GameObject.Find("Predators/AssetSpawner(fish)/OrcaWhale");
+        MovementScript = OrcaWhale.GetComponent<PredatorMovement>();
         FOVScript = OrcaWhale.GetComponent<EnemyFOV>();
     }
 
@@ -74,7 +76,18 @@ public class EnemyFOVTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,0,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
+        GameObject Seaweed = GameObject.FindWithTag("Terrain");
+        Seaweed.SetActive(false);
         Assert.That(FOVScript.IsPlayerVisible(), Is.True);
+    }
+
+    [UnityTest]
+    public IEnumerator TestDirectionInCone() {
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(0,0,0);
+        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Vector3 DirectionToPlayer = Vector3.Normalize(Player.transform.position - OrcaWhale.transform.position);
+        Assert.That(MovementScript.Direction, Is.EqualTo(DirectionToPlayer));
     }
 
     [OneTimeTearDown]
