@@ -8,7 +8,7 @@ public class PredatorMovement : MonoBehaviour
     int VisionFrequency; // how many fixed updates to wait before checking vision cone
     [SerializeField]
     float speed; // units to move every second
-    Vector3 Direction;
+    public Vector3 Direction;
     float DirectionTimer;
     float xMin, xMax, yMin, yMax;
     int counter;
