@@ -41,7 +41,6 @@ public class LevelSelect : MonoBehaviour
     }
 
     public string ChooseSelectedLevel(string curStage) {
-        Debug.Log("chooseselectedlevel " + curStage);
         if (curStage == "Alevin" || curStage == "Fry" || curStage == "Smolt") {
             loadScene.sceneToLoad = LoadScene.Level.River;
         } 
