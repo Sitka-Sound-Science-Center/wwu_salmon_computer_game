@@ -3966,7 +3966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 209.47
+      value: 215
       objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4966,7 +4966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionRadius: 120
+  DetectionRadius: 140
   ViewAngle: 52
   ObjectsMask:
     serializedVersion: 2
@@ -5946,7 +5946,7 @@ Transform:
   m_GameObject: {fileID: 1385615519}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1085.2719, y: 37.25412, z: 0.68443274}
+  m_LocalPosition: {x: 1085, y: 37.25412, z: 0.68443274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6468,11 +6468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6775,7 +6775,7 @@ GameObject:
   - component: {fileID: 1580666578}
   m_Layer: 11
   m_Name: BullKelp
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8644,7 +8644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684.53845, y: -29}
+  m_AnchoredPosition: {x: -685, y: -29}
   m_SizeDelta: {x: 496.7302, y: 102.1088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094390748
