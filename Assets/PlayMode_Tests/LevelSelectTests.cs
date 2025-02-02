@@ -13,7 +13,6 @@ public class LevelSelectTests : MonoBehaviour
     public LoadScene LoadScript;
     public LevelSelect LevelScript;
     public TouchListener TouchScript;
-    public ManagePhase PhaseScript;
     public GameObject ChangeButton;
     public GameObject Canvas;
     public GameObject[] FishButtons;
@@ -30,7 +29,6 @@ public class LevelSelectTests : MonoBehaviour
         ChangeButton = GameObject.FindWithTag("ChangeButton");
         Canvas = GameObject.FindWithTag("Canvas");
         LoadScript = GameObject.FindWithTag("LoadScreen").GetComponent<LoadScene>();
-        PhaseScript = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
         LevelScript = Canvas.GetComponent<LevelSelect>();
         TouchScript = Canvas.GetComponent<TouchListener>();
     }

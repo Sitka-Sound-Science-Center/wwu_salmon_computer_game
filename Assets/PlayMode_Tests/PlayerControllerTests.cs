@@ -25,13 +25,14 @@ public class PlayerControllerTests : MonoBehaviour
 
     void SetPlayerControllerTestRefs(Scene scene, LoadSceneMode mode) {
         Player = GameObject.FindWithTag("Player");
-        PlayerScript = Player.GetComponent<PlayerController>();
+        PlayerScript = Player.GetComponentInParent<PlayerController>();
         HungerMeter = GameObject.FindWithTag("HMeter");
         Predators = GameObject.FindWithTag("PredatorsParent"); // actual enemy objects are children of this
         FoodSpawner = GameObject.FindWithTag("Spawner"); // this should be the Plankton spawner 
         FoodScript = FoodSpawner.GetComponent<FoodController>(); // so we can access the actual food 
         FoodScript.MaxFoodObjects=1; // so the test doesn't spawn a bunch of stuff
         rt = HungerMeter.GetComponent<RectTransform>();
+        print(Player.name);
     }
 
     [OneTimeSetUp]
