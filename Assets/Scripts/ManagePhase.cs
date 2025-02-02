@@ -19,7 +19,6 @@ public class ManagePhase : ScriptableObject
 
     public static void SetPhase(Phase nxt) {
         currentPhase = nxt;
-        Debug.Log("Phase is now " + nxt.ToString());
     }
 
     public static void NextLevel() {
