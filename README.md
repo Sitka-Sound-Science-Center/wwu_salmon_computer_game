@@ -5,3 +5,4 @@ A Unity game built for the Sitka Sound Science Center to teach visitors about th
 * Fix tests and add new ones for reworked predator movement (WA)
 * prototype fishermen in the ocean -- need to slow down movement so it "feels better" (WA)
 * add death screen for getting fished (WA)
+* add new sprites for river background, rocks, and fish eggs (MB)
