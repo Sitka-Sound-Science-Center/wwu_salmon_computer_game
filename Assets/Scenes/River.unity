@@ -23918,6 +23918,10 @@ PrefabInstance:
       value: Plankton (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_TagString
       value: Spawner
       objectReference: {fileID: 0}
@@ -29390,7 +29394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1109406053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -54918,9 +54922,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 527969054}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab
       value: 
       objectReference: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 527969055}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: movementRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: MaxFoodObjects
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
