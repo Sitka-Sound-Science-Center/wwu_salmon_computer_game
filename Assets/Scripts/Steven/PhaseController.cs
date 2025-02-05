@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 //[RequireComponent(typeof(string))]
 
@@ -31,23 +32,41 @@ public class PhaseController : MonoBehaviour
         {
             case ManagePhase.Phase.Alevin:
                 print("why are you changing to alevin...?");
-                PlayerCamera.GetComponent<Camera>().orthographicSize = 32;
+                //PlayerCamera.GetComponent<Camera>().orthographicSize = 32;
+                StartCoroutine(SmoothZoom(32, 2));
                 SetActiveSprite("Alevin");
                 break;
             case ManagePhase.Phase.Fry:
                 print("Changing to Fry");
                 SetActiveSprite("Fry");
                 //PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
-                PlayerCamera.GetComponent<Camera>().orthographicSize = 50;
+                //PlayerCamera.GetComponent<Camera>().orthographicSize = 50;
+                StartCoroutine(SmoothZoom(50, 2));
                 break;
             case ManagePhase.Phase.Smolt:
                 SetActiveSprite("Smolt");
-                PlayerCamera.GetComponent<Camera>().orthographicSize = 70;
+                //PlayerCamera.GetComponent<Camera>().orthographicSize = 70;
+                StartCoroutine(SmoothZoom(70, 2));
                 break;
             default:
                 print("something went wrong in phase changer");
                 break;
         }
+    }
+
+    private IEnumerator SmoothZoom(float target, float time)
+    {
+        float startSize = PlayerCamera.GetComponent<Camera>().orthographicSize;
+        float elapsed = 0f;
+
+        while (elapsed < time)
+        {
+            float size = Mathf.Lerp(startSize, target, elapsed / time);
+            PlayerCamera.GetComponent<Camera>().orthographicSize = size;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        PlayerCamera.GetComponent<Camera>().orthographicSize = target;
     }
 
     // sets all phases inactive except given phase
