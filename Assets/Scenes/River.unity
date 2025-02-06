@@ -37008,7 +37008,7 @@ MonoBehaviour:
     m_Bits: 0
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!1 &1466101805
 GameObject:
   m_ObjectHideFlags: 0
