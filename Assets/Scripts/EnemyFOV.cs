@@ -6,7 +6,6 @@ public class EnemyFOV : MonoBehaviour
 {
     public float DetectionRadius;
     public float ViewAngle; // in degrees, breadth of FOV cone
-    public LayerMask ObjectsMask;
     public LayerMask PlayerMask; // layer that only has player object on it
 
     // Helper method to vectors and angles
