@@ -48,15 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f6b29f1d8d91e4f9c2b05d305ba51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   DirectionFrequency: 4.5
   VisionFrequency: 5
   speed: 8
-=======
-  DirectionFrequency: 10
-  VisionFrequency: 1
-  speed: 0.1
->>>>>>> e674cd24aaeb383ef924b372dddd13ed1ef401c5
   Direction: {x: 0, y: 0, z: 0}
 --- !u!212 &7634516845495172035
 SpriteRenderer:
