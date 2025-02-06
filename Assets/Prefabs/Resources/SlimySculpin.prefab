@@ -48,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f6b29f1d8d91e4f9c2b05d305ba51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 200
-  speed: 0.1
+  DirectionFrequency: 4.5
+  VisionFrequency: 5
+  speed: 8
+  Direction: {x: 0, y: 0, z: 0}
 --- !u!212 &7634516845495172035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -398,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcb0fdfd9461452dad29002b4203874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionRadius: 0
-  ViewAngle: 0
+  DetectionRadius: 80
+  ViewAngle: 40
   ObjectsMask:
     serializedVersion: 2
     m_Bits: 0
