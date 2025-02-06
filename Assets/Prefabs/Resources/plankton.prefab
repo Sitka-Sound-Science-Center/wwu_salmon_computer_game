@@ -103,12 +103,6 @@ MonoBehaviour:
   speed: 0.02
   newPosition: {x: 0, y: 0, z: 0}
   movementRange: 200
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!58 &2282454461928137760
 CircleCollider2D:
   m_ObjectHideFlags: 0
