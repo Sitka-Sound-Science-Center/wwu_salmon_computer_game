@@ -57,7 +57,6 @@ public class PredatorMovement : MonoBehaviour
         counter++;
         if (counter>VisionFrequency) {
             PlayerVision = VisionScript.IsPlayerVisible();
-            print(PlayerVision);
             counter = 0; 
         }
     }
