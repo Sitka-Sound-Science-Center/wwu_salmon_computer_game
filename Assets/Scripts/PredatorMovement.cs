@@ -57,6 +57,7 @@ public class PredatorMovement : MonoBehaviour
         counter++;
         if (counter>VisionFrequency) {
             PlayerVision = VisionScript.IsPlayerVisible();
+            print(PlayerVision);
             counter = 0; 
         }
     }
@@ -71,12 +72,12 @@ public class PredatorMovement : MonoBehaviour
     {
         if (position.x < transform.position.x)
         {
-            //face sprite to the right
+            //face sprite to the left
             transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
         else
         {
-            //face sprite to the left
+            //face sprite to the right
             transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
     }
