@@ -132,12 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectionRadius: 80
   ViewAngle: 40
-  ObjectsMask:
-    serializedVersion: 2
-    m_Bits: 0
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!60 &2847686192354423053
 PolygonCollider2D:
   m_ObjectHideFlags: 0
