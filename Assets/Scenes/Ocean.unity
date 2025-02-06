@@ -4425,6 +4425,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 23.47645
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124540187670534768, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: m_LocalPosition.x
       value: 215
       objectReference: {fileID: 0}
@@ -5512,9 +5516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectionRadius: 140
   ViewAngle: 52
-  ObjectsMask:
-    serializedVersion: 2
-    m_Bits: 0
   PlayerMask:
     serializedVersion: 2
     m_Bits: 2048
