@@ -43,11 +43,12 @@ public class PredatorMovement : MonoBehaviour
             DirectionTimer=0;
             //pick a random spot in the rect transform
             position = NewPosition();
-            SetSpriteOrientation(position);
             Direction = Vector3.Normalize(position - gameObject.transform.position);
+            SetSpriteOrientation(Direction);
         }
         else if (PlayerVision) {
-            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);       
+            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);    
+            SetSpriteOrientation(Direction);
         }
         // speed is set reasonably high so movement looks and feels smooth
         gameObject.transform.position += (Direction * Time.deltaTime * speed); 
@@ -67,9 +68,9 @@ public class PredatorMovement : MonoBehaviour
         return position;
     }
 
-    private void SetSpriteOrientation(Vector3 position)
+    private void SetSpriteOrientation(Vector3 dir)
     {
-        if (position.x < transform.position.x)
+        if (dir.x < 0)
         {
             //face sprite to the left
             transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
