@@ -11,7 +11,7 @@ public class EnemyFOV : MonoBehaviour
 
     // Helper method to vectors and angles
     public Vector3 DirectionFromAngle(float angleInDegrees) {
-        float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1;
+        float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1; // make vision cone come out of front of enemy
         angleInDegrees *= Mathf.Deg2Rad;
         Vector3 direction = new Vector3(Mathf.Cos(angleInDegrees),Mathf.Sin(angleInDegrees),0);
         direction = Vector3.Normalize(direction);
