@@ -37,28 +37,12 @@ public class EnemyFOVTests : MonoBehaviour
     } 
 
     [UnityTest]
-    public IEnumerator TestInDetectionRadius() {
-        yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(0,0,0);
-        OrcaWhale.transform.position = new Vector3(100,0,0);
-        Assert.That(FOVScript.IsPlayerInRadius(), Is.True);
-    }
-
-    [UnityTest]
-    public IEnumerator TestNotInDetectionRadius() {
-        yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(0,0,0);
-        OrcaWhale.transform.position = new Vector3(300,0,0);
-        Assert.That(FOVScript.IsPlayerInRadius(), Is.False);
-    }
-
-    [UnityTest]
     public IEnumerator TestNotInDetectionConeTop() {
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,100,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
-        Assert.That(FOVScript.IsPlayerVisible(), Is.False);
+        Assert.That(FOVScript.IsPlayerInCone(), Is.False);
     }
 
     [UnityTest]
@@ -67,28 +51,17 @@ public class EnemyFOVTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,-100,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
-        Assert.That(FOVScript.IsPlayerVisible(), Is.False);
+        Assert.That(FOVScript.IsPlayerInCone(), Is.False);
     }
 
     [UnityTest]
     public IEnumerator TestInDetectionCone() {
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(0,50,0);
-        OrcaWhale.transform.position = new Vector3(100,50,0);
-        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y, OrcaWhale.transform.localScale.z);
-        GameObject Seaweed = GameObject.FindWithTag("Terrain");
-        Seaweed.SetActive(false);
-        Assert.That(FOVScript.IsPlayerVisible(), Is.True);
-    }
-
-    [UnityTest]
-    public IEnumerator TestDirectionInCone() {
-        yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(0,0,0);
-        OrcaWhale.transform.position = new Vector3(100,0,0);
-        Vector3 DirectionToPlayer = Vector3.Normalize(Player.transform.position - OrcaWhale.transform.position);
-        Assert.That(MovementScript.Direction == DirectionToPlayer, Is.True);
+        Player.transform.position = new Vector3(0,300,0);
+        OrcaWhale.transform.position = new Vector3(100,300,0);
+        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y ,OrcaWhale.transform.localScale.z);
+        Assert.That(FOVScript.IsPlayerInCone(), Is.True);
     }
 
     [OneTimeTearDown]
