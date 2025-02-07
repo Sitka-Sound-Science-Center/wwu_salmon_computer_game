@@ -48,7 +48,7 @@ public class EnemyFOVTests : MonoBehaviour
     public IEnumerator TestNotInDetectionRadius() {
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,0,0);
-        OrcaWhale.transform.position = new Vector3(200,0,0);
+        OrcaWhale.transform.position = new Vector3(300,0,0);
         Assert.That(FOVScript.IsPlayerInRadius(), Is.False);
     }
 
@@ -74,8 +74,9 @@ public class EnemyFOVTests : MonoBehaviour
     public IEnumerator TestInDetectionCone() {
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(0,0,0);
-        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Player.transform.position = new Vector3(0,50,0);
+        OrcaWhale.transform.position = new Vector3(100,50,0);
+        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y, OrcaWhale.transform.localScale.z);
         GameObject Seaweed = GameObject.FindWithTag("Terrain");
         Seaweed.SetActive(false);
         Assert.That(FOVScript.IsPlayerVisible(), Is.True);
@@ -87,7 +88,7 @@ public class EnemyFOVTests : MonoBehaviour
         Player.transform.position = new Vector3(0,0,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
         Vector3 DirectionToPlayer = Vector3.Normalize(Player.transform.position - OrcaWhale.transform.position);
-        Assert.That(MovementScript.Direction, Is.EqualTo(DirectionToPlayer));
+        Assert.That(MovementScript.Direction == DirectionToPlayer, Is.True);
     }
 
     [OneTimeTearDown]
