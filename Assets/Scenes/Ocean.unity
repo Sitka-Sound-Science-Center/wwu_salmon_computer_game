@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21636367}
   - component: {fileID: 21636366}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95623643}
   - component: {fileID: 95623642}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 134459819}
   - component: {fileID: 134459818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,7 +1555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279473729}
   - component: {fileID: 279473728}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1986,9 +1986,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310752578}
-  m_Layer: 0
-  m_Name: GiantKelp
-  m_TagString: Untagged
+  m_Layer: 11
+  m_Name: GiantKelpParent
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2660,7 +2660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480938642}
   - component: {fileID: 480938641}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5154,7 +5154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101412893}
   - component: {fileID: 1101412892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6476,7 +6476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1379957391}
   - component: {fileID: 1379957390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7101,7 +7101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1881015766429208116, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7157,7 +7157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4128240938706355037, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4128240938706355037, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_IsActive
@@ -7173,7 +7173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5921493616355820565, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5921493616355820565, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_IsActive
@@ -7193,7 +7193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6341014241417169100, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6341014241417169100, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_IsActive
@@ -7209,7 +7209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7020050113916190176, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7020050113916190176, guid: 8b967ae606c672144b7528ace45c8264, type: 3}
       propertyPath: m_IsActive
@@ -7403,7 +7403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580666578}
   m_Layer: 11
-  m_Name: BullKelp
+  m_Name: BullKelpParent
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8043,7 +8043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753386819}
   - component: {fileID: 1753386818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8433,7 +8433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814823918}
   - component: {fileID: 1814823917}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GiantKellp (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
