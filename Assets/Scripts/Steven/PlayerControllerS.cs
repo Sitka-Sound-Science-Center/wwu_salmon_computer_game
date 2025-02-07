@@ -1,3 +1,4 @@
+using PlasticGui;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,7 @@ public class PlayerControllerS : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         player = new Player();
         player.Enable();
-    }
+}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -39,6 +40,7 @@ public class PlayerControllerS : MonoBehaviour
     {
         
         rb.AddForce(GetInput(player), ForceMode.Impulse);
+        rb.velocity = clampSpeed(rb.velocity, maxSpeed);
         
         
     }
@@ -59,7 +61,7 @@ public class PlayerControllerS : MonoBehaviour
             print("SwimUP");
             ycomp += swimUpPower;
         }
-        if (playerInput.PlayerMain.Jump.IsPressed() && isGrounded)
+        if (playerInput.PlayerMain.Jump.IsPressed() && isGrounded && rb.velocity.x > 0)
         {
             isGrounded = false; //change to raycast?
             print("Jump");
@@ -72,24 +74,38 @@ public class PlayerControllerS : MonoBehaviour
         if (isGrounded)
         {
             move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
-            move = clampSpeed(move);
+            move = clampSpeed(move, 0f);
         }
         return move;
     }
 
-    private Vector3 clampSpeed(Vector3 move)
+    private Vector3 clampSpeed(Vector3 move, float clampValue)
     {
-        if (rb.velocity.x > maxSpeed || rb.velocity.x < -maxSpeed)
+        //positive speed cap
+        if (rb.velocity.x > maxSpeed)
         {
-            move.x = 0f;
+            move.x = clampValue;
         }
         if(rb.velocity.y > maxSpeed)
         {
-            move.y = 0f;
+            move.y = clampValue;
         }
         if(rb.velocity.z > maxSpeed)
         {
-            move.z = 0f;
+            move.z = clampValue;
+        }
+        //negative speed cap
+        if (rb.velocity.x < -maxSpeed)
+        {
+            move.x = -clampValue;
+        }
+        if (rb.velocity.y < -maxSpeed)
+        {
+            move.y = -clampValue;
+        }
+        if (rb.velocity.z < -maxSpeed)
+        {
+            move.z = -clampValue;
         }
         return move;
     }
