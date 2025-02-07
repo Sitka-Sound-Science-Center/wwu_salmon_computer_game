@@ -2090,6 +2090,7 @@ MonoBehaviour:
   swimUpPower: 0.2
   jumpPower: 10
   maxSpeed: 10
+  JumpPowerVector: {x: 10, y: 10, z: 0}
 --- !u!54 &1098772842
 Rigidbody:
   m_ObjectHideFlags: 0

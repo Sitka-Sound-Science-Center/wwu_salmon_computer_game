@@ -16,6 +16,11 @@ public class PlayerControllerS : MonoBehaviour
     private bool isGrounded;
     Rigidbody rb;
     Player player;
+
+    public Vector3 JumpPowerVector;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,19 +63,23 @@ public class PlayerControllerS : MonoBehaviour
         {
             isGrounded = false; //change to raycast?
             print("Jump");
-            ycomp += jumpPower;
+            //ycomp += jumpPower;
+            rb.AddForce(JumpPowerVector, ForceMode.Impulse);
         }
-        Vector3 move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
+        Vector3 move = new Vector3(0f, 0f, 0f);
+        //Vector3 move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
         //print(move);
-
-        move = clampSpeed(move);
-
+        if (isGrounded)
+        {
+            move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
+            move = clampSpeed(move);
+        }
         return move;
     }
 
     private Vector3 clampSpeed(Vector3 move)
     {
-        if(rb.velocity.x > maxSpeed)
+        if (rb.velocity.x > maxSpeed || rb.velocity.x < -maxSpeed)
         {
             move.x = 0f;
         }
