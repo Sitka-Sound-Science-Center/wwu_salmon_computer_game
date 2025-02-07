@@ -35967,10 +35967,11 @@ GameObject:
   - component: {fileID: 1425957409}
   - component: {fileID: 1425957410}
   - component: {fileID: 1425957411}
-  - component: {fileID: 1425957412}
+  - component: {fileID: 1425957413}
+  - component: {fileID: 1425957414}
   m_Layer: 10
   m_Name: SlimySculpin
-  m_TagString: Untagged
+  m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36004,7 +36005,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.3
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -36053,7 +36054,7 @@ CapsuleCollider2D:
   m_Offset: {x: -13.526777, y: 6.859154}
   m_Size: {x: 38.758755, y: 14.156599}
   m_Direction: 1
---- !u!114 &1425957412
+--- !u!114 &1425957413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36062,11 +36063,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1425957408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775c7740a4e90eb48a7320ac532fe7e6, type: 3}
+  m_Script: {fileID: 11500000, guid: d5c3774736bf0d04885b43b978833d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpAngle: 200
-  jumpForce: 35
+  clock: 0
+  attackTimeout: 500
+  jumpForce: 5
+--- !u!114 &1425957414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425957408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4624f5251bdb83419e8479b672a2932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reason: SlimySculpin
+  ac: 20
 --- !u!1 &1427727266
 GameObject:
   m_ObjectHideFlags: 0
@@ -37114,9 +37130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectionRadius: 90
   ViewAngle: 40
-  ObjectsMask:
-    serializedVersion: 2
-    m_Bits: 0
   PlayerMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -38562,9 +38575,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'Slimy Sculpin
+      value: 'A Slimy Sculpin leapt out from its hiding spot and ate you!
 
-'
+        Not
+        even 3in long, these tiny predators feed on Alevin and other small bugs and
+        fish. They hid in the shadows between rocks on the floor of the river, and
+        jump at prey that come into range.'
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -38660,7 +38676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254376102552273070, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Type
@@ -49247,7 +49263,7 @@ GameObject:
   - component: {fileID: 1944649134}
   m_Layer: 10
   m_Name: slimy-sculpin-photo
-  m_TagString: Untagged
+  m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53135,9 +53151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectionRadius: 0
   ViewAngle: 0
-  ObjectsMask:
-    serializedVersion: 2
-    m_Bits: 0
   PlayerMask:
     serializedVersion: 2
     m_Bits: 0
