@@ -13825,7 +13825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399941186200866830, guid: 5e5e3630c9c66824c8024cea8e8f5f63, type: 3}
       propertyPath: m_Name
-      value: PhysicsPebble (15)
+      value: PhysicsPebble (boot)
       objectReference: {fileID: 0}
     - target: {fileID: 7605644339372503972, guid: 5e5e3630c9c66824c8024cea8e8f5f63, type: 3}
       propertyPath: m_LocalPosition.x
