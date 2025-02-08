@@ -1,13 +1,10 @@
-using PlasticGui;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerControllerS : MonoBehaviour
 {
     [SerializeField]
-    private float playerSpeed;
+    private float playerSpeedS;
     [SerializeField]
     private float swimUpPower;
     [SerializeField]
@@ -15,7 +12,7 @@ public class PlayerControllerS : MonoBehaviour
     [SerializeField]
     private float maxSpeed;
     private bool isGrounded;
-    Rigidbody rb;
+    Rigidbody rb3;
     Player player;
 
     public Vector3 JumpPowerVector;
@@ -25,7 +22,7 @@ public class PlayerControllerS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb3 = GetComponent<Rigidbody>();
         player = new Player();
         player.Enable();
 }
@@ -39,8 +36,8 @@ public class PlayerControllerS : MonoBehaviour
     private void HandleMove()
     {
         
-        rb.AddForce(GetInput(player), ForceMode.Impulse);
-        rb.velocity = clampSpeed(rb.velocity, maxSpeed);
+        rb3.AddForce(GetInput(player), ForceMode.Impulse);
+        rb3.velocity = clampSpeed(rb3.velocity, maxSpeed);
         
         
     }
@@ -61,19 +58,19 @@ public class PlayerControllerS : MonoBehaviour
             print("SwimUP");
             ycomp += swimUpPower;
         }
-        if (playerInput.PlayerMain.Jump.IsPressed() && isGrounded && rb.velocity.x > 0)
+        if (playerInput.PlayerMain.Jump.IsPressed() && isGrounded && rb3.velocity.x > 0)
         {
             isGrounded = false; //change to raycast?
             print("Jump");
             //ycomp += jumpPower;
-            rb.AddForce(JumpPowerVector, ForceMode.Impulse);
+            rb3.AddForce(JumpPowerVector, ForceMode.Impulse);
         }
         Vector3 move = new Vector3(0f, 0f, 0f);
         //Vector3 move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
         //print(move);
         if (isGrounded)
         {
-            move = new Vector3(movementInput.x * playerSpeed, ycomp, movementInput.y * playerSpeed);
+            move = new Vector3(movementInput.x * playerSpeedS, ycomp, movementInput.y * playerSpeedS);
             move = clampSpeed(move, 0f);
         }
         return move;
@@ -82,36 +79,38 @@ public class PlayerControllerS : MonoBehaviour
     private Vector3 clampSpeed(Vector3 move, float clampValue)
     {
         //positive speed cap
-        if (rb.velocity.x > maxSpeed)
+        if (rb3.velocity.x > maxSpeed)
         {
             move.x = clampValue;
         }
-        if(rb.velocity.y > maxSpeed)
+        if(rb3.velocity.y > maxSpeed)
         {
             move.y = clampValue;
         }
-        if(rb.velocity.z > maxSpeed)
+        if(rb3.velocity.z > maxSpeed)
         {
             move.z = clampValue;
         }
         //negative speed cap
-        if (rb.velocity.x < -maxSpeed)
+        if (rb3.velocity.x < -maxSpeed)
         {
             move.x = -clampValue;
         }
-        if (rb.velocity.y < -maxSpeed)
+        if (rb3.velocity.y < -maxSpeed)
         {
             move.y = -clampValue;
         }
-        if (rb.velocity.z < -maxSpeed)
+        if (rb3.velocity.z < -maxSpeed)
         {
             move.z = -clampValue;
         }
         return move;
     }
 
-    public void disablePlayer()
+    public void disablePlayer(string reason)
     {
         player.Disable();
+        UnityEngine.Time.timeScale = 0;
+        GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true);
     }
 }

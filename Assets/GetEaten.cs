@@ -6,10 +6,11 @@ public class GetEaten : MonoBehaviour
 {
     [SerializeField]
     GameObject mouthPosition;
+    private DeathReason reason;
     // Start is called before the first frame update
     void Start()
     {
-        
+        reason = this.GetComponent<DeathReason>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class GetEaten : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<PlayerControllerS>().disablePlayer();
+            other.GetComponent<PlayerControllerS>().disablePlayer(reason.reason);
             //other.attachedRigidbody.velocity = Vector3.zero;
             other.attachedRigidbody.isKinematic = true;
             other.transform.SetPositionAndRotation(mouthPosition.transform.position, Quaternion.identity);
