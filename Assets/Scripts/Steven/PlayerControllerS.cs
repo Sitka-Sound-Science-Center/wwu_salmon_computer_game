@@ -4,18 +4,14 @@ using UnityEngine.InputSystem;
 public class PlayerControllerS : MonoBehaviour
 {
     [SerializeField]
-    private float playerSpeedS;
+    private float playerSpeedS = 10;
     [SerializeField]
-    private float swimUpPower;
-    [SerializeField]
-    private float jumpPower;
-    [SerializeField]
-    private float maxSpeed;
+    private float maxSpeed = 10;
     private bool isGrounded;
     Rigidbody rb3;
     Player player;
 
-    public Vector3 JumpPowerVector;
+    public Vector3 JumpPowerVector = new Vector3(10f, 12f, 0f);
 
 
 
@@ -53,11 +49,6 @@ public class PlayerControllerS : MonoBehaviour
     {
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
         float ycomp = 0;
-        if (playerInput.PlayerMain.SwimUp.IsPressed())
-        {
-            print("SwimUP");
-            ycomp += swimUpPower;
-        }
         if (playerInput.PlayerMain.Jump.IsPressed() && isGrounded && rb3.velocity.x > 0)
         {
             isGrounded = false; //change to raycast?
