@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class PlayerControllerS : MonoBehaviour
 {
     [SerializeField]
-    private float playerSpeedS = 10;
+    private float playerSpeedS = 10f;
     [SerializeField]
-    private float maxSpeed = 10;
+    private float maxSpeed = 10f;
     private bool isGrounded;
     Rigidbody rb3;
     Player player;

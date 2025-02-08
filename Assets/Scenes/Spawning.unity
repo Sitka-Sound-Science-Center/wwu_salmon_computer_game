@@ -2046,10 +2046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed483b8648c4e34686dd25152def308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 1
-  gravityValue: 0
-  HungerMeter: {fileID: 0}
-  DeathScreenParent: {fileID: 0}
+  playerSpeedS: 7
+  maxSpeed: 10
   JumpPowerVector: {x: 10, y: 10, z: 0}
 --- !u!54 &1098772842
 Rigidbody:
