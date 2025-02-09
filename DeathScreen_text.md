@@ -2,7 +2,7 @@
 
 -Does not 'automaticaly' update the game assets, just a place to do all proofreading/editing without being in the editor
 
-**River:**
+##River:##
 
 <ins>Slimy Sculpin:</ins>
 
@@ -25,7 +25,7 @@ Dont walk through streams!
 <ins>End of Level:</ins>\
 River Level Complete!
 
-**Oean:**
+##**Oean:**##
 
 <ins>Slimy Sculpin</ins>
 
@@ -37,7 +37,7 @@ River Level Complete!
 
 <ins>End of Level</ins>
 
-**Spawning:**
+##**Spawning:**##
 
 <ins>Bald Eagle</ins>
 
