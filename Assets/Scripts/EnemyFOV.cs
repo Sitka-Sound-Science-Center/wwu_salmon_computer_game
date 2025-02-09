@@ -23,9 +23,8 @@ public class EnemyFOV : MonoBehaviour
         return (PlayerCollider!=null && PlayerCollider.gameObject.name == "Fish_Player_prefab");
     }
 
-    public bool IsPlayerInCone() {
-        GameObject Player = GameObject.FindWithTag("Player");
-        Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
+    public bool IsPlayerInCone(Vector3 PlayerPosition) {
+        Vector3 DirectionToPlayer = PlayerPosition - gameObject.transform.position;
         bool in_radius = DirectionToPlayer.magnitude <= DetectionRadius;
         Vector3 EnemyLookDirection = (gameObject.transform.localScale.x < 0) ? Vector3.left : Vector3.right;
         DirectionToPlayer.Normalize();
@@ -38,27 +37,21 @@ public class EnemyFOV : MonoBehaviour
     // Check if player object is inside the vision cone and enemy has line of sight to player
     public bool IsPlayerVisible() {
         GameObject Player = GameObject.FindWithTag("Player");
+        if (!IsPlayerInCone(Player.transform.position)) return false;
         int mask = LayerMask.GetMask(LayerMask.LayerToName(Player.layer));
-        print(mask);
-        print(Player.name);
-        Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
-        Vector3 EnemyLookDirection = (gameObject.transform.localScale.x < 0) ? Vector3.left : Vector3.right;
-        DirectionToPlayer.Normalize();
-        // Check if player object is inside of the enemy's vision cone
-        float AngleToPlayer = Vector3.Angle(EnemyLookDirection, DirectionToPlayer);   
-        if (AngleToPlayer > ViewAngle/2) return false;
-        print(AngleToPlayer);
-        print(DirectionToPlayer);
-        print(EnemyLookDirection);
         // Ray cast for objects that player can hide from enemies in 
+        Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
         RaycastHit2D HitInfo;
         Vector2 DirToPlayer = new Vector2(DirectionToPlayer.x, DirectionToPlayer.y);
+        DirToPlayer = DirToPlayer.normalized;
         Vector2 RaycastOrigin = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
         HitInfo = Physics2D.Raycast(RaycastOrigin, DirToPlayer, DetectionRadius, mask);
         // There should be an easier way to check if the object that the ray cast hits is the player object but apparently
         // GameObject class doesnt support (GameObject a == GameObject b)?
-        print(HitInfo.collider==null);
-        if (HitInfo.collider != null && HitInfo.transform.gameObject.name == Player.name) return true;
+        if (HitInfo.collider != null && HitInfo.transform.gameObject.name == "Fish_Player_prefab"){
+            print("LINE OF SIGHT: " + gameObject.name);
+            return true;
+        } 
         return false;
     }
 }

@@ -42,7 +42,7 @@ public class EnemyFOVTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,100,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
-        Assert.That(FOVScript.IsPlayerInCone(), Is.False);
+        Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.False);
     }
 
     [UnityTest]
@@ -51,7 +51,7 @@ public class EnemyFOVTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,-100,0);
         OrcaWhale.transform.position = new Vector3(100,0,0);
-        Assert.That(FOVScript.IsPlayerInCone(), Is.False);
+        Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.False);
     }
 
     [UnityTest]
@@ -61,7 +61,27 @@ public class EnemyFOVTests : MonoBehaviour
         Player.transform.position = new Vector3(0,300,0);
         OrcaWhale.transform.position = new Vector3(100,300,0);
         OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y ,OrcaWhale.transform.localScale.z);
-        Assert.That(FOVScript.IsPlayerInCone(), Is.True);
+        Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.True);
+    }
+
+    [UnityTest]
+    public IEnumerator TestLineOfSightNotOccluded() {
+        // Position of player for test depends on enemy detection angle
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(100,300,0);
+        OrcaWhale.transform.position = new Vector3(0,300,0);
+        yield return new WaitForFixedUpdate();
+        Assert.That(FOVScript.IsPlayerVisible(), Is.True);
+    }
+
+    [UnityTest]
+    public IEnumerator TestLineOfSightOccluded() {
+        // Position of player for test depends on enemy detection angle
+        yield return new WaitWhile(() => loaded == false);
+        Player.transform.position = new Vector3(50,10,0);
+        OrcaWhale.transform.position = new Vector3(-50,-5,0);
+        yield return new WaitForFixedUpdate();
+        Assert.That(FOVScript.IsPlayerVisible(), Is.False);
     }
 
     [OneTimeTearDown]
