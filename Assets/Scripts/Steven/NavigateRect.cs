@@ -16,6 +16,8 @@ public class NavigateRect : MonoBehaviour
     private float xMax;
     private float yMax;
     private RectTransform rect;
+    private Vector3[] fourCorners = new Vector3[4];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +27,14 @@ public class NavigateRect : MonoBehaviour
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
         float rectY = MoveableArea.rect.y + MoveableArea.position.y; //bottom edge of transform
         Vector2 area = MoveableArea.sizeDelta;
-        xMin = rectX;
-        xMax = rectX + area.x;
-        yMin = rectY;
-        yMax = rectY + area.y;
+        
+        MoveableArea.GetWorldCorners(fourCorners);
+        xMin = fourCorners[0][0];
+        xMax = fourCorners[2][0];
+        yMin = fourCorners[0][2];
+        yMax = fourCorners[2][2];
+
+        print("rectCorners: xMin: " + xMin + " xMax: " + xMax + " yMin: " + yMin + " yMax: " + yMax);
     }
 
     // Update is called once per frame
@@ -45,10 +51,7 @@ public class NavigateRect : MonoBehaviour
 
     private Vector3 GetPoint(RectTransform rect)
     {
-        Vector3 target = new Vector3(Random.Range(rect.rect.xMin, rect.rect.xMax), 0, Random.Range(rect.rect.yMin, rect.rect.yMax));
-        target.x += rect.transform.position.x;
-        target.y += rect.transform.position.y;
-        target.z += rect.transform.position.z;
+        Vector3 target = new Vector3(Random.Range(xMin,xMax), 0, Random.Range(yMin,yMax));
         print(target);
         return target;
     }

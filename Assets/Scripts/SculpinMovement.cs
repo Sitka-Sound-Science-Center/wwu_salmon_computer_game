@@ -1,13 +1,12 @@
-using Codice.Client.BaseCommands;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
+
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class SculpinMovement : MonoBehaviour
 {
 
+    public int clock = 0;
+    public int attackTimeout = 500;
     Collider2D jumpTrigger;
     Rigidbody2D rb;
     //public float jumpAngle;
@@ -25,25 +24,43 @@ public class SculpinMovement : MonoBehaviour
     {
         
     }
+    private void FixedUpdate()
+    {
+        clock++;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            Vector2 target = collision.transform.position - this.transform.position;
-            attack(target);
-        }   
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (PlayerCheck(collision))
         {
             Vector2 target = collision.transform.position - this.transform.position;
             attack(target);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (PlayerCheck(collision))
+        {
+            Vector2 target = collision.transform.position - this.transform.position;
+            attack(target);
+        }
+    }
+
+    bool PlayerCheck(Collider2D collison)
+    {
+        if (collison.CompareTag("Player") && clock > attackTimeout)
+        {
+            Transform playerTransform = collison.transform.Find("Alevin");
+            if (playerTransform && playerTransform.gameObject.activeInHierarchy)
+            {
+                clock = 0;
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
     void attack(Vector2 target)
     {
         //float xComponent = Mathf.Sin(jumpAngle) * jumpForce;
