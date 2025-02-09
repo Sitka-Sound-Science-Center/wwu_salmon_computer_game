@@ -9,42 +9,42 @@
 A Slimy Sculpin leapt out from its hiding spot and ate you!\
 Not even 3in long, these tiny predators feed on Alevin and other small bugs and fish. They hid in the shadows between rocks on the floor of the river, and jump at prey that come into range.
 
-Salmon Shark:\
+<ins>Salmon Shark:</ins>\
 --Emptty--
 
-Bald Eagle:\
+<ins>Bald Eagle:</ins>\
 You Died! An eagle snatched you from the river for its next meal!\
 Salmon that are eaten by eagles in this way often end up on the forest floor
 where their bodies will continue to provide nutrients for their ecosystem.
 
-Boot:\
+<ins>Boot:</ins>\
 You Died!\
 Walking in spawning streams can destroy the sentitive habitats that salmon use to grow up in.
 Dont walk through streams!
 
-End of Level:\
+<ins>End of Level:</ins>\
 River Level Complete!
 
 **Oean:**
 
-Slimy Sculpin
+<ins>Slimy Sculpin</ins>
 
-Orca
+<ins>Orca</ins>
 
-Seal
+<ins>Seal</ins>
 
-Bald Eagle
+<ins>Bald Eagle</ins>
 
-End of Level
+<ins>End of Level</ins>
 
 **Spawning:**
 
-Bald Eagle
+<ins>Bald Eagle</ins>
 
-Bear
+<ins>Bear</ins>
 
-Salmon Shark
+<ins>Salmon Shark</ins>
 
-Otter
+<ins>Otter</ins>
 
-Wolf
+<ins>Wolf</ins>
