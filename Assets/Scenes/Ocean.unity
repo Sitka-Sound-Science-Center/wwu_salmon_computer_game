@@ -133,7 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: Eaten by an orca whale!
+      value: 'An Orca whale ate you for lunch!
+
+        Orca whales eat millions
+        of Salmon each year, primarily chinook as they are more fatty and dense with
+        the calories that these magnificent whales need '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x

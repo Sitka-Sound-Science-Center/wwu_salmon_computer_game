@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 
@@ -7,17 +8,19 @@ public class PredatorController : MonoBehaviour
     [SerializeField]
     int maxpredator;
     [SerializeField]
-    float spawndelay;
+    int spawndelay;
     float xMin;
     float xMax;
     float yMin;
     float yMax;
     Vector3 position;
-    int planktonCount = 0;
+    int predatorCount = 0;
     int counter;
-    [SerializeField]
-    GameObject predator;
-
+    //[SerializeField]
+    //GameObject predatorsParent;
+    public GameObject[] predatorsArray;
+    public float maxsize = 1.0f;
+    public float minsize = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +33,22 @@ public class PredatorController : MonoBehaviour
         xMax = rectX + area.x;
         yMin = rectY;
         yMax = rectY + area.y;
+        //init counter to spawn delay for instant spawn of fish on scene load
+        counter = spawndelay;
+        //predatorsArray = predatorsParent.GetComponentsInChildren<GameObject>();
     }
 
     void Update()
     {
-        if (planktonCount < maxpredator && counter > spawndelay)
+        if (predatorCount < maxpredator && counter > spawndelay)
         {
-            //spawn a plankton
-            planktonCount++;
-            GameObject pebblen = Instantiate(predator, NewPosition(), Quaternion.identity, this.transform);
+            //spawn a ppredator
+            predatorCount++;
+            //GameObject pebblen = 
+            GameObject predator = Instantiate(GetPredatorObj(), NewPosition(), Quaternion.identity, this.transform);
+            predator.transform.localScale = predator.transform.localScale*(Random.Range(0.5f, 1.5f));
+            
+
             counter = 0;
         }
 
@@ -58,6 +68,14 @@ public class PredatorController : MonoBehaviour
 
     private void CountChildren()
     {
-        planktonCount = GetComponentsInChildren<Transform>().Length - 1;
+        predatorCount = GetComponentsInChildren<Transform>().Length;
     }
+
+    private GameObject GetPredatorObj()
+    {
+        int randP = Random.Range(0, predatorsArray.Length);
+        print(randP);
+        return predatorsArray[randP];
+    }
+
 }
