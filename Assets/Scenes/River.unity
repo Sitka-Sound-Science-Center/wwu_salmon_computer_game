@@ -55915,7 +55915,6 @@ MonoBehaviour:
   predatorsArray:
   - {fileID: 8307876715117581251, guid: b4e28e6833173724a868d6a00088ac9d, type: 3}
   - {fileID: 8307876715117581251, guid: 1d20864343661884c91386a0d97198d1, type: 3}
-  - {fileID: 8307876715117581251, guid: c0b7befffe160574fa88a1feacfd78b5, type: 3}
   maxsize: 1
   minsize: 1
 --- !u!1660057539 &9223372036854775807

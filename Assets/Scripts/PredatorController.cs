@@ -19,8 +19,6 @@ public class PredatorController : MonoBehaviour
     //[SerializeField]
     //GameObject predatorsParent;
     public GameObject[] predatorsArray;
-    public float maxsize = 1.0f;
-    public float minsize = 1.0f;
 
     // Start is called before the first frame update
     void Start()
