@@ -9,6 +9,14 @@
 A Slimy Sculpin leapt out from its hiding spot and ate you!\
 Not even 3in long, these tiny predators feed on Alevin and other small bugs and fish. They hid in the shadows between rocks on the floor of the river, and jump at prey that come into range.
 
+### <ins>Arctic Char: </ins>
+An Arctic Char Ate you!\
+\*\*Fact about arctic char\*\*
+
+### <ins>Cutthroat Trout</ins>\
+The Coastal Cuthroat Trout lives in the same rivers that Salmon spawn in.\
+During the spawning season these trout feast on the small alevin, fry and Smolt on their journey to the ocean
+
 ### <ins>Salmon Shark:</ins>\
 --Emptty--
 
@@ -29,7 +37,10 @@ River Level Complete!
 
 ### <ins>Slimy Sculpin</ins>
 
-### <ins>Orca</ins>
+### <ins>Orca:</ins>
+An Orca whale ate you for lunch! <<add Tlingit word for Orca (Blackfish?)\
+Orca whales eat millions of Salmon each year, primarily chinook as they are more fatty and dense with the calories that these magnificent whales need 
+(add another fun fact about orca species?)
 
 ### <ins>Seal</ins>
 
