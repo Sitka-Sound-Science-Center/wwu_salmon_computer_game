@@ -133,6 +133,21 @@ public class LevelSelectTests : MonoBehaviour
     }
 
     [UnityTest]
+    public IEnumerator TestSpeciesSelectIcon() {
+        yield return new WaitWhile(() => loaded == false);
+        ChangeButton.GetComponent<Button>().onClick.Invoke();
+        foreach (GameObject species in SpeciesButtons) {
+            species.GetComponent<Button>().onClick.Invoke();
+            
+            // Each species select button has a parent object with the species name for the button
+            string selectedSpecies = species.transform.parent.gameObject.name;
+            string curSpecies = LevelScript.curSpecies.text;
+            GameObject IconSquare = GameObject.FindWithTag("SpeciesSquare");
+            Assert.That(IconSquare.name, Is.EqualTo(selectedSpecies));
+        }
+    }
+
+    [UnityTest]
     public IEnumerator TestStageUpdate() {
         yield return new WaitWhile(() => loaded == false);
         foreach (GameObject fish in FishButtons) {
