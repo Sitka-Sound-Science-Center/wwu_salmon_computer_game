@@ -3466,7 +3466,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_Name
-      value: Bugs
+      value: Plankton
       objectReference: {fileID: 0}
     - target: {fileID: 2818072301669965395, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_Pivot.x
@@ -3552,6 +3552,22 @@ PrefabInstance:
       propertyPath: FoodPrefab
       value: 
       objectReference: {fileID: 1181478382769471881, guid: 4d6300747d121327ba24b180f9bbf50e, type: 3}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: FoodPrefab.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: FoodPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: FoodPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 3269034151589274365, guid: ddd7c58f5a722764c8bf5e8ee5a13069, type: 3}
+    - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
+      propertyPath: FoodPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 69150374435709005, guid: 17c31435161745f4fb10a0e8971634d1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9464,7 +9480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxpredator: 4
   spawndelay: 100
-  predator: {fileID: 6884110306819388496, guid: 790ac9387ef275e46b050b01c4583430, type: 3}
+  predatorsArray: []
 --- !u!224 &2096952043 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7989495392767472528, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}

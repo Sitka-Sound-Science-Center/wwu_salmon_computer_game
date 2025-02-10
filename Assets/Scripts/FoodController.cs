@@ -4,7 +4,7 @@ public class FoodController : MonoBehaviour
 {
     public int MaxFoodObjects=10;
     public float spawndelay;
-    public GameObject FoodPrefab;
+    public GameObject[] FoodPrefab;
     public GameObject HungerMeter;
     public int FoodObjectCount=0;
     private float counter;
@@ -27,16 +27,12 @@ public class FoodController : MonoBehaviour
             //plankton init position:
             Vector3 startPos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
             //print(this.name + "start pos: " + startPos);
-            GameObject food = Instantiate(FoodPrefab, startPos , Quaternion.identity, this.transform);
+            int foodIndex = i % FoodPrefab.Length;
+            GameObject food = Instantiate(FoodPrefab[foodIndex], startPos , Quaternion.identity, this.transform);
             food.transform.position = startPos;
             
         }
 
-    }
-
-    // Update is called once per frame
-    void Update() {
-        
     }
 
     private void FixedUpdate() {
@@ -44,7 +40,8 @@ public class FoodController : MonoBehaviour
         if (FoodObjectCount < MaxFoodObjects && counter >= spawndelay)
         {
             FoodObjectCount++;
-            GameObject food = Instantiate(FoodPrefab, NewPosition(), Quaternion.identity, this.transform);
+            int foodIndex = FoodObjectCount % FoodPrefab.Length;
+            GameObject food = Instantiate(FoodPrefab[foodIndex], NewPosition(), Quaternion.identity, this.transform);
             counter = 0;
         }
         
