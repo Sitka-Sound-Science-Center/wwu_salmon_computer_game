@@ -56,6 +56,7 @@ public class FoodController : MonoBehaviour
     }
 
     private void CountChildren() {
-        FoodObjectCount = GetComponentsInChildren<Transform>().Length -1;
+        //FoodObjectCount = GetComponentsInChildren<Transform>().Length -1;
+        FoodObjectCount = transform.childCount;
     }
 }

@@ -143,7 +143,7 @@ public class PlayerControllerSpawning : MonoBehaviour
         {
             EatableObject FoodScript = other.GetComponent<EatableObject>();
             float curWidth = rt.rect.width;
-            float ActualRestore = FoodScript.GetActualRestore();
+            float ActualRestore = FoodScript.GetRestoreValue();
             // Cap hunger at max length of parent container
             float nextWidth = System.Math.Min(MaxFill, curWidth + ActualRestore);
             rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
