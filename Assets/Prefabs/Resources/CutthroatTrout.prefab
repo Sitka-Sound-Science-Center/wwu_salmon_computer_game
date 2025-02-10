@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reason: CutthroatTrout
-  ac: 20
+  ac: 0.2
 --- !u!114 &-3174113218583976578
 MonoBehaviour:
   m_ObjectHideFlags: 0
