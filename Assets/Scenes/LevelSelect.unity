@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 308027897}
   m_Layer: 0
   m_Name: Chum
-  m_TagString: Untagged
+  m_TagString: SpeciesSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2249,7 +2249,7 @@ GameObject:
   - component: {fileID: 516342099}
   m_Layer: 0
   m_Name: Chinook
-  m_TagString: Untagged
+  m_TagString: SpeciesSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 892415617}
   m_Layer: 0
   m_Name: Coho
-  m_TagString: Untagged
+  m_TagString: SpeciesSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5147,7 +5147,7 @@ GameObject:
   - component: {fileID: 1005104856}
   m_Layer: 0
   m_Name: Sockeye
-  m_TagString: Untagged
+  m_TagString: SpeciesSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8899,7 +8899,7 @@ GameObject:
   - component: {fileID: 1787134322}
   m_Layer: 0
   m_Name: Pink
-  m_TagString: Untagged
+  m_TagString: SpeciesSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

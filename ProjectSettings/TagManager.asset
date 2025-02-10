@@ -25,6 +25,7 @@ TagManager:
   - PredatorsParent
   - DeathScreens
   - Terrain
+  - SpeciesSquare
   layers:
   - Default
   - TransparentFX

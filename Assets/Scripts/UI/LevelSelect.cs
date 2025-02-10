@@ -30,9 +30,9 @@ public class LevelSelect : MonoBehaviour
 
     public void SelectSpecies(FishButton fish) {
         curSpecies.text = fish.name;
-        fish.icon.SetActive(true);
         curSpeciesIcon.SetActive(false);
         curSpeciesIcon = fish.icon;
+        curSpeciesIcon.SetActive(true);
     }
 
     public string ChooseSelectedStage(ManagePhase.Phase phase) {
