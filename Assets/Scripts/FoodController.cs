@@ -4,7 +4,7 @@ public class FoodController : MonoBehaviour
 {
     public int MaxFoodObjects=10;
     public float spawndelay;
-    public GameObject FoodPrefab;
+    public GameObject[] FoodPrefab;
     public GameObject HungerMeter;
     public int FoodObjectCount=0;
     private float counter;
@@ -22,25 +22,37 @@ public class FoodController : MonoBehaviour
         xMax = rectX + area.x;
         yMin = rectY;
         yMax = rectY + area.y;
-    }
-
-    // Update is called once per frame
-    void Update() {
-        if(FoodObjectCount < MaxFoodObjects && counter>=spawndelay) {
-            FoodObjectCount++;
-            GameObject food = Instantiate(FoodPrefab, NewPosition(), Quaternion.identity,this.transform);
-            counter=0;
+        for(int i = 0; i < MaxFoodObjects; i++)
+        {
+            //plankton init position:
+            Vector3 startPos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
+            //print(this.name + "start pos: " + startPos);
+            int foodIndex = i % FoodPrefab.Length;
+            GameObject food = Instantiate(FoodPrefab[foodIndex], startPos , Quaternion.identity, this.transform);
+            food.transform.position = startPos;
+            
         }
-        CountChildren(); // what? isnt the foodobjectcount++ line doing this? 
+
     }
 
     private void FixedUpdate() {
+        CountChildren(); // what? isnt the foodobjectcount++ line doing this?   
+        if (FoodObjectCount < MaxFoodObjects && counter >= spawndelay)
+        {
+            FoodObjectCount++;
+            int foodIndex = FoodObjectCount % FoodPrefab.Length;
+            GameObject food = Instantiate(FoodPrefab[foodIndex], NewPosition(), Quaternion.identity, this.transform);
+            counter = 0;
+        }
+        
         counter += Time.deltaTime;
     }
 
     private Vector3 NewPosition() {
-        position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
-        return position;
+
+
+        Vector3 Nposition = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
+        return Nposition;
     }
 
     private void CountChildren() {

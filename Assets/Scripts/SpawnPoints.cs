@@ -8,9 +8,12 @@ public class SpawnPoints : MonoBehaviour
     public GameObject AdultSpawn;
     public GameObject SpawningSpawn;
     public GameObject Player;
+
+    public GameObject tutorial;
+    public Rigidbody2D boot;
     //private string[] stages = {"Alevin", "Fry", "Smolt", "Adult", "Spawning"}; // change to use the Stage enum?
 
-    public Vector3 Spawn(ManagePhase.Phase phase) { // take Stage enum as param?
+    public Vector3 Spawn(ManagePhase.Phase phase) {
         Debug.Log("Spawning " + phase.ToString());
         int idx = (int)phase; // mod player transform #childs eg adult prefab will only have one child
 
@@ -19,11 +22,18 @@ public class SpawnPoints : MonoBehaviour
         SpawnPos = gameObject.transform.GetChild(idx).position; 
         Player.transform.position = SpawnPos; 
         PlayerPos = active.transform.position;
+
         int zoom = 32;
         if (phase == ManagePhase.Phase.Fry) zoom = 50;
         if (phase == ManagePhase.Phase.Smolt) zoom = 70;
         GameObject.FindWithTag("Camera").GetComponent<Camera>().orthographicSize = zoom;
-        //active.SetActive(true);
+
+        if (phase != ManagePhase.Phase.Alevin)
+        {
+            boot.isKinematic = false;
+            tutorial.SetActive(false);
+        }
+        
         return PlayerPos;
     }
 }
