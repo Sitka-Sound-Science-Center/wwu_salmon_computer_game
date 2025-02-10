@@ -9480,7 +9480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxpredator: 4
   spawndelay: 100
-  predatorsArray: []
+  predatorsArray:
+  - {fileID: 6884110306819388496, guid: 790ac9387ef275e46b050b01c4583430, type: 3}
 --- !u!224 &2096952043 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7989495392767472528, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}

@@ -66,7 +66,7 @@ public class PredatorController : MonoBehaviour
 
     private void CountChildren()
     {
-        predatorCount = GetComponentsInChildren<Transform>().Length;
+        predatorCount = transform.childCount;
     }
 
     private GameObject GetPredatorObj()
