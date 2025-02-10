@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,10 +22,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 move;
 
     // hunger meter elements
-    public GameObject HungerMeter;
-    private RectTransform rt;
-    private float MaxFill = 550; // actual width of parent container
-    private float ActualDamage;
+    public HungerMeter hungerMeter;
+    //private RectTransform rt;
+    //private float MaxFill = 550; // actual width of parent container
+    //private float ActualDamage;
 
     [SerializeField]
     GameObject DeathScreenParent;
@@ -48,8 +49,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
        scale = transform.localScale;
-       HungerMeter = GameObject.FindWithTag("HMeter");
-       rt = HungerMeter.GetComponent<RectTransform>();
+       hungerMeter = GameObject.FindWithTag("HMeter").GetComponent<HungerMeter>();
+       //rt = hungerMeter.GetComponent<RectTransform>();
     }
 
     private void FixedUpdate()
@@ -115,15 +116,11 @@ public class PlayerController : MonoBehaviour
     // Handle food interactions: increase health bar and destroy food obj
     private void OnTriggerEnter2D(Collider2D collision) {
         GameObject other = collision.gameObject;
-        if (other.CompareTag("Food") && rt.rect.width!=MaxFill) {
+        if (other.CompareTag("Food")) {
             EatableObject FoodScript = other.GetComponent<EatableObject>();
-            float curWidth = rt.rect.width;
-            float ActualRestore = FoodScript.GetActualRestore();
-
-            // Cap hunger at max length of parent container
-            float nextWidth = System.Math.Min(MaxFill, curWidth+ActualRestore);
-            rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
-            FoodScript.Spawner.GetComponent<FoodController>().FoodObjectCount--;
+            hungerMeter.EatFish(FoodScript.GetRestoreValue());
+            
+            //FoodScript.Spawner.GetComponent<FoodController>().FoodObjectCount--;
             Destroy(other);
         }
     }
@@ -131,15 +128,16 @@ public class PlayerController : MonoBehaviour
     // Handle predator interactions: die and display death screen
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Predator")) {
-            ActualDamage = other.gameObject.GetComponent<DeathReason>().ac;
-            float curWidth = rt.rect.width;
-            float nextWidth = curWidth - ActualDamage;
-            if (nextWidth <= 0) {
+            float actualDamage = other.gameObject.GetComponent<DeathReason>().ac;
+            //float curWidth = rt.rect.width;
+            //float nextWidth = curWidth - ActualDamage;
+            if (hungerMeter.GetComponent<Slider>().value <= 0) {
                 string reason = other.gameObject.GetComponent<DeathReason>().reason; 
                 killPlayer(reason);
             }
             else {
-                rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+                //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
+                hungerMeter.TakeDamage(actualDamage);
             }
         }
     }
