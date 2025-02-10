@@ -1,4 +1,5 @@
 
+using GluonGui;
 using UnityEngine;
 
 
@@ -19,6 +20,7 @@ public class PredatorController : MonoBehaviour
     //[SerializeField]
     //GameObject predatorsParent;
     public GameObject[] predatorsArray;
+    public Camera Camera;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class PredatorController : MonoBehaviour
         //init counter to spawn delay for instant spawn of fish on scene load
         counter = spawndelay;
         //predatorsArray = predatorsParent.GetComponentsInChildren<GameObject>();
+        
     }
 
     void Update()
@@ -61,9 +64,18 @@ public class PredatorController : MonoBehaviour
     private Vector3 NewPosition()
     {
         position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
+        Vector3 viewPosition = Camera.WorldToViewportPoint(position);
+        if(viewPosition.x >= 0 && viewPosition.x <= 1 && viewPosition.y >= 0 && viewPosition.y <= 1 && viewPosition.z > 0)
+        {
+            print("object onscreen -- skip spawn");
+            position = NewPosition();
+        }
+        else
+        {
+            print("object offscreen -- spawn");
+        }
         return position;
     }
-
     private void CountChildren()
     {
         predatorCount = transform.childCount;
