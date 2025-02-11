@@ -2486,7 +2486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2124339323952838342, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -453
+      value: -433.67
       objectReference: {fileID: 0}
     - target: {fileID: 2124339323952838342, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8961,6 +8961,7 @@ MonoBehaviour:
   Player: {fileID: 1823360019}
   tutorial: {fileID: 0}
   boot: {fileID: 0}
+  hungerMeter: {fileID: 0}
 --- !u!4 &1959546827
 Transform:
   m_ObjectHideFlags: 0
@@ -9427,6 +9428,7 @@ MonoBehaviour:
   spawndelay: 100
   predatorsArray:
   - {fileID: 6884110306819388496, guid: 790ac9387ef275e46b050b01c4583430, type: 3}
+  Camera: {fileID: 336715358}
 --- !u!224 &2096952043 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7989495392767472528, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
