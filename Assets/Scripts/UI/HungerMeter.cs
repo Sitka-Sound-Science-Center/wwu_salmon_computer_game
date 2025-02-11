@@ -5,22 +5,20 @@ using UnityEngine.UI;
 
 public class HungerMeter : MonoBehaviour
 {
-    [SerializeField] 
-    //private float EmptyTime=10F; // time in seconds needed for bar to go from full to empty
-    //private float MaxFill=550; // actual width of parent container
-    private float timer=0F;
-    //private RectTransform rt;
+    public float startingWidth;
+    public float startingHeight;
 
-    void Start() {
-        //rt = gameObject.GetComponent<RectTransform>();
+    private void Start()
+    {
+        //startingWidth = transform.localScale.x;
+        startingWidth = 550;
+        startingHeight = 76;
     }
 
-    void Update() {
-        //timer+=Time.deltaTime;
-
-        //if (timer>=2.5F) {
-        //    timer=0F;
-        //}
+    public void SetMeterSize(float val)
+    {
+        gameObject.GetComponent<Slider>().maxValue = val;
+        GetComponent<RectTransform>().sizeDelta = new Vector2(startingWidth * val, startingHeight);
     }
 
     public void EatFish(float value)

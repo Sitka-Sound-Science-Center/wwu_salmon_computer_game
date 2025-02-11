@@ -12,6 +12,12 @@ public class SpawnPoints : MonoBehaviour
     public GameObject tutorial;
     public Rigidbody2D boot;
     //private string[] stages = {"Alevin", "Fry", "Smolt", "Adult", "Spawning"}; // change to use the Stage enum?
+    public HungerMeter hungerMeter;
+
+    private void Start()
+    {
+        hungerMeter = GameObject.FindWithTag("HMeter").GetComponent<HungerMeter>();
+    }
 
     public Vector3 Spawn(ManagePhase.Phase phase) {
         Debug.Log("Spawning " + phase.ToString());
@@ -24,16 +30,29 @@ public class SpawnPoints : MonoBehaviour
         PlayerPos = active.transform.position;
 
         int zoom = 32;
-        if (phase == ManagePhase.Phase.Fry) zoom = 50;
-        if (phase == ManagePhase.Phase.Smolt) zoom = 70;
-        GameObject.FindWithTag("Camera").GetComponent<Camera>().orthographicSize = zoom;
 
         if (phase != ManagePhase.Phase.Alevin)
         {
             boot.isKinematic = false;
             tutorial.SetActive(false);
+            //hungerMeter.SetMeterSize(0)
         }
-        
+        if (phase == ManagePhase.Phase.Alevin)
+        {
+            hungerMeter.SetMeterSize(0);
+        } else if (phase == ManagePhase.Phase.Fry)
+        {
+            zoom = 50;
+            hungerMeter.SetMeterSize(1);
+        } else if (phase == ManagePhase.Phase.Smolt)
+        {
+            zoom = 70;
+            hungerMeter.SetMeterSize(1.5f);
+            //hungerMeter.SetMeterSize(1);
+        }
+
+        GameObject.FindWithTag("Camera").GetComponent<Camera>().orthographicSize = zoom;
+
         return PlayerPos;
     }
 }
