@@ -4970,6 +4970,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3839784994744983620, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
+      propertyPath: Direction.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839784994744983620, guid: 96a0a06633e1fbf4eaac267569101981, type: 3}
       propertyPath: VisionFrequency
       value: 5
       objectReference: {fileID: 0}
