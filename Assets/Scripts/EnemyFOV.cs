@@ -8,6 +8,12 @@ public class EnemyFOV : MonoBehaviour
     public float ViewAngle; // in degrees, breadth of FOV cone
     public LayerMask PlayerMask; // layer that only has player object on it
 
+    // Used for editor script
+    public Vector3 GetPredatorDirection() {
+        PredatorMovement pm = gameObject.GetComponent<PredatorMovement>();
+        return pm.Direction;
+    }
+
     // Helper method to vectors and angles
     public Vector3 DirectionFromAngle(float angleInDegrees) {
         float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1; // make vision cone come out of front of enemy
