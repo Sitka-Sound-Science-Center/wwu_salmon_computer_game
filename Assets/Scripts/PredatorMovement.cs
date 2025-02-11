@@ -47,8 +47,8 @@ public class PredatorMovement : MonoBehaviour
             SetSpriteOrientation(Direction);
         }
         else if (PlayerVision) {
-            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);    
-            SetSpriteOrientation(Direction);
+            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);   
+            SetSpriteOrientation(Direction); 
         }
         // speed is set reasonably high so movement looks and feels smooth
         gameObject.transform.position += (Direction * Time.deltaTime * speed); 
@@ -73,12 +73,15 @@ public class PredatorMovement : MonoBehaviour
         if (dir.x < 0)
         {
             //face sprite to the left
-            transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
+            gameObject.transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
         else
         {
             //face sprite to the right
-            transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
+            gameObject.transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
+        float angle = Vector3.Angle(dir, Direction);
+        Vector3 rotation = new Vector3(0,0,angle);
+        gameObject.transform.Rotate(rotation);
     }
 }
