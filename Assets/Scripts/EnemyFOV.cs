@@ -32,7 +32,7 @@ public class EnemyFOV : MonoBehaviour
     public bool IsPlayerInCone(Vector3 PlayerPosition) {
         Vector3 DirectionToPlayer = PlayerPosition - gameObject.transform.position;
         bool in_radius = DirectionToPlayer.magnitude <= DetectionRadius;
-        Vector3 EnemyLookDirection = (gameObject.transform.localScale.x < 0) ? Vector3.left : Vector3.right;
+        Vector3 EnemyLookDirection = GetPredatorDirection();
         DirectionToPlayer.Normalize();
         // Check if player object is inside of the enemy's vision cone
         float AngleToPlayer = Vector3.Angle(EnemyLookDirection, DirectionToPlayer);   
