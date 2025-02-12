@@ -488,7 +488,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_Name
-      value: Plankton
+      value: Herring2
       objectReference: {fileID: 0}
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_IsActive
@@ -584,12 +584,12 @@ PrefabInstance:
       objectReference: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
+      objectReference: {fileID: 2795454146970692178, guid: 2c1d60c42411d934286e873113793276, type: 3}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.data[1]
       value: 
@@ -8982,7 +8982,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_Name
-      value: Plankton
+      value: Herring1
       objectReference: {fileID: 0}
     - target: {fileID: 1691142323103288025, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: m_TagString
@@ -9090,12 +9090,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
+      objectReference: {fileID: 2795454146970692178, guid: 2c1d60c42411d934286e873113793276, type: 3}
     - target: {fileID: 7786501060978372901, guid: b840ea049a6c17244af7c30649800baa, type: 3}
       propertyPath: FoodPrefab.Array.data[1]
       value: 
