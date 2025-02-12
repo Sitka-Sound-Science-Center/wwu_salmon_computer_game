@@ -55,7 +55,6 @@ public class EnemyFOV : MonoBehaviour
         // There should be an easier way to check if the object that the ray cast hits is the player object but apparently
         // GameObject class doesnt support (GameObject a == GameObject b)?
         if (HitInfo.collider != null && HitInfo.transform.gameObject.name == "Fish_Player_prefab"){
-            print("LINE OF SIGHT: " + gameObject.name);
             return true;
         } 
         return false;
