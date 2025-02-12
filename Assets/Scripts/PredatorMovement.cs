@@ -80,8 +80,12 @@ public class PredatorMovement : MonoBehaviour
             //face sprite to the right
             gameObject.transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
-        float angle = Vector3.Angle(dir, Direction);
-        Vector3 rotation = new Vector3(0,0,angle);
-        gameObject.transform.Rotate(rotation);
+        float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1;
+        float angle = Vector3.SignedAngle(Vector3.right, Direction, Vector3.forward);
+        print("Signed Angle: " + angle + " Orientation: " + orientation + " Predator: " + gameObject.name);
+        if (orientation < 0) angle = -(180 - angle);
+        //else angle = -angle;
+        //print("orientation: " + orientation + " Angle: " + angle + " " + gameObject.name);
+        gameObject.transform.eulerAngles = new Vector3(0,0, angle);
     }
 }
