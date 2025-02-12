@@ -12,8 +12,8 @@ public class FOVEditor : Editor
         Handles.color = Color.white;
         Handles.DrawWireArc(fov.transform.position, Vector3.forward, Vector3.left, 360, fov.DetectionRadius, 2F);
         Vector3 PredatorDirection = fov.GetPredatorDirection();
-        Vector3 BottomView = fov.DirectionFromAngle(-fov.ViewAngle/2);
-        Vector3 TopView = fov.DirectionFromAngle(fov.ViewAngle/2);
+        Vector3 BottomView = fov.DirectionFromAngle(fov.gameObject.transform.eulerAngles.z - fov.ViewAngle/2);
+        Vector3 TopView = fov.DirectionFromAngle(fov.gameObject.transform.eulerAngles.z + fov.ViewAngle/2);
         Vector3 Bottom = fov.transform.position + (BottomView * fov.DetectionRadius);
         Vector3 Top = fov.transform.position + (TopView * fov.DetectionRadius);
         Vector3 dir = fov.transform.position + (PredatorDirection * fov.DetectionRadius);
