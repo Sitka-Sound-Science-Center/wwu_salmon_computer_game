@@ -20,24 +20,20 @@ public class BackgroudFishController : MonoBehaviour
     void Start()
     {
         counter = frequency;
-        RectTransform MoveableArea = GetComponentInParent<RectTransform>();
-        MoveableArea.GetWorldCorners(fourCorners);
-        xMin = fourCorners[0][0];
-        xMax = fourCorners[2][0];
-        yMin = fourCorners[0][2];
-        yMax = fourCorners[2][2];
-    }
+        RectTransform moveableArea = GetComponentInParent<RectTransform>();
+        moveableArea.GetWorldCorners(fourCorners);
+        xMin = fourCorners[0].x;
+        xMax = fourCorners[2].x;
+        yMin = fourCorners[0].y;
+        yMax = fourCorners[2].y;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Debug.Log("Y VALS: " + yMin + " " + yMax);
     }
 
     private void FixedUpdate()
     {
         counter++;
-        if (counter > UnityEngine.Random.Range(frequency / 2, frequency * 2))
+        if (counter > Random.Range(frequency / 2, frequency * 2))
         {
             //pick a random spot in the rect transform
             this.newPosition = NewPosition();
@@ -52,7 +48,7 @@ public class BackgroudFishController : MonoBehaviour
     {
         float newX = Mathf.Clamp((this.transform.position.x + (Random.Range(-movementRange, movementRange) * 2)), xMin, xMax);
         float newY = Mathf.Clamp((this.transform.position.y + (Random.Range(-movementRange, movementRange))), yMin, yMax);
-        //print("newCoord: " + newX + ", " + newY);
+        // print("newCoord: " + newX + ", " + newY);
         //newPosition = new Vector3(newX, new YieldIn)
         //position = new Vector3(0f, 0f, 0f);
         return new Vector3(newX, newY, 0f); ;
