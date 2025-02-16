@@ -4366,7 +4366,7 @@ GameObject:
   - component: {fileID: 141365660}
   - component: {fileID: 141365659}
   m_Layer: 0
-  m_Name: GiantKellp
+  m_Name: GiantKelp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11876,8 +11876,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.68, y: 7.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1879211859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11921,9 +11921,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 777f1af4e581f7e4594eb8bc27e20bc9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6073692, g: 0.83119893, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14279,7 +14279,7 @@ GameObject:
   - component: {fileID: 594700245}
   - component: {fileID: 594700247}
   - component: {fileID: 594700246}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Alevin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14295,9 +14295,9 @@ Transform:
   m_GameObject: {fileID: 594700244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.68, y: 7.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 18, y: 0.1, z: 0}
+  m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1879211859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14356,9 +14356,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 777f1af4e581f7e4594eb8bc27e20bc9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6073692, g: 0.83119893, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19059,7 +19059,7 @@ GameObject:
   - component: {fileID: 744486191}
   - component: {fileID: 744486193}
   - component: {fileID: 744486192}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Alevin (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19075,9 +19075,9 @@ Transform:
   m_GameObject: {fileID: 744486190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.68, y: 7.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -16.6, y: -10.6, z: 0}
+  m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1879211859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19136,9 +19136,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 777f1af4e581f7e4594eb8bc27e20bc9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6073692, g: 0.83119893, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25135,7 +25135,7 @@ GameObject:
   - component: {fileID: 906341007}
   - component: {fileID: 906341009}
   - component: {fileID: 906341008}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Alevin (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25151,9 +25151,9 @@ Transform:
   m_GameObject: {fileID: 906341006}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.68, y: 7.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 8.6, y: -11.1, z: 0}
+  m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1879211859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25212,9 +25212,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 777f1af4e581f7e4594eb8bc27e20bc9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6073692, g: 0.83119893, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -27465,7 +27465,7 @@ GameObject:
   - component: {fileID: 1004542997}
   - component: {fileID: 1004542996}
   m_Layer: 0
-  m_Name: GiantKellp (1)
+  m_Name: GiantKelp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30903,7 +30903,7 @@ GameObject:
   - component: {fileID: 1125021245}
   - component: {fileID: 1125021247}
   - component: {fileID: 1125021246}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Alevin (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30920,8 +30920,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.68, y: 7.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1879211859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30980,9 +30980,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 777f1af4e581f7e4594eb8bc27e20bc9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6073692, g: 0.83119893, b: 0.8867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -49566,8 +49566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.0402, y: 6.5554}
-  m_SizeDelta: {x: 85.4905, y: 44.5146}
+  m_AnchoredPosition: {x: 14.0402, y: 6.6116}
+  m_SizeDelta: {x: 85.4905, y: 29.3417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1880873687
 GameObject:
