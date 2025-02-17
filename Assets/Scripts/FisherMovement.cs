@@ -11,12 +11,13 @@ public class FisherMovement : MonoBehaviour
     [SerializeField]
     Vector3 RightPatrol = new Vector3(370, 150, 0);
     [SerializeField]
-    int lines = 6; // how many fishing lines out at once (outriggers)
+    int lines = 1; // how many fishing lines out at once (outriggers)
     [SerializeField]
     float CastFrequency = 3F; // how long between each cast (spawn a fishing hook)
     [SerializeField]
     float speed = 4F; // how much movement
     Vector3 ScaleFactor;
+    GameObject castLine;
     float timer; // timer to track casting fishing line
     float cur = 0F; // current proportion of distance traveled between left and right patrol points
     float direction = 1F; // moving in positive x-direction or negative x-direction
@@ -38,11 +39,16 @@ public class FisherMovement : MonoBehaviour
             if (t - cur < 0) direction = -1F;
             else direction = 1F;
             gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z); 
-            GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation);
+            castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation);
+            print(castLine.name);
             LineCount++;
             cur = t;
             timer = 0;
         }
+        else if (LineCount == lines) {
+            Destroy(castLine);
+            lines--;
+        }    
         gameObject.transform.position += (Time.deltaTime * speed * direction * Vector3.Normalize(RightPatrol - LeftPatrol));
     }
 }
