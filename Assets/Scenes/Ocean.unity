@@ -6256,7 +6256,7 @@ MonoBehaviour:
   FishHook: {fileID: 8691841904342348015, guid: f86d4541af859f0a7bac7010dbabc9fc, type: 3}
   LeftPatrol: {x: 90, y: 160, z: 0}
   RightPatrol: {x: 370, y: 150, z: 0}
-  lines: 4
+  lines: 1
   CastFrequency: 3
   speed: 4
 --- !u!1 &1194492627
@@ -10495,3 +10495,4 @@ SceneRoots:
   - {fileID: 1959546827}
   - {fileID: 310752578}
   - {fileID: 130251442}
+  - {fileID: 1194161002}

@@ -32,7 +32,12 @@ public class FisherMovement : MonoBehaviour
     // next move: if no hook, move then cast hook like previously
     void Update() {
         timer += Time.deltaTime;
-        if (timer >= CastFrequency && LineCount < lines) {
+        if (timer >= CastFrequency && LineCount >= lines) {
+            Destroy(castLine);
+            LineCount--;
+            timer=0;
+        }
+        else if (timer >= CastFrequency && LineCount < lines) {
             float t = Random.Range(0F,1F);
             Vector3 nxt = Vector3.Lerp(LeftPatrol, RightPatrol, t);
             Vector3 linePos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 20, 0);
@@ -40,15 +45,10 @@ public class FisherMovement : MonoBehaviour
             else direction = 1F;
             gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z); 
             castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation);
-            print(castLine.name);
             LineCount++;
             cur = t;
             timer = 0;
-        }
-        else if (LineCount == lines) {
-            Destroy(castLine);
-            lines--;
-        }    
+        } 
         gameObject.transform.position += (Time.deltaTime * speed * direction * Vector3.Normalize(RightPatrol - LeftPatrol));
     }
 }
