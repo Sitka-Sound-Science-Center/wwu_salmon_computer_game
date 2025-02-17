@@ -8,6 +8,12 @@ public class EnemyFOV : MonoBehaviour
     public float ViewAngle; // in degrees, breadth of FOV cone
     public LayerMask PlayerMask; // layer that only has player object on it
 
+    // Used for editor script
+    public Vector3 GetPredatorDirection() {
+        PredatorMovement pm = gameObject.GetComponent<PredatorMovement>();
+        return pm.Direction;
+    }
+
     // Helper method to vectors and angles
     public Vector3 DirectionFromAngle(float angleInDegrees) {
         float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1; // make vision cone come out of front of enemy
@@ -26,7 +32,7 @@ public class EnemyFOV : MonoBehaviour
     public bool IsPlayerInCone(Vector3 PlayerPosition) {
         Vector3 DirectionToPlayer = PlayerPosition - gameObject.transform.position;
         bool in_radius = DirectionToPlayer.magnitude <= DetectionRadius;
-        Vector3 EnemyLookDirection = (gameObject.transform.localScale.x < 0) ? Vector3.left : Vector3.right;
+        Vector3 EnemyLookDirection = GetPredatorDirection();
         DirectionToPlayer.Normalize();
         // Check if player object is inside of the enemy's vision cone
         float AngleToPlayer = Vector3.Angle(EnemyLookDirection, DirectionToPlayer);   
@@ -49,7 +55,6 @@ public class EnemyFOV : MonoBehaviour
         // There should be an easier way to check if the object that the ray cast hits is the player object but apparently
         // GameObject class doesnt support (GameObject a == GameObject b)?
         if (HitInfo.collider != null && HitInfo.transform.gameObject.name == "Fish_Player_prefab"){
-            print("LINE OF SIGHT: " + gameObject.name);
             return true;
         } 
         return false;

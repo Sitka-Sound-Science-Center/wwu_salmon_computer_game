@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reason: Seal
-  ac: 5
+  ac: 0.5
 --- !u!114 &2662385038172951902
 MonoBehaviour:
   m_ObjectHideFlags: 0

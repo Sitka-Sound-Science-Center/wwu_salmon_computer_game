@@ -9,6 +9,7 @@ public class PhaseController : MonoBehaviour
     [SerializeField]
     private GameObject PlayerCamera;
     public SpawnPoints sp;
+    private HungerMeter hungerMeter;
     //private GameObject CurrentPhase;
 
     private void Start()
@@ -22,7 +23,7 @@ public class PhaseController : MonoBehaviour
             SetActiveSprite(ManagePhase.currentPhase.ToString());
             sp.Spawn(ManagePhase.currentPhase);
         }
-        
+        hungerMeter = GameObject.FindWithTag("HMeter").GetComponent<HungerMeter>();
     }
 
     public void ChangePhase(ManagePhase.Phase nextPhase)
@@ -32,21 +33,20 @@ public class PhaseController : MonoBehaviour
         {
             case ManagePhase.Phase.Alevin:
                 print("why are you changing to alevin...?");
-                //PlayerCamera.GetComponent<Camera>().orthographicSize = 32;
                 StartCoroutine(SmoothZoom(32, 2));
+                hungerMeter.SetMeterSize(0);
                 SetActiveSprite("Alevin");
                 break;
             case ManagePhase.Phase.Fry:
                 print("Changing to Fry");
                 SetActiveSprite("Fry");
-                //PlayerCamera.GetComponent<CameraXTrack>().ChangeToFryPosition();
-                //PlayerCamera.GetComponent<Camera>().orthographicSize = 50;
                 StartCoroutine(SmoothZoom(50, 2));
+                hungerMeter.SetMeterSize(1);
                 break;
             case ManagePhase.Phase.Smolt:
                 SetActiveSprite("Smolt");
-                //PlayerCamera.GetComponent<Camera>().orthographicSize = 70;
                 StartCoroutine(SmoothZoom(70, 2));
+                hungerMeter.SetMeterSize(1.5f);
                 break;
             default:
                 print("something went wrong in phase changer");
@@ -81,15 +81,4 @@ public class PhaseController : MonoBehaviour
         }
     }
 
-    /*private void SetPhase(string phase) {
-        // change these two GameObjects to be references in the controller 
-        // or use findwithtag or similar not Find()
-        string phaseCurrent = ManagePhase.currentPhase.ToString();
-        GameObject currentPhase = transform.Find(phaseCurrent).gameObject; 
-        GameObject nextPhase = transform.Find(phase).gameObject;
-        currentPhase.SetActive(false);
-        phaseCurrent = phase;
-        nextPhase.SetActive(true);
-        phaseCurrent = phase;
-    } */
 }
