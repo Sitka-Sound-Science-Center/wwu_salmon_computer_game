@@ -23,12 +23,6 @@ public class EnemyFOV : MonoBehaviour
         return direction * orientation;
     }
 
-    // Check if player object is within the vision radius
-    public bool IsPlayerInRadius() {
-        Collider2D PlayerCollider = Physics2D.OverlapCircle(gameObject.transform.position, DetectionRadius, PlayerMask);
-        return (PlayerCollider!=null && PlayerCollider.gameObject.name == "Fish_Player_prefab");
-    }
-
     public bool IsPlayerInCone(Vector3 PlayerPosition) {
         Vector3 DirectionToPlayer = PlayerPosition - gameObject.transform.position;
         bool in_radius = DirectionToPlayer.magnitude <= DetectionRadius;
