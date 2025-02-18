@@ -119,8 +119,6 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Food")) {
             EatableObject FoodScript = other.GetComponent<EatableObject>();
             hungerMeter.EatFish(FoodScript.GetRestoreValue());
-            
-            //FoodScript.Spawner.GetComponent<FoodController>().FoodObjectCount--;
             Destroy(other);
         }
     }
@@ -129,23 +127,16 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Predator")) {
             float actualDamage = other.gameObject.GetComponent<DeathReason>().ac;
-            //float curWidth = rt.rect.width;
-            //float nextWidth = curWidth - ActualDamage;
             if (hungerMeter.GetComponent<Slider>().value <= 0) {
                 string reason = other.gameObject.GetComponent<DeathReason>().reason; 
                 killPlayer(reason);
             }
-            else {
-                //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nextWidth);
-                hungerMeter.TakeDamage(actualDamage);
-            }
+            else hungerMeter.TakeDamage(actualDamage);
         }
     }
 
-    public void killPlayer(string reason) 
-    {
+    public void killPlayer(string reason) {
         UnityEngine.Time.timeScale = 0;
         GameObject.Find("UICanvas/DeathScreens/" + reason).SetActive(true);
     }
-
 }
