@@ -26,7 +26,6 @@ public class FoodController : MonoBehaviour
         {
             //plankton init position:
             Vector3 startPos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
-            //print(this.name + "start pos: " + startPos);
             int foodIndex = i % FoodPrefab.Length;
             GameObject food = Instantiate(FoodPrefab[foodIndex], startPos , Quaternion.identity, this.transform);
             food.transform.position = startPos;
