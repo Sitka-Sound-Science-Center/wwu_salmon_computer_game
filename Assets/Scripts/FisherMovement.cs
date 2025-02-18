@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FisherMovement : MonoBehaviour
 {
+    // Public: 
     [SerializeField]
     GameObject FishHook;
     [SerializeField]
@@ -16,6 +17,7 @@ public class FisherMovement : MonoBehaviour
     float CastFrequency = 3F; // how long between each cast (spawn a fishing hook)
     [SerializeField]
     float speed = 4F; // how much movement
+    // Private: 
     Vector3 ScaleFactor;
     GameObject castLine;
     float timer; // timer to track casting fishing line
@@ -27,9 +29,7 @@ public class FisherMovement : MonoBehaviour
         ScaleFactor = gameObject.transform.localScale;
     }
 
-    // spawn fisher hook that can kill you
     // next move: if hook active -- reel it in, perhaps show NPC fish object trailing it and pop up info box about fishing benefits to economy
-    // next move: if no hook, move then cast hook like previously
     void Update() {
         timer += Time.deltaTime;
         if (timer >= CastFrequency && LineCount >= lines) {
