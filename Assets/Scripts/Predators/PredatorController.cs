@@ -20,7 +20,7 @@ public class PredatorController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        RectTransform MoveableArea = GetComponent<RectTransform>();
+        RectTransform MoveableArea = GetComponentInParent<RectTransform>();
         float rectX = MoveableArea.rect.x + MoveableArea.position.x; //left edge of transform
         float rectY = MoveableArea.rect.y + MoveableArea.position.y; //bottom edge of transform
         Vector2 area = MoveableArea.sizeDelta;
