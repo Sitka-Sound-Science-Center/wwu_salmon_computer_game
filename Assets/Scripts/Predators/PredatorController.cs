@@ -33,14 +33,14 @@ public class PredatorController : MonoBehaviour
     }
 
     void Update() {
-        if (predatorCount < maxpredator && counter > spawndelay) {
-            //spawn a ppredator
+        if (predatorCount < maxpredator && counter > spawndelay) { 
+            // spawn a predator after (spawndelay) fixed updates
             predatorCount++;
             GameObject predator = Instantiate(GetPredatorObj(), NewPosition(), Quaternion.identity, this.transform);
             predator.transform.localScale = predator.transform.localScale*(Random.Range(0.5f, 1.5f));
             counter = 0;
         }
-        CountChildren();
+        //print("Predator count: " + predatorCount + " Transform children: " + gameObject.transform.childCount);
     }
 
     private void FixedUpdate() {
@@ -54,10 +54,6 @@ public class PredatorController : MonoBehaviour
             position = NewPosition();
         }
         return position;
-    }
-    
-    private void CountChildren() {
-        predatorCount = transform.childCount;
     }
 
     private GameObject GetPredatorObj() {
