@@ -4,7 +4,7 @@ public class PredatorController : MonoBehaviour
 {   
     // Public: 
     [SerializeField]
-    int maxpredator;
+    public int maxpredator;
     [SerializeField]
     int spawndelay;
     public GameObject[] predatorsArray;
@@ -30,6 +30,14 @@ public class PredatorController : MonoBehaviour
         yMax = rectY + area.y;
         // init counter to spawn delay for instant spawn of fish on scene load
         counter = spawndelay;
+    }
+
+    public int CountPredators() {
+        return predatorCount;
+    }
+
+    public void SetSpawnDelay(int delay) {
+        spawndelay = delay;
     }
 
     void Update() {
