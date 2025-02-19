@@ -40,6 +40,15 @@ public class PredatorController : MonoBehaviour
         spawndelay = delay;
     }
 
+    public bool PointOnScreen(Vector3 p) {
+        Vector3 viewPosition = Camera.WorldToViewportPoint(p);
+        // point p is on-screen (inside main camera viewport)
+        if(viewPosition.x >= 0 && viewPosition.x <= 1 && viewPosition.y >= 0 && viewPosition.y <= 1 && viewPosition.z > 0) {
+            return true;
+        }
+        else return false; // point p is off-screen (outside of main camera viewport)
+    }
+
     void Update() {
         if (predatorCount < maxpredator && counter > spawndelay) { 
             // spawn a predator after (spawndelay) fixed updates
@@ -56,11 +65,10 @@ public class PredatorController : MonoBehaviour
     }
 
     private Vector3 NewPosition() {
-        position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
-        Vector3 viewPosition = Camera.WorldToViewportPoint(position);
-        if(viewPosition.x >= 0 && viewPosition.x <= 1 && viewPosition.y >= 0 && viewPosition.y <= 1 && viewPosition.z > 0) {
-            position = NewPosition();
-        }
+        while (true) {
+            position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0f);
+            if (!PointOnScreen(position)) break;
+        } 
         return position;
     }
 
