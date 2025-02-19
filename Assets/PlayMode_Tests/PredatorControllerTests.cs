@@ -45,7 +45,7 @@ public class PredatorControllerTests : MonoBehaviour
     public IEnumerator TestMaxCountChildren() {
         yield return new WaitWhile(() => loaded == false);
         ControlScript.SetSpawnDelay(1);
-        yield return new WaitForSeconds(0.1F);
+        yield return new WaitForSeconds(0.1F); // dependent on max predator value 
         Assert.That(ControlScript.CountPredators(), Is.EqualTo(ControlScript.maxpredator));
     }
 
