@@ -49,6 +49,20 @@ public class PredatorControllerTests : MonoBehaviour
         Assert.That(ControlScript.CountPredators(), Is.EqualTo(ControlScript.maxpredator));
     }
 
+    [UnityTest]
+    public IEnumerator TestPointOffScreen() {
+        yield return new WaitWhile(() => loaded == false);
+        Vector3 p = ControlScript.Camera.ViewportToWorldPoint(new Vector3(2,2,0));
+        Assert.That(ControlScript.PointOnScreen(p), Is.False);
+    }
+
+    [UnityTest]
+    public IEnumerator TestPointOnScreen() {
+        yield return new WaitWhile(() => loaded == false);
+        Vector3 p = ControlScript.Camera.ViewportToWorldPoint(new Vector3(0.75F,0.5F,0.1F));
+        Assert.That(ControlScript.PointOnScreen(p), Is.True);
+    }
+
     [OneTimeTearDown]
     public void TearDown() {
         SceneManager.sceneLoaded -= OceanOnSceneLoaded;
