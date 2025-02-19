@@ -10328,9 +10328,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2094390747}
   - component: {fileID: 2094390748}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: AssetSpawner(fish)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
