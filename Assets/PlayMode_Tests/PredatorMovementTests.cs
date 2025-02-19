@@ -22,7 +22,7 @@ public class PredatorMovementTests : MonoBehaviour
 
     void SetPredatorMovementTestRefs(Scene scene, LoadSceneMode mode) {
         Player = GameObject.FindWithTag("Player");
-        OrcaWhale = GameObject.Find("Predators/AssetSpawner(fish)/OrcaWhale");
+        OrcaWhale = GameObject.Find("Predators/OrcaWhale");
         MovementScript = OrcaWhale.GetComponent<PredatorMovement>();
         FOVScript = OrcaWhale.GetComponent<EnemyFOV>();
     }
