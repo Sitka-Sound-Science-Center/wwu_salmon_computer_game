@@ -136,6 +136,7 @@ public class PlayerControllerSpawning : MonoBehaviour
     }
 
     // Handle food interactions: increase health bar and destroy food obj
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject other = collision.gameObject;
@@ -151,6 +152,7 @@ public class PlayerControllerSpawning : MonoBehaviour
             Destroy(other);
         }
     }
+    */
 
     // Handle predator interactions: die and display death screen
     private void OnCollisionEnter2D(Collision2D other)
