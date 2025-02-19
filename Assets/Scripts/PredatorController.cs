@@ -47,11 +47,8 @@ public class PredatorController : MonoBehaviour
             //GameObject pebblen = 
             GameObject predator = Instantiate(GetPredatorObj(), NewPosition(), Quaternion.identity, this.transform);
             predator.transform.localScale = predator.transform.localScale*(Random.Range(0.5f, 1.5f));
-            
-
             counter = 0;
         }
-
         CountChildren();
     }
 
@@ -80,10 +77,8 @@ public class PredatorController : MonoBehaviour
         predatorCount = transform.childCount;
     }
 
-    private GameObject GetPredatorObj()
-    {
+    private GameObject GetPredatorObj() {
         int randP = Random.Range(0, predatorsArray.Length);
-        print(randP);
         return predatorsArray[randP];
     }
 

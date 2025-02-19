@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PredatorMovement : MonoBehaviour
 {
+    // Public: 
     [SerializeField]
     float DirectionFrequency; // duration between direction change
     [SerializeField]
@@ -9,17 +10,17 @@ public class PredatorMovement : MonoBehaviour
     [SerializeField]
     float speed; // units to move every second
     public Vector3 Direction;
+    // Private: 
+    GameObject Player;
+    EnemyFOV VisionScript;
+    Vector3 position;
+    Vector3 scaleFactor;
     float DirectionTimer;
     float xMin, xMax, yMin, yMax;
     int counter;
     bool PlayerVision;
-    GameObject Player;
-    Vector3 position;
-    Vector3 scaleFactor;
-    EnemyFOV VisionScript;
 
-    void Start()
-    {
+    void Start() {
         PlayerVision = false;
         Player = GameObject.FindWithTag("Player");
         Direction = Vector3.left;
@@ -47,8 +48,8 @@ public class PredatorMovement : MonoBehaviour
             SetSpriteOrientation(Direction);
         }
         else if (PlayerVision) {
-            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);    
-            SetSpriteOrientation(Direction);
+            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);   
+            SetSpriteOrientation(Direction); 
         }
         // speed is set reasonably high so movement looks and feels smooth
         gameObject.transform.position += (Direction * Time.deltaTime * speed); 
@@ -62,23 +63,24 @@ public class PredatorMovement : MonoBehaviour
         }
     }
 
-    private Vector3 NewPosition()
-    {
+    private Vector3 NewPosition() {
         position = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0);
         return position;
     }
 
     private void SetSpriteOrientation(Vector3 dir)
     {
-        if (dir.x < 0)
-        {
+        if (dir.x < 0) {
             //face sprite to the left
-            transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
+            gameObject.transform.localScale = new Vector3(-scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
-        else
-        {
+        else {
             //face sprite to the right
-            transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
+            gameObject.transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, scaleFactor.z);
         }
+        float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1;
+        float angle = Vector3.SignedAngle(Vector3.right, Direction, Vector3.forward);
+        if (orientation < 0) angle = -(180 - angle);
+        gameObject.transform.eulerAngles = new Vector3(0,0, angle);
     }
 }

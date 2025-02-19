@@ -68,8 +68,8 @@ public class EnemyFOVTests : MonoBehaviour
     public IEnumerator TestLineOfSightNotOccluded() {
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
-        Player.transform.position = new Vector3(100,300,0);
-        OrcaWhale.transform.position = new Vector3(0,300,0);
+        Player.transform.position = new Vector3(0,300,0);
+        OrcaWhale.transform.position = new Vector3(100,300,0);
         yield return new WaitForFixedUpdate();
         Assert.That(FOVScript.IsPlayerVisible(), Is.True);
     }
