@@ -10,7 +10,6 @@ using NUnit.Framework;
 [TestFixture]
 public class PredatorControllerTests : MonoBehaviour
 {
-    public GameObject Player;
     public GameObject SealSpawner;
     public PredatorController ControlScript;
     public bool loaded=false;
@@ -20,7 +19,6 @@ public class PredatorControllerTests : MonoBehaviour
     }
 
     void SetPredatorControllerTestRefs(Scene scene, LoadSceneMode mode) {
-        Player = GameObject.FindWithTag("Player");
         SealSpawner = GameObject.Find("Predators/AssetSpawner(fish)");
         ControlScript = SealSpawner.GetComponent<PredatorController>();
     }
