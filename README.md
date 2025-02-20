@@ -3,6 +3,7 @@ A Unity game built for the Sitka Sound Science Center to teach visitors about th
 
 # Changelog and Updates 2/19
 * Predators' sprite and vision cone rotate to be along the randomly chosen movement direction (WA)
+* Merge fisherman prototype and make it a prefab (WA)
 
 # Changelog and Updates 2/12
 * Fix tests and add new ones for reworked predator movement (WA)
