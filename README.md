@@ -1,6 +1,10 @@
 # Sitka-Salmon
 A Unity game built for the Sitka Sound Science Center to teach visitors about the salmon life cycle
 
+# Changelog and Updates 2/26
+* Start organizing code base -- group related scripts, remove unused scripts, etc. (WA)
+* Add tests for remaining untested predator scripts (WA)
+
 # Changelog and Updates 2/19
 * Predators' sprite and vision cone rotate to be along the randomly chosen movement direction (WA)
 * Merge fisherman prototype and make it a prefab (WA)
