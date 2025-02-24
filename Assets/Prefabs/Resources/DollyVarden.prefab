@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3174113218583976578}
   - component: {fileID: 7719621883784948834}
   m_Layer: 10
-  m_Name: ArcticChar
+  m_Name: DollyVarden
   m_TagString: Predator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
