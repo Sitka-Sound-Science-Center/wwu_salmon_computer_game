@@ -26,6 +26,7 @@ TagManager:
   - DeathScreens
   - Terrain
   - SpeciesSquare
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -39,7 +40,7 @@ TagManager:
   - Food
   - Predators
   - Player
-  - 
+  - NPC
   - 
   - 
   - 
