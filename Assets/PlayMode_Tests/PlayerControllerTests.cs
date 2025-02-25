@@ -32,7 +32,7 @@ public class PlayerControllerTests : MonoBehaviour
         FoodScript = FoodSpawner.GetComponent<FoodController>(); // so we can access the actual food 
         FoodScript.MaxFoodObjects=1; // so the test doesn't spawn a bunch of stuff
         rt = HungerMeter.GetComponent<RectTransform>();
-        print(Player.name);
+        ManagePhase.currentPhase = ManagePhase.Phase.Alevin;
     }
 
     [OneTimeSetUp]
