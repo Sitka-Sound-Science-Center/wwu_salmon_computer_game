@@ -4,6 +4,8 @@ A Unity game built for the Sitka Sound Science Center to teach visitors about th
 # Changelog and Updates 2/26
 * Start organizing code base -- group related scripts, remove unused scripts, etc. (WA)
 * Add tests for remaining untested predator scripts (WA)
+* Reduce plankton health value in river level (WA)
+* Add auto generating code coverage package (WA)
 
 # Changelog and Updates 2/19
 * Predators' sprite and vision cone rotate to be along the randomly chosen movement direction (WA)
