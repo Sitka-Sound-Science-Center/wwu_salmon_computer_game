@@ -13,6 +13,7 @@ public class CameraXTrack : MonoBehaviour
     public float lowBound;
     public float leftBound;
     public float rightBound;
+    public float yStart;
  
     void Update()
     {
@@ -21,7 +22,7 @@ public class CameraXTrack : MonoBehaviour
         if (trackY)
         {
             yPos = Mathf.Lerp(transform.position.y, Player.transform.position.y, 0.75f);
-            yPos = Mathf.Clamp(yPos, lowBound, topBound);
+            yPos = Mathf.Clamp(yPos+yStart, lowBound, topBound);
         }
         if (boundX)
         {
