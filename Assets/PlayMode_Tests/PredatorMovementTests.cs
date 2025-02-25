@@ -11,7 +11,7 @@ using NUnit.Framework;
 public class PredatorMovementTests : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject OrcaWhale;
+    public GameObject Predator;
     public EnemyFOV FOVScript;
     public PredatorMovement MovementScript;
     public bool loaded=false;
@@ -22,9 +22,9 @@ public class PredatorMovementTests : MonoBehaviour
 
     void SetPredatorMovementTestRefs(Scene scene, LoadSceneMode mode) {
         Player = GameObject.FindWithTag("Player");
-        OrcaWhale = GameObject.Find("Predators/OrcaWhale");
-        MovementScript = OrcaWhale.GetComponent<PredatorMovement>();
-        FOVScript = OrcaWhale.GetComponent<EnemyFOV>();
+        Predator = GameObject.Find("Predators/Lingcod");
+        MovementScript = Predator.GetComponent<PredatorMovement>();
+        FOVScript = Predator.GetComponent<EnemyFOV>();
     }
 
     [OneTimeSetUp]
@@ -40,46 +40,46 @@ public class PredatorMovementTests : MonoBehaviour
     public IEnumerator TestLeftOrientationScale() {
         yield return new WaitWhile(() => loaded == false);
         MovementScript.SetSpriteOrientation(Vector3.left);
-        Assert.That(OrcaWhale.transform.localScale.x, Is.LessThan(0));
+        Assert.That(Predator.transform.localScale.x, Is.LessThan(0));
     }
 
     [UnityTest]
     public IEnumerator TestRightOrientationScale() {
         yield return new WaitWhile(() => loaded == false);
         MovementScript.SetSpriteOrientation(Vector3.right);
-        Assert.That(OrcaWhale.transform.localScale.x, Is.GreaterThanOrEqualTo(0));
+        Assert.That(Predator.transform.localScale.x, Is.GreaterThanOrEqualTo(0));
     }
 
     [UnityTest]
     public IEnumerator TestLeftOrientationRotation() {
         yield return new WaitWhile(() => loaded == false);
         MovementScript.SetSpriteOrientation(Vector3.left);
-        Assert.That(OrcaWhale.transform.eulerAngles.z, Is.EqualTo(0));
+        Assert.That(Predator.transform.eulerAngles.z, Is.EqualTo(0));
     }
 
     [UnityTest]
     public IEnumerator TestRightOrientationRotation() {
         yield return new WaitWhile(() => loaded == false);
         MovementScript.SetSpriteOrientation(Vector3.right);
-        Assert.That(OrcaWhale.transform.eulerAngles.z, Is.EqualTo(0));
+        Assert.That(Predator.transform.eulerAngles.z, Is.EqualTo(0));
     }
 
     [UnityTest]
     public IEnumerator TestLeftOrientationGeneralRotation() {
         yield return new WaitWhile(() => loaded == false);
-        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y, OrcaWhale.transform.localScale.z);
+        Predator.transform.localScale = new Vector3(-Predator.transform.localScale.x, Predator.transform.localScale.y, Predator.transform.localScale.z);
         Vector3 dir = FOVScript.DirectionFromAngle(-45); 
         MovementScript.SetSpriteOrientation(dir);
-        Assert.That(OrcaWhale.transform.eulerAngles.z, Is.EqualTo(315));
+        Assert.That(Predator.transform.eulerAngles.z, Is.EqualTo(315));
     }
 
     [UnityTest]
     public IEnumerator TestLeftOrientationGeneralRotation2() {
         yield return new WaitWhile(() => loaded == false);
-        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y, OrcaWhale.transform.localScale.z);
+        Predator.transform.localScale = new Vector3(-Predator.transform.localScale.x, Predator.transform.localScale.y, Predator.transform.localScale.z);
         Vector3 dir = FOVScript.DirectionFromAngle(-87); 
         MovementScript.SetSpriteOrientation(dir);
-        Assert.That(OrcaWhale.transform.eulerAngles.z, Is.EqualTo(273));
+        Assert.That(Predator.transform.eulerAngles.z, Is.EqualTo(273));
     }
 
     [UnityTest]
@@ -87,7 +87,7 @@ public class PredatorMovementTests : MonoBehaviour
         yield return new WaitWhile(() => loaded == false);
         Vector3 dir = FOVScript.DirectionFromAngle(67); 
         MovementScript.SetSpriteOrientation(dir);
-        Assert.That(OrcaWhale.transform.eulerAngles.z, Is.EqualTo(67));
+        Assert.That(Predator.transform.eulerAngles.z, Is.EqualTo(67));
     }
 
     [OneTimeTearDown]

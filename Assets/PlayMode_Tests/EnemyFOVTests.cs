@@ -11,7 +11,7 @@ using NUnit.Framework;
 public class EnemyFOVTests : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject OrcaWhale;
+    public GameObject Predator;
     public EnemyFOV FOVScript;
     public PredatorMovement MovementScript;
     public bool loaded=false;
@@ -22,9 +22,9 @@ public class EnemyFOVTests : MonoBehaviour
 
     void SetEnemyFOVTestRefs(Scene scene, LoadSceneMode mode) {
         Player = GameObject.FindWithTag("Player");
-        OrcaWhale = GameObject.Find("Predators/OrcaWhale");
-        MovementScript = OrcaWhale.GetComponent<PredatorMovement>();
-        FOVScript = OrcaWhale.GetComponent<EnemyFOV>();
+        Predator = GameObject.Find("Predators/Lingcod");
+        MovementScript = Predator.GetComponent<PredatorMovement>();
+        FOVScript = Predator.GetComponent<EnemyFOV>();
     }
 
     [OneTimeSetUp]
@@ -41,7 +41,7 @@ public class EnemyFOVTests : MonoBehaviour
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,100,0);
-        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Predator.transform.position = new Vector3(100,0,0);
         Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.False);
     }
 
@@ -50,7 +50,7 @@ public class EnemyFOVTests : MonoBehaviour
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,-100,0);
-        OrcaWhale.transform.position = new Vector3(100,0,0);
+        Predator.transform.position = new Vector3(100,0,0);
         Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.False);
     }
 
@@ -59,8 +59,8 @@ public class EnemyFOVTests : MonoBehaviour
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,300,0);
-        OrcaWhale.transform.position = new Vector3(100,300,0);
-        OrcaWhale.transform.localScale = new Vector3(-OrcaWhale.transform.localScale.x, OrcaWhale.transform.localScale.y ,OrcaWhale.transform.localScale.z);
+        Predator.transform.position = new Vector3(100,300,0);
+        Predator.transform.localScale = new Vector3(-Predator.transform.localScale.x, Predator.transform.localScale.y ,Predator.transform.localScale.z);
         Assert.That(FOVScript.IsPlayerInCone(Player.transform.position), Is.True);
     }
 
@@ -69,7 +69,7 @@ public class EnemyFOVTests : MonoBehaviour
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(0,300,0);
-        OrcaWhale.transform.position = new Vector3(100,300,0);
+        Predator.transform.position = new Vector3(100,300,0);
         yield return new WaitForFixedUpdate();
         Assert.That(FOVScript.IsPlayerVisible(), Is.True);
     }
@@ -79,7 +79,7 @@ public class EnemyFOVTests : MonoBehaviour
         // Position of player for test depends on enemy detection angle
         yield return new WaitWhile(() => loaded == false);
         Player.transform.position = new Vector3(50,10,0);
-        OrcaWhale.transform.position = new Vector3(-50,-5,0);
+        Predator.transform.position = new Vector3(-50,-5,0);
         yield return new WaitForFixedUpdate();
         Assert.That(FOVScript.IsPlayerVisible(), Is.False);
     }
