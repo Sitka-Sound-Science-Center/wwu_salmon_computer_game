@@ -150,5 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551caf27c89e114d1badc7ba42266f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RestoreValue: 0.125
-  Spawner: {fileID: 0}
+  RestoreValue: 0.05

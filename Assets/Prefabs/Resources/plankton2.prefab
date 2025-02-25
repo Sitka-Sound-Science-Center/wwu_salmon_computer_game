@@ -10,12 +10,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3269034151589274365, guid: ddd7c58f5a722764c8bf5e8ee5a13069, type: 3}
       propertyPath: m_Name
-      value: plankton1 Variant 1
+      value: plankton2
       objectReference: {fileID: 0}
     - target: {fileID: 4352124064362633512, guid: ddd7c58f5a722764c8bf5e8ee5a13069, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 83672790, guid: b94594cd23637664ead32f3e720aef75, type: 3}
+    - target: {fileID: 6212843514470828194, guid: ddd7c58f5a722764c8bf5e8ee5a13069, type: 3}
+      propertyPath: RestoreValue
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7500280794286278176, guid: ddd7c58f5a722764c8bf5e8ee5a13069, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

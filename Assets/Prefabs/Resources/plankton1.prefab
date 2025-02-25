@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5271616674700942532, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
+      propertyPath: RestoreValue
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 646646384953224638, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598803296806127971, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
       propertyPath: m_Name
-      value: plankton1 Variant
+      value: plankton1
       objectReference: {fileID: 0}
     - target: {fileID: 6668380885843227318, guid: d5fbe22837c1091498796fdefd283a2b, type: 3}
       propertyPath: m_Sprite
