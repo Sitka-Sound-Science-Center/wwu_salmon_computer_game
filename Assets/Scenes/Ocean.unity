@@ -910,119 +910,6 @@ Transform:
   - {fileID: 1521779954}
   m_Father: {fileID: 1880345723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &77741348
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 600433065}
-    m_Modifications:
-    - target: {fileID: 4155813649129449178, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_Name
-      value: Textbox-BootSection
-      objectReference: {fileID: 0}
-    - target: {fileID: 4155813649129449178, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -128.38672
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -530.6924
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 461
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 335.45056
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: TimeOnScreen
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: timeOnScreen
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.6020508
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
 --- !u!1 &84908464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4473,7 +4360,6 @@ RectTransform:
   - {fileID: 1821396542}
   - {fileID: 368833730}
   - {fileID: 1452953896}
-  - {fileID: 1139701937}
   - {fileID: 885545878}
   - {fileID: 356094311}
   m_Father: {fileID: 0}
@@ -6021,7 +5907,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: Not too deep! [insert facts about optimal salmon depth]
+      value: 'Not too deep! When it''s not feeding or migration time, salmon are
+        typically found in deeper off-shore waters. They can swim in depths below
+        the surface up to 398 meters. '
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
@@ -6543,11 +6431,6 @@ RectTransform:
   m_AnchoredPosition: {x: 435.84598, y: -32.2}
   m_SizeDelta: {x: 204.0844, y: 69.4298}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &1139701937 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
-  m_PrefabInstance: {fileID: 77741348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148107105
 GameObject:
   m_ObjectHideFlags: 0
@@ -7228,7 +7111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4155813649129449178, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_Name
-      value: Textbox-Tutorial
+      value: Textbox-Seaweed
       objectReference: {fileID: 0}
     - target: {fileID: 4155813649129449178, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_IsActive
@@ -7316,14 +7199,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: 'Touch and drag the joystick in the corner to move
-
-        Tap the
-        button in the upper left corner to pause
-
-
-        Survive ocean life by
-        avoiding predation and fishermen!'
+      value: Survive ocean life by collecting food and avoiding predators. Hide from
+        predators in the kelp formations.
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
