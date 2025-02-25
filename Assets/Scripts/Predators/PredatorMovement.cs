@@ -80,10 +80,7 @@ public class PredatorMovement : MonoBehaviour
         }
         float orientation = (gameObject.transform.localScale.x < 0) ? -1 : 1;
         float angle = Vector3.SignedAngle(Vector3.right, dir, Vector3.forward);
-        //if (orientation < 0) angle = -(180 - angle);
-        //gameObject.transform.eulerAngles = new Vector3(0,0, angle);
-        angle = Mathf.Clamp(angle, 140, 230);
         if (orientation < 0) angle = -(180 - angle);
-        gameObject.transform.eulerAngles = new Vector3(0, 0, angle);
+        gameObject.transform.eulerAngles = new Vector3(0,0, angle);
     }
 }
