@@ -3,113 +3,79 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    private Player playerInput;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
+    // Public: 
+    public HungerMeter hungerMeter;
 
+    // Private
+    [SerializeField]
+    private GameObject DeathScreenParent;
     [SerializeField]
     private float playerSpeed = 11f;
+    [SerializeField]
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = 0f;
 
-    Vector3 scale;
+    private Player playerInput;
+    private Vector3 playerVelocity;
+    private Vector3 move;
+    private Vector3 scale;
+    private Rigidbody2D rb;
     float smooth = 5.0f;
     float flip = 0;
     float lastflip = 0;
+    bool groundedPlayer;
 
-    private Rigidbody2D rb;
-    private Vector3 move;
-
-    // hunger meter elements
-    public HungerMeter hungerMeter;
-    //private RectTransform rt;
-    //private float MaxFill = 550; // actual width of parent container
-    //private float ActualDamage;
-
-    [SerializeField]
-    GameObject DeathScreenParent;
-
-    private void Awake()
-    {
+    private void Awake() {
         playerInput = new Player();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable()
-    {
+    private void OnEnable() {
         playerInput.Enable();
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         playerInput.Disable();
     }
 
-    private void Start()
-    {
+    private void Start() {
        scale = transform.localScale;
        hungerMeter = GameObject.FindWithTag("HMeter").GetComponent<HungerMeter>();
-       //rt = hungerMeter.GetComponent<RectTransform>();
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         HandleMove();
     }
 
-    private void HandleMove()
-    {
+    private void HandleMove() {
         rb.AddForce(move, ForceMode2D.Impulse);
     }
 
-    void Update()
-    {
-        //groundedPlayer = controller.isGrounded;
-        //if (groundedPlayer && playerVelocity.y < 0)
-        //{
-        //    playerVelocity.y = 0f;
-       /// /}
+    void Update() {
         Vector2 movementInput = playerInput.PlayerMain.Move.ReadValue<Vector2>();
-        
         move = new Vector3(movementInput.x*playerSpeed, movementInput.y*playerSpeed,0f);
-
         float tiltAroundZ = Mathf.Atan2(movementInput.y , movementInput.x) * Mathf.Rad2Deg;
-        //print("tilt: " + tiltAroundZ + "  movement vec:" + movementInput);
-        
-        if (move.x < 0f)
-        {
-            flip = -1;
-        }
-        else
-        {
-            flip = 1;
-        }    
+        if (move.x < 0f) flip = -1;
+        else flip = 1;   
 
         Quaternion rotation = Quaternion.Euler(0, 0, tiltAroundZ - 180 + (flip * 180));
-        if (lastflip != flip)
-        {
-            transform.rotation = rotation;
-        }
-
+        if (lastflip != flip) transform.rotation = rotation;
         lastflip = flip;
 
         transform.localScale = new Vector3(scale.x, scale.y * flip, scale.z);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * smooth);
 
         // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
+        if (Input.GetButtonDown("Jump") && groundedPlayer) {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        //controller.Move(playerVelocity * Time.deltaTime);
     }
 
     //Methods for unit test
-    public float getPlayerSpeed()
-    {
+    public float getPlayerSpeed() {
         return playerSpeed;
     }
 
