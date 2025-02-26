@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4624f5251bdb83419e8479b672a2932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reason: ArcticChar
+  reason: DollyVarden
   ac: 0.2
 --- !u!114 &-3174113218583976578
 MonoBehaviour:

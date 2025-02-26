@@ -161,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8565385188277867916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -971,6 +971,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 0
+  loadingScreen: {fileID: 0}
+  progressBar: {fileID: 0}
+  message: {fileID: 0}
 --- !u!1 &6203011233046206529
 GameObject:
   m_ObjectHideFlags: 0
