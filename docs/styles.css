@@ -24,11 +24,11 @@ a {
   display: block;
   width: fit-content;
   align-items: center;
+  margin: 10px;
 }
 
 .feedback {
   font-size: large;
-  margin: 10px;
 }
 
 footer {
