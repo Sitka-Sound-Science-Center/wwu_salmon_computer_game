@@ -15,30 +15,17 @@ public class PauseMenu : MonoBehaviour
         menu.SetActive(false);
     }
 
-    public void InfoMenu() {
-        Debug.Log("Opening info menu");
-    }
-
     public void Restart() {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void NextLevel()
-    {
+    public void NextLevel() {
         ManagePhase.NextLevel();
     }
 
     public void ReturnToMenu() {
         Time.timeScale = 1;
         SceneManager.LoadScene("LevelSelect");
-    }
-
-    public void Exit() {
-        // quit editor or exit application
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-            Application.Quit();
     }
 }
