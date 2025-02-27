@@ -42,9 +42,8 @@ public class EnemyFOV_S : MonoBehaviour
         int mask = LayerMask.GetMask(LayerMask.LayerToName(Player.layer));
         // Ray cast for objects that player can hide from enemies in 
         Vector3 DirectionToPlayer = Player.transform.position - gameObject.transform.position;
+        DirectionToPlayer = DirectionToPlayer.normalized;
         RaycastHit HitInfo;
-        Vector2 DirToPlayer = new Vector2(DirectionToPlayer.x, DirectionToPlayer.z);
-        DirToPlayer = DirToPlayer.normalized;
         Vector3 RaycastOrigin = gameObject.transform.position;
         
         // There should be an easier way to check if the object that the ray cast hits is the player object but apparently
