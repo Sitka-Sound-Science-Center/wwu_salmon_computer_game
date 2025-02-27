@@ -17,6 +17,7 @@ public class PredatorController : MonoBehaviour
     float yMax;
     int predatorCount = 0;
     int counter;
+    float scaleRange = 0.2f;
 
     // Start is called before the first frame update
     void Start() {
@@ -54,7 +55,7 @@ public class PredatorController : MonoBehaviour
             // spawn a predator after (spawndelay) fixed updates
             predatorCount++;
             GameObject predator = Instantiate(GetPredatorObj(), NewPosition(), Quaternion.identity, this.transform);
-            predator.transform.localScale = predator.transform.localScale*(Random.Range(0.5f, 1.5f));
+            predator.transform.localScale = predator.transform.localScale*(Random.Range(1-scaleRange, 1+scaleRange));
             counter = 0;
         }
         //print("Predator count: " + predatorCount + " Transform children: " + gameObject.transform.childCount);
