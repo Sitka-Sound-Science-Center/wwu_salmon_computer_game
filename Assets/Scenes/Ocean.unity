@@ -1946,7 +1946,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: You were eaten by a seal!
+      value: 'You were eaten by a seal! Seals often gather near river mouths during
+        spawning season to prey on the large number of salmon attempting to pass
+        through the area to spawn. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4842,7 +4844,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: You were eaten by a lingcod!
+      value: 'You were eaten by a lingcod! These fish are able to change their color
+        depending on their environment. This allows them to more easily blend into
+        their surroundings and ambush prey. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4934,11 +4938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1100
+      value: 1089.6538
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 786
+      value: 778.6072
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_LocalScale.x
@@ -4953,8 +4957,12 @@ PrefabInstance:
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000011444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9.71
+      value: -0.0000076294
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -4966,7 +4974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254376102552273070, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Type

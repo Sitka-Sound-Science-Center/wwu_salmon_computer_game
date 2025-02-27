@@ -4700,9 +4700,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'Slimy Sculpin
+      value: 'A Sculpin leapt out from its hiding spot and ate you!
 
-'
+        Not
+        even 3in long, these tiny predators feed on Alevin and other small bugs and
+        fish. They hid in the shadows between rocks on the floor of the river, and
+        jump at prey that come into range.'
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -9306,7 +9309,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: Salmon Shark
+      value: 'A salmon shark ate you! Salmon sharks can commonly be found near estuaries
+        where both juvenile salmon and adult salmon are plentiful. These sharks can
+        reach speeds of up to 50 miles per hour, making them one of the fastest sharks
+        in the ocean. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
