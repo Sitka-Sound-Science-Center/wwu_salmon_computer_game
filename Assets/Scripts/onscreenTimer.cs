@@ -7,20 +7,12 @@ public class OnscreenTimer : MonoBehaviour
     public bool shown;
     public float timeOnScreen;
 
-    private void OnEnable()
-    {
-        if (!shown)
-        {
-            StartCoroutine(TextboxDespawnDelay());
-        } else
-        {
-            gameObject.SetActive(false);
-        }
-
+    private void OnEnable() {
+        if (!shown) StartCoroutine(TextboxDespawnDelay());
+        else gameObject.SetActive(false);
     }
 
-    private IEnumerator TextboxDespawnDelay()
-    {
+    private IEnumerator TextboxDespawnDelay() {
         yield return new WaitForSecondsRealtime(timeOnScreen);
         shown = true;
         gameObject.SetActive(false);
