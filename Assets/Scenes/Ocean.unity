@@ -7004,8 +7004,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: Survive ocean life by collecting food and avoiding predators. Hide from
-        predators in the kelp formations.
+      value: 'Survive ocean life by collecting food and avoiding predators. Hide
+        from predators in the kelp formations.
+
+
+        WASD or the Joystick in
+        the bottom left to move'
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
@@ -7018,6 +7022,10 @@ PrefabInstance:
     - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.6020508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933501235663584108, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

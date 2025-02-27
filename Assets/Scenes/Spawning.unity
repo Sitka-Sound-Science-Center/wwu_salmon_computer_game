@@ -6546,11 +6546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -128.38672
+      value: -127.52
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -530.6924
+      value: -264.93
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6562,7 +6562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6582,11 +6582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 461
+      value: 461.21
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 335.45056
+      value: 269.51
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6602,9 +6602,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: Spawning salmon must swim upstream to lay their eggs. Tap the button
+      value: 'Spawning salmon must swim upstream to lay their eggs. Tap the button
         on the bottom right of the screen to jump over waterfalls on the journey
         upstream.
+
+
+        WASD or the Joystick to move
+
+        SPACE or the Jump
+        button to jump'
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
