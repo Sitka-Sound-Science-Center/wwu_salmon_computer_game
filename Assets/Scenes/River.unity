@@ -2811,11 +2811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -128.38672
+      value: -110.27
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -530.6924
+      value: -394.815
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2847,11 +2847,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 461
+      value: 465.496
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 335.45056
+      value: 301.736
       objectReference: {fileID: 0}
     - target: {fileID: 4601290208598317170, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2867,14 +2867,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: 'Touch and drag the joystick in the lower left corner to move
-
-        Tap
-        the button in the upper left corner to pause
+      value: 'Touch and drag the joystick in the lower left corner OR use WASD to
+        move
 
 
-        Make your way along
-        the river, and avoid obstacles!'
+        Tap the button in the upper left corner to pause
+
+
+        Make
+        your way along the river, and avoid obstacles!'
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
@@ -2882,7 +2883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12502,6 +12503,7 @@ MonoBehaviour:
   lowBound: -35
   leftBound: 86
   rightBound: 1856
+  yStart: 0
 --- !u!114 &527969059
 MonoBehaviour:
   m_ObjectHideFlags: 0
