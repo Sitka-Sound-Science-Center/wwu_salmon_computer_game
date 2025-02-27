@@ -27777,12 +27777,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 677997196}
   - {fileID: 5855411779689030648}
   - {fileID: 1453183975}
   - {fileID: 94865023}
   - {fileID: 1444149292}
   - {fileID: 712291609}
+  - {fileID: 677997196}
   - {fileID: 1427727267}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44166,6 +44166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6116677073054327127, guid: 4a7d5b8ef5772d445bcd07aba7da39d5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50.449997
+      objectReference: {fileID: 0}
     - target: {fileID: 6938947056546929588, guid: 4a7d5b8ef5772d445bcd07aba7da39d5, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 920
@@ -56211,12 +56215,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: HungerBar
       objectReference: {fileID: 0}
+    - target: {fileID: 7313579132719549521, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8078838600558681881, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8078838600558681881, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932181604476087813, guid: 6e0dd2d0ee9bc7a42ac7dabf7fd440d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
