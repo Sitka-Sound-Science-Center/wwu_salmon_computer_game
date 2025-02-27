@@ -26,7 +26,7 @@
     </div>
 
     <script>
-      var versionID = "LD6.F25";
+      var versionID = "LD6.F26";
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -80,23 +80,34 @@
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'height=device-height, width=device-height*(16.0/9.0), initial-scale=1.0, user-scalable=yes, shrink-to-fit=no';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
-
+        //var meta = document.createElement('meta');
+        //meta.name = 'viewport';
+        //meta.content = 'height="480px", width="720px", initial-scale=1.0, user-scalable=no, shrink-to-fit=no';
+        //document.getElementsByTagName('head')[0].appendChild(meta);
+        //container.className = "unity-mobile";
+        //canvas.className = "unity-mobile";
+	var size = .25;
+	var height = window.innerHeight;
+	var width = window.innerWidth;
+	if(height < width){
+		size = height/1080;
+	}
+	else{
+		size = width/1920;
+	}
+	//size = sf/1080;
+	canvas.style.width = 1920*size+"px";
+	canvas.style.height = 1080*size+"px";
+	
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
 	//config.devicePixelRatio = .5;
-
-
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-      canvas.style.width = "1152px";
-      canvas.style.height = "648px";
+      canvas.style.width = ((window.innerHeight*16)/9)*.85+"px";
+      canvas.style.height = window.innerHeight*.85+"px";
+	
       }
 
       loadingBar.style.display = "block";
@@ -114,7 +125,6 @@
             };
 
       document.body.appendChild(script);
-      document.write("<h1>Email Feedback to salmon@stevengrubb.com with version number:" + versionID + "</h1>");
     </script>
   </body>
   <footer>
