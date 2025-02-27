@@ -43,8 +43,10 @@ public class FisherMovement : MonoBehaviour
             Vector3 linePos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 90, 0);
             if (t - cur < 0) direction = -1F;
             else direction = 1F;
-            gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z); 
-            castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation);
+            gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z);
+            castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation, gameObject.transform);
+            castLine.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            //castLine = GameObject.Instantiate(FishHook, gameObject.transform);
             LineCount++;
             cur = t;
             timer = 0;
