@@ -40,11 +40,13 @@ public class FisherMovement : MonoBehaviour
         else if (timer >= CastFrequency && LineCount < lines) {
             float t = Random.Range(0F,1F);
             Vector3 nxt = Vector3.Lerp(LeftPatrol, RightPatrol, t);
-            Vector3 linePos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 20, 0);
+            Vector3 linePos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 90, 0);
             if (t - cur < 0) direction = -1F;
             else direction = 1F;
-            gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z); 
-            castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation);
+            gameObject.transform.localScale = new Vector3(direction * ScaleFactor.x, ScaleFactor.y, ScaleFactor.z);
+            castLine = GameObject.Instantiate(FishHook, linePos, gameObject.transform.rotation, gameObject.transform);
+            castLine.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            //castLine = GameObject.Instantiate(FishHook, gameObject.transform);
             LineCount++;
             cur = t;
             timer = 0;
