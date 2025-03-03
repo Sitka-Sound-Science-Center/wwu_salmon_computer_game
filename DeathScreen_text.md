@@ -29,7 +29,7 @@ Dont walk through streams!
 
 ### <ins>End of Level:</ins>
 River Level Complete!\
-You succesfully transformed into a smolt, and made it to the Ocean!
+You succesfully transformed from an Alevin, to a Fry, to a Smolt, and now begin your life as an Adult in the Ocean
 
 ## **Ocean:**
 
