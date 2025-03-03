@@ -14,7 +14,8 @@ The Coastal Cuthroat Trout lives in the same rivers that Salmon spawn in.\
 During the spawning season these trout feast on the small alevin, fry and Smolt on their journey to the ocean
 
 ### <ins>Salmon Shark:</ins>\
---Emptty--
+A salmon shark ate you!\
+Salmon sharks can commonly be found near estuaries where both juvenile salmon and adult salmon are plentiful. These sharks can reach speeds of up to 50 miles per hour, making them one of the fastest sharks in the ocean. 
 
 ### <ins>Bald Eagle:</ins>\
 You Died! An eagle snatched you from the river for its next meal!\
