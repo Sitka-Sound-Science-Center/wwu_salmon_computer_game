@@ -38,10 +38,17 @@ You were eaten by a lingcod!\
 These fish are able to change their color depending on their environment. This allows them to more easily blend into their surroundings and ambush prey. 
 
 ### <ins>Seal</ins>
+You were eaten by a seal! \
+Seals often gather near river mouths during spawning season to prey on the large number of salmon attempting to pass through the area to spawn. 
 
-### <ins>Bald Eagle</ins>
+### <ins>Fisherman: </ins>
+You got reeled in! \
+Fishing supports the Alaskan economy as people can support themselves through subsistence fishing or commercial fishing operations. Salmon hatcheries support both the ecosystem and economy by supplementing the salmon population, allowing us to all enjoy delicious salmon dips like the one pictured here.
 
 ### <ins>End of Level</ins>
+Ocean Level Complete! \
+After successfully avoiding the many predators of the ocean, You will now begin the long journey home. The Salmon stop eating entierly and only focus on one thing: Making it far enough up their home river to spawn. 
+
 
 ## **Spawning:**
 
