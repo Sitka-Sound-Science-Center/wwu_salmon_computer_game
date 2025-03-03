@@ -55,6 +55,18 @@ public class PredatorMovement : MonoBehaviour
         gameObject.transform.position += (Direction * Time.deltaTime * speed); 
     }
 
+    Vector3 RejectionSample() {
+        Vector3 dir;
+        while (true) {
+            position = NewPosition();
+            dir = Vector3.Normalize(position - gameObject.transform.position);
+            bool bottom = dir.y < 0 && Vector3.Angle(dir, Vector3.Down) > 10F;
+            bool top = dir.y > 0 && Vector3.Angle(dir, Vector3.Up) > 10F;
+            if (bottom && top) break;   
+        }
+        return dir;
+    }
+
     void FixedUpdate() {
         counter++;
         if (counter>VisionFrequency) {
