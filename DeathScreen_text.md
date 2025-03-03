@@ -4,9 +4,10 @@
 
 ## River:
 
-### <ins>Arctic Char: </ins>
-An Arctic Char Ate you!\
-\*\*Fact about arctic char\*\*
+### <ins>Dolly Varden: </ins>
+A Dolly Varden ate you!\
+These fish are uniquely adaptable species of the char family of fish. Some populations are anadromous like salmon.\
+This means that some dolly varden will migrate from the ocean to freshwater rivers to spawn.
 
 ### <ins>Cutthroat Trout</ins>\
 The Coastal Cuthroat Trout lives in the same rivers that Salmon spawn in.\

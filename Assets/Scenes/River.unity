@@ -36473,7 +36473,7 @@ PrefabInstance:
       propertyPath: m_text
       value: "A Dolly Varden ate you! These fish are uniquely adaptable species of
         the char family of fish. Some populations are anadromous like salmon. This
-        means that some dolly varden will migrate from the ocean to freshwater rivers
+        means that some Dolly Varden will migrate from the ocean to freshwater rivers
         to spawn. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
