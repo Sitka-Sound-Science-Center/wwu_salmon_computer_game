@@ -47,7 +47,7 @@ public class PlayerControllerTests : MonoBehaviour
     [UnityTest]
     public IEnumerator TestKillPlayer() {
         yield return new WaitWhile(() => loaded == false);
-        string[] reasons = {"BaldEagle", "SlimySculpin", "SalmonShark", "Boot"};
+        string[] reasons = {"BaldEagle", "BuffaloSculpin", "SalmonShark", "Boot"};
         foreach(string reason in reasons) {
             GameObject sc = GameObject.Find("UICanvas/DeathScreens/" + reason);
             PlayerScript.killPlayer(reason);
