@@ -20430,10 +20430,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'A salmon shark ate you! Salmon sharks can commonly be found near estuaries
-        where both juvenile salmon and adult salmon are plentiful. These sharks can
-        reach speeds of up to 50 miles per hour, making them one of the fastest sharks
-        in the ocean. '
+      value: 'A salmon shark ate you!
+
+        Salmon sharks can commonly be found
+        near estuaries where both juvenile salmon and adult salmon are plentiful.
+        These sharks can reach speeds of up to 50 miles per hour, making them one
+        of the fastest sharks in the ocean. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -21283,9 +21285,13 @@ PrefabInstance:
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f0112e73566daff4b8f05ef176d86bbe, type: 3}
+      objectReference: {fileID: 21300000, guid: 5f953f35c79bb8a40a10d31c85fabd28, type: 3}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8992466722069203474, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
@@ -36473,7 +36479,7 @@ PrefabInstance:
       propertyPath: m_text
       value: "A Dolly Varden ate you! These fish are uniquely adaptable species of
         the char family of fish. Some populations are anadromous like salmon. This
-        means that some dolly varden will migrate from the ocean to freshwater rivers
+        means that some Dolly Varden will migrate from the ocean to freshwater rivers
         to spawn. \n"
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
@@ -37415,7 +37421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1425957409
 Transform:
   m_ObjectHideFlags: 0
@@ -50468,6 +50474,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1427727267}
     m_Modifications:
+    - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
+      propertyPath: m_text
+      value: 'You Died! An eagle snatched you from the river for its next meal!
+
+        Salmon
+        that are eaten by eagles in this way often end up on the forest floor
+
+        where
+        their bodies will continue to provide nutrients for the local ecosystem.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 51.291016
@@ -50571,7 +50587,7 @@ PrefabInstance:
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2711196973b7e514b8a6abb16482e27c, type: 3}
+      objectReference: {fileID: 21300000, guid: aaff747adb197974189fd2f346e648f3, type: 3}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -53714,15 +53730,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: River Level Complete!
+      value: 'River Complete!
+
+        You succesfully transformed from an Alevin,
+        to a Fry, to a Smolt, and now begin your life as an Adult in the Ocean'
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_fontSize
-      value: 76.92
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_fontSizeBase
-      value: 76.92
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_LocalScale.x
@@ -53838,7 +53857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254376102552273070, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Type
@@ -55089,8 +55108,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: "You Died! \nWalking in spawning streams can destroy the sentitive habitats
-        that salmon use to grow up in.\nDont walk through streams!"
+      value: 'You got stepped on by a human!
+
+        Walking in spawning streams
+        can destroy the sentitive habitats that salmon use to grow up in.
+
+        Dont
+        walk through streams!'
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
