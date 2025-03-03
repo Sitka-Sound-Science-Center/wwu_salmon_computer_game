@@ -4,11 +4,6 @@
 
 ## River:
 
-### <ins>Slimy Sculpin:</ins>
-
-A Slimy Sculpin leapt out from its hiding spot and ate you!\
-Not even 3in long, these tiny predators feed on Alevin and other small bugs and fish. They hid in the shadows between rocks on the floor of the river, and jump at prey that come into range.
-
 ### <ins>Arctic Char: </ins>
 An Arctic Char Ate you!\
 \*\*Fact about arctic char\*\*
