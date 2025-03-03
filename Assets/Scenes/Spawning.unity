@@ -4473,6 +4473,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 977494210882657263, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 977494210882657263, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 1759860906524629901, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4593,9 +4601,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8423339125475635188, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423339125475635188, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 185
+      objectReference: {fileID: 0}
     - target: {fileID: 8699029908036573247, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_Name
       value: ControlCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199108556825756448, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199108556825756448, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 9199108556825756448, guid: 0b9a9588292d8164ca2c1e68e11c10fe, type: 3}
       propertyPath: m_AnchoredPosition.x
