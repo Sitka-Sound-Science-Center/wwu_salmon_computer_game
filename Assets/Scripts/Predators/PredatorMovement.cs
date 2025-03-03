@@ -60,8 +60,8 @@ public class PredatorMovement : MonoBehaviour
         while (true) {
             position = NewPosition();
             dir = Vector3.Normalize(position - gameObject.transform.position);
-            bool bottom = dir.y < 0 && Vector3.Angle(dir, Vector3.Down) > 10F;
-            bool top = dir.y > 0 && Vector3.Angle(dir, Vector3.Up) > 10F;
+            bool bottom = dir.y < 0 && Vector3.Angle(dir, Vector3.down) > 10F;
+            bool top = dir.y > 0 && Vector3.Angle(dir, Vector3.up) > 10F;
             if (bottom && top) break;   
         }
         return dir;
