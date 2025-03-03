@@ -5,6 +5,7 @@ A Unity game built for the Sitka Sound Science Center to teach visitors about th
 * Fixed waterfall colliders where player could get stuck/fall through map (SG)
 * Updated death screen images and text (SG)
 * Player can now hide from predators in the giant kelp on the Ocean level (SG)
+* Increased Idle screen animation delay
 
 
 # Changelog and Updates 2/28
