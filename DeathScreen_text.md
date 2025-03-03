@@ -20,7 +20,7 @@ Salmon sharks can commonly be found near estuaries where both juvenile salmon an
 ### <ins>Bald Eagle:</ins>\
 You Died! An eagle snatched you from the river for its next meal!\
 Salmon that are eaten by eagles in this way often end up on the forest floor
-where their bodies will continue to provide nutrients for their ecosystem.
+where their bodies will continue to provide nutrients for the local ecosystem.
 
 ### <ins>Boot:</ins>\
 You Died!\

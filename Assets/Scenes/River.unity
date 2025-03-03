@@ -20430,10 +20430,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'A salmon shark ate you! Salmon sharks can commonly be found near estuaries
-        where both juvenile salmon and adult salmon are plentiful. These sharks can
-        reach speeds of up to 50 miles per hour, making them one of the fastest sharks
-        in the ocean. '
+      value: 'A salmon shark ate you!
+
+        Salmon sharks can commonly be found
+        near estuaries where both juvenile salmon and adult salmon are plentiful.
+        These sharks can reach speeds of up to 50 miles per hour, making them one
+        of the fastest sharks in the ocean. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -50468,6 +50470,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1427727267}
     m_Modifications:
+    - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
+      propertyPath: m_text
+      value: 'You Died! An eagle snatched you from the river for its next meal!
+
+        Salmon
+        that are eaten by eagles in this way often end up on the forest floor
+
+        where
+        their bodies will continue to provide nutrients for the local ecosystem.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 51.291016
