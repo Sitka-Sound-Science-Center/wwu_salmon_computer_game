@@ -8,8 +8,6 @@ public class PredatorMovement_S : MonoBehaviour
     float DirectionFrequency; // duration between direction change
     [SerializeField]
     int VisionFrequency; // how many fixed updates to wait before checking vision cone
-    [SerializeField]
-    float speed; // units to move every second
     public Vector3 Direction;
     // Private: 
     GameObject Player;
