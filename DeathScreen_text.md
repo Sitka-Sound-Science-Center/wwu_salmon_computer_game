@@ -33,12 +33,9 @@ You succesfully transformed from an Alevin, to a Fry, to a Smolt, and now begin 
 
 ## **Ocean:**
 
-### <ins>Slimy Sculpin</ins>
-
-### <ins>Orca:</ins>
-An Orca whale ate you for lunch! <<add Tlingit word for Orca (Blackfish?)\
-Orca whales eat millions of Salmon each year, primarily chinook as they are more fatty and dense with the calories that these magnificent whales need 
-(add another fun fact about orca species?)
+### <ins>Lingcod:</ins>
+You were eaten by a lingcod!\ 
+These fish are able to change their color depending on their environment. This allows them to more easily blend into their surroundings and ambush prey. 
 
 ### <ins>Seal</ins>
 

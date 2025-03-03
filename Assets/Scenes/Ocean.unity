@@ -4844,9 +4844,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'You were eaten by a lingcod! These fish are able to change their color
-        depending on their environment. This allows them to more easily blend into
-        their surroundings and ambush prey. '
+      value: "You were eaten by a lingcod! \nThese fish are able to change their
+        color depending on their environment. This allows them to more easily blend
+        into their surroundings and ambush prey. "
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4938,11 +4938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1089.6538
+      value: 1469.9272
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 778.6072
+      value: 974.3
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_LocalScale.x
@@ -4958,11 +4958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000011444
+      value: 0.000030518
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076294
+      value: 0.0000076294
       objectReference: {fileID: 0}
     - target: {fileID: 6165116807568803736, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -4974,7 +4974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254376102552273070, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Type
@@ -4983,9 +4983,13 @@ PrefabInstance:
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e440f730974910f40bd662182d9eba60, type: 3}
+      objectReference: {fileID: 21300000, guid: 16f71c3322c94864a9f47a1b1d63adfb, type: 3}
     - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479629681494471159, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
+      propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8992466722069203474, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
