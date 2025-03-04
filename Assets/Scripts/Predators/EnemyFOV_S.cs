@@ -50,7 +50,7 @@ public class EnemyFOV_S : MonoBehaviour
         // GameObject class doesnt support (GameObject a == GameObject b)?
         if (Physics.Raycast(RaycastOrigin, DirectionToPlayer, out HitInfo, DetectionRadius, PlayerMask)){ //} && HitInfo.transform.gameObject.name == "SpawningPlayer"){
             Debug.DrawRay(transform.position, DirectionToPlayer * HitInfo.distance, Color.yellow);
-            Debug.Log("Did Hit " + HitInfo.transform.name);
+            //Debug.Log("Did Hit " + HitInfo.transform.name);
             return true;
         }
         Debug.DrawRay(transform.position, DirectionToPlayer * 1000, Color.white);

@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 25727ec5df6e8844fae770f701d53b0f, type: 2}
 --- !u!1 &76155483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,10 +3021,10 @@ GameObject:
   - component: {fileID: 836391839}
   - component: {fileID: 836391838}
   - component: {fileID: 836391837}
+  - component: {fileID: 836391840}
   - component: {fileID: 836391835}
   - component: {fileID: 836391834}
   - component: {fileID: 836391833}
-  - component: {fileID: 836391840}
   m_Layer: 0
   m_Name: GrizzlyLedge_upper
   m_TagString: Untagged
@@ -3156,7 +3156,7 @@ Transform:
   m_GameObject: {fileID: 836391832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 311.7, y: 15.24, z: 22.2}
+  m_LocalPosition: {x: 305.4, y: 15.24, z: 22.2}
   m_LocalScale: {x: 1.97, y: 1.97, z: 1.97}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3177,7 +3177,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 0
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -8388,8 +8388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.3, y: 11.29}
-  m_SizeDelta: {x: 3.5697, y: 18.8524}
+  m_AnchoredPosition: {x: 304.74, y: 11.29}
+  m_SizeDelta: {x: 3.7225, y: 18.8524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2096204634
 GameObject:
