@@ -15732,7 +15732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -18397,7 +18397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -37536,9 +37536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c3774736bf0d04885b43b978833d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clock: 0
-  attackTimeout: 500
-  jumpForce: 5
 --- !u!114 &1425957414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37948,6 +37945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005387021}
     m_Modifications:
+    - target: {fileID: 499177644303844691, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 788734421002313795, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -38048,8 +38049,8 @@ PrefabInstance:
       propertyPath: m_text
       value: 'After consuming the last of the egg sack, it is time for the alevin
         to transition into a Fry, the next stage in its life cycle. Now the Fry must
-        rise up from the gravel to forrage for food, eating bugs, plankton, while
-        being careful to not get eaten itslef by larger fish or birds. '
+        rise up from the gravel to forage for food, eating bugs, plankton, while
+        being careful to not get eaten itself by larger fish or birds. '
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
@@ -38057,7 +38058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7744648035216879613, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_AnchoredPosition.x
