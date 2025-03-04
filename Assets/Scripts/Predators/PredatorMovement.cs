@@ -43,16 +43,25 @@ public class PredatorMovement : MonoBehaviour
         if (DirectionTimer >= DirectionFrequency && !PlayerVision) {
             DirectionTimer=0;
             //pick a random spot in the rect transform
-            position = NewPosition();
-            Direction = Vector3.Normalize(position - gameObject.transform.position);
+            Direction = Vector3.Normalize(RejectionSample());
             SetSpriteOrientation(Direction);
         }
         else if (PlayerVision) {
-            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);   
+            Direction = Vector3.Normalize(Player.transform.position - gameObject.transform.position);  
+            if (VerticalAngle(Direction) <= 20F) {
+                PlayerVision = false;
+                Direction = RejectionSample();
+            } 
             SetSpriteOrientation(Direction); 
         }
         // speed is set reasonably high so movement looks and feels smooth
         gameObject.transform.position += (Direction * Time.deltaTime * speed); 
+    }
+
+    float VerticalAngle(Vector3 dir) {
+        float orientation = (dir.y < 0) ? -1 : 1;
+        if (orientation > 0) return Vector3.Angle(dir, Vector3.down);
+        else return Vector3.Angle(dir, Vector3.up);
     }
 
     Vector3 RejectionSample() {
@@ -60,9 +69,7 @@ public class PredatorMovement : MonoBehaviour
         while (true) {
             position = NewPosition();
             dir = Vector3.Normalize(position - gameObject.transform.position);
-            bool bottom = dir.y < 0 && Vector3.Angle(dir, Vector3.down) > 10F;
-            bool top = dir.y > 0 && Vector3.Angle(dir, Vector3.up) > 10F;
-            if (bottom && top) break;   
+            if (VerticalAngle(dir) > 20F) break; 
         }
         return dir;
     }
