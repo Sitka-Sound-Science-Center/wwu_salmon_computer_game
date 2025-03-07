@@ -8489,6 +8489,7 @@ GameObject:
   - component: {fileID: 8681775669376195282}
   - component: {fileID: 7904674232689633088}
   - component: {fileID: 2846332929912045226}
+  - component: {fileID: 8681775669376195283}
   m_Layer: 11
   m_Name: Spawner
   m_TagString: Player
@@ -8761,6 +8762,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1098772839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8681775669376195283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681251550708859227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb978b18054887469da98f2c2179698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cohoSprite: {fileID: 21300000, guid: bbbb41f34c89fdb4bb439193b62fe874, type: 3}
+  sockeyeSprite: {fileID: 622475291, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  pinkSprite: {fileID: 67080212, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  chumSprite: {fileID: 1938580893, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  chinookSprite: {fileID: 706725639, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
