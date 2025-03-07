@@ -52,6 +52,12 @@ public class LevelSelect : MonoBehaviour
         SelectSpeciesFish((SpeciesManager.Species)fish);
     }
 
+    public void RefreshImages()
+    {
+        fishButtons[3].RefreshImage();
+        fishButtons[4].RefreshImage();
+    }
+
     public string ChooseSelectedStage(ManagePhase.Phase phase) {
         ManagePhase.SetPhase(phase);
         return ManagePhase.GetPhase().ToString();

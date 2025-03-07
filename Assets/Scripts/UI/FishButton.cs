@@ -6,7 +6,6 @@ public class FishButton : MonoBehaviour
 {
     public ManagePhase.Phase phase;
     public SpeciesManager.Species species;
-    public GameObject icon;
     public GameObject infoScreen;
     public GameObject highlight;
 
@@ -16,5 +15,11 @@ public class FishButton : MonoBehaviour
             infoScreen.SetActive(select);
             highlight.SetActive(infoScreen != null && select);
         }
+    }
+
+    public void RefreshImage()
+    {
+        SpeciesController controller = gameObject.GetComponentInChildren<SpeciesController>();
+        controller.RefreshImage();
     }
 }
