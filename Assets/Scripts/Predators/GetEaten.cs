@@ -40,6 +40,7 @@ public class GetEaten : MonoBehaviour
             busyEating = true;
             other.attachedRigidbody.isKinematic = true;
             other.transform.SetPositionAndRotation(mouthPosition.transform.position, Quaternion.identity);
+            other.gameObject.SetActive(false);
         }
     }
 
