@@ -2875,7 +2875,7 @@ PrefabInstance:
 
 
         Make
-        your way along the river, and avoid obstacles!'
+        your way along the river and avoid obstacles!'
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_margin.y
@@ -15726,6 +15726,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
+      propertyPath: m_text
+      value: 'Walking in salmon spawning areas can compress the gravel that the alevin
+        live in. This can impact the alevins ability to move and hide from predators.
+
+        Protect
+        our salmon by staying out of creeks and streams!'
+      objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: TimeOnScreen
       value: 10
@@ -21176,11 +21184,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'The Coastal Cuthroat Trout lives in the same rivers that Salmon spawn
+      value: 'The coastal cutthroat trout lives in the same rivers that salmon spawn
         in.
 
         During the spawning season these trout feast on the small alevin,
-        fry and Smolt on their journey to the ocean'
+        fry and smolt on their journey to the ocean'
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -38048,7 +38056,7 @@ PrefabInstance:
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
       value: 'After consuming the last of the egg sack, it is time for the alevin
-        to transition into a Fry, the next stage in its life cycle. Now the Fry must
+        to transition into a fry, the next stage in its life cycle. Now the fry must
         rise up from the gravel to forage for food, eating bugs, plankton, while
         being careful to not get eaten itself by larger fish or birds. '
       objectReference: {fileID: 0}
@@ -50501,7 +50509,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'You Died! An eagle snatched you from the river for its next meal!
+      value: 'An eagle snatched you from the river for its next meal!
 
         Salmon
         that are eaten by eagles in this way often end up on the forest floor
@@ -53755,10 +53763,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'River Complete!
+      value: 'River complete!
 
-        You succesfully transformed from an Alevin,
-        to a Fry, to a Smolt, and now begin your life as an Adult in the Ocean'
+        You successfully transformed from an alevin,
+        to a fry, to a smolt, and now begin your life as an adult in the ocean'
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_fontSize
@@ -55136,9 +55144,9 @@ PrefabInstance:
       value: 'You got stepped on by a human!
 
         Walking in spawning streams
-        can destroy the sentitive habitats that salmon use to grow up in.
+        can destroy the sensititive habitats that salmon use to grow in.
 
-        Dont
+        Don''t
         walk through streams!'
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}

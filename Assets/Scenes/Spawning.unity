@@ -958,8 +958,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: 'River Otters are dangerous predators, hunting both on land, and in
-        the river. A spawning salmon is so large that the Otter will drag the carcas
+      value: 'River otters are dangerous predators, hunting both on land, and in
+        the river. A spawning salmon is so large that the otter will drag the carcass
         to the shore to feed, leaving behind scraps for other opportunists to enjoy. '
       objectReference: {fileID: 0}
     - target: {fileID: 3110777862600355500, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
@@ -4862,10 +4862,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Spawning Level Complete!
 
-        Congradulations, you have completed
-        the Salmon Life cycle, from hatching here in this very river, venturing to
-        the ocean, and then returning again to spawn a the next generation of Salmon.
-        Less than 5% of salmon make it this far. '
+        Congratulations, you have completed
+        the salmon life cycle, from hatching here in this very river, venturing to
+        the ocean, and then returning to spawn the next generation of salmon. Less
+        than 5% of salmon make it this far. '
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_fontSize
@@ -5671,15 +5671,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5912872107293968577, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_text
-      value: 'Spawning salmon must swim upstream to lay their eggs. Tap the button
-        on the bottom right of the screen to jump over waterfalls on the journey
-        upstream.
+      value: 'Spawning salmon must swim upstream to lay eggs. Tap the button on the
+        bottom right of the screen to jump over waterfalls on the journey upstream.
 
 
-        WASD or the Joystick to move
+        WASD
+        or the Joystick to move
 
-        SPACE or the Jump
-        button to jump'
+        SPACE or the Jump button to jump'
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
@@ -6720,7 +6719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: "A grizzly bear ate you for luch. \nDuring the spawning season bears
+      value: "A grizzly bear ate you for lunch. \nDuring the spawning season bears
         come together on the edges of waterfalls to catch salmon that are jumping
         their way up the river."
       objectReference: {fileID: 0}

@@ -1155,7 +1155,7 @@ PrefabInstance:
 
         After successfully avoiding the many
         predators of the ocean, You will now begin the long journey home. The Salmon
-        stop eating entierly and only focus on one thing: Making it far enough up
+        stop eating entirely and only focus on one thing: Making it far enough up
         their home river to spawn. '
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
