@@ -21,5 +21,7 @@ public class FishButton : MonoBehaviour
     {
         SpeciesController controller = gameObject.GetComponentInChildren<SpeciesController>();
         controller.RefreshImage();
+
+        highlight.GetComponent<GetSpriteFromParent>().RefreshSprite();
     }
 }
