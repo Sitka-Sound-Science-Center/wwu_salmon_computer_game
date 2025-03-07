@@ -73,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
+  timer: 0
+  frequency_s: 3
 --- !u!54 &7055637795919388793
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -261,6 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4745327038067942398}
   - component: {fileID: 1007897161157843570}
+  - component: {fileID: 1491661807443891216}
   m_Layer: 12
   m_Name: CohoSpawning1
   m_TagString: Untagged
@@ -335,3 +338,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1491661807443891216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290449450322279270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb978b18054887469da98f2c2179698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cohoSprite: {fileID: 21300000, guid: 23296e8241e8a7d47aad61487ea797bd, type: 3}
+  sockeyeSprite: {fileID: 622475291, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  pinkSprite: {fileID: 67080212, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  chumSprite: {fileID: 1938580893, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
+  chinookSprite: {fileID: 706725639, guid: e18db6fd6152ebf46b60a11c6f6a6f82, type: 3}
