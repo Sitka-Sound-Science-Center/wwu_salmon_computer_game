@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b32ff0a6a6757c64c83e0dd3805a3127
+guid: 5b19ccf5387317441b65a636dc3d6db0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,136 +106,110 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Adultsv1_0
+      name: Adults_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 839
+        x: 47
+        y: 840
         width: 492
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0efe351f1e8bc824caf375a606190db7
-      internalID: -1301323827
+      spriteID: 70c224329213b414593e5015a847c474
+      internalID: 1918382681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adultsv1_1
+      name: Adults_1
       rect:
         serializedVersion: 2
-        x: 49
-        y: 649
+        x: 36
+        y: 646
         width: 492
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eeb3f450a427a748ad4e3cb524b909f
-      internalID: 1826594756
+      spriteID: 997f6ef7ef6b5bc4c979f8110ef51251
+      internalID: -1262401945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adultsv1_2
+      name: Adults_2
       rect:
         serializedVersion: 2
-        x: 49
-        y: 435
+        x: 31
+        y: 438
         width: 492
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db1a15a253868e54bb1e9397c6c6a9cf
-      internalID: -1154232265
+      spriteID: 39117661b5f77294a9c303fddf71e707
+      internalID: 2060800019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adultsv1_3
+      name: Adults_3
       rect:
         serializedVersion: 2
-        x: 58
-        y: 227
+        x: 43
+        y: 229
         width: 492
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f798664c882eb468b4b7eb00a530b0
-      internalID: -618087593
+      spriteID: a55ceb9e9736c994f83de5bbb911289c
+      internalID: -1409214725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Adultsv1_4
+      name: Adults_4
       rect:
         serializedVersion: 2
-        x: 62
-        y: 37
+        x: 54
+        y: 31
         width: 492
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30e4f0a2ca3f3154cbe08ab40c5ccc4c
-      internalID: -67127209
+      spriteID: 9e3b6fe643a0a8742b23d788d5eec5f5
+      internalID: -363555442
       vertices: []
       indices: 
       edges: []
@@ -251,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Adultsv1_0: -1301323827
-      Adultsv1_1: 1826594756
-      Adultsv1_2: -1154232265
-      Adultsv1_3: -618087593
-      Adultsv1_4: -67127209
+      Adults_0: 1918382681
+      Adults_1: -1262401945
+      Adults_2: 2060800019
+      Adults_3: -1409214725
+      Adults_4: -363555442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

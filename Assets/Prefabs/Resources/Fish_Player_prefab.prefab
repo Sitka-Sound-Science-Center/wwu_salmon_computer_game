@@ -748,12 +748,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1154232265, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  m_Sprite: {fileID: 2060800019, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.78, y: 1.67}
+  m_Size: {x: 4.92, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -795,8 +795,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.78, y: 1.67}
-    newSize: {x: 4.78, y: 1.67}
+    oldSize: {x: 4.92, y: 1.73}
+    newSize: {x: 4.92, y: 1.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -912,8 +912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb978b18054887469da98f2c2179698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cohoSprite: {fileID: 21300000, guid: 3f0f0e0eed4d5b24f89582761cd7f17a, type: 3}
-  sockeyeSprite: {fileID: -67127209, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
-  pinkSprite: {fileID: 1826594756, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
-  chumSprite: {fileID: -1154232265, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
-  chinookSprite: {fileID: -1301323827, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  cohoSprite: {fileID: -1409214725, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
+  sockeyeSprite: {fileID: -363555442, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
+  pinkSprite: {fileID: -1262401945, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
+  chumSprite: {fileID: 2060800019, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
+  chinookSprite: {fileID: 1918382681, guid: 5b19ccf5387317441b65a636dc3d6db0, type: 3}
