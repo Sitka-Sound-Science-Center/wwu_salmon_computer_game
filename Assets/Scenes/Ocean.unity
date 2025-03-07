@@ -1371,9 +1371,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_text
-      value: "You were eaten by a seal! \nSeals often gather near river mouths during
-        spawning season to prey on the large number of salmon attempting to pass
-        through the area to spawn. "
+      value: "You were eaten by a seal! \nSeals often gather near river mouths to
+        prey on the large number of salmon heading out into the ocean."
       objectReference: {fileID: 0}
     - target: {fileID: 832137688963498511, guid: 07eaf8f14fb6cad4bb586e5f6a71e70c, type: 3}
       propertyPath: m_fontSize
