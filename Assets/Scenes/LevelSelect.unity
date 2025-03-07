@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 0
   icon: {fileID: 892415615}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -1454,7 +1455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &308027896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1700,6 +1701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 4
+  species: 0
   icon: {fileID: 0}
   infoScreen: {fileID: 1288838179}
   highlight: {fileID: 261291308}
@@ -1969,6 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 1
+  species: 0
   icon: {fileID: 0}
   infoScreen: {fileID: 2089687548}
   highlight: {fileID: 1634367593}
@@ -2493,6 +2496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 2
+  species: 0
   icon: {fileID: 0}
   infoScreen: {fileID: 902165326}
   highlight: {fileID: 1719358747}
@@ -3450,11 +3454,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1174953727}
         m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectSpecies
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 964084863}
-          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3595,11 +3599,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1174953727}
         m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectSpecies
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1776451598}
-          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3949,11 +3953,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1174953727}
         m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectSpecies
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1951479421}
-          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4697,7 +4701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &892415616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5020,6 +5024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 3
   icon: {fileID: 308027895}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -5701,6 +5706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 0
   icon: {fileID: 0}
   infoScreen: {fileID: 1750905551}
   highlight: {fileID: 1527196761}
@@ -5970,7 +5976,8 @@ MonoBehaviour:
   - {fileID: 310105138}
   currentInfo: {fileID: 1750905551}
   curSpecies: {fileID: 1581118114}
-  curSpeciesIcon: {fileID: 892415615}
+  speciesParent: {fileID: 1410641101}
+  curSpeciesIcon: {fileID: 308027895}
   loadScene: {fileID: 1420605852}
   active: {fileID: 0}
 --- !u!114 &1174953728
@@ -6687,11 +6694,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1174953727}
         m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectSpecies
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1825504546}
-          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Sockeye
           m_BoolArgument: 0
@@ -7118,8 +7125,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 892415616}
   - {fileID: 308027896}
+  - {fileID: 892415616}
   - {fileID: 1005104855}
   - {fileID: 516342098}
   - {fileID: 1787134321}
@@ -7734,6 +7741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 3
+  species: 0
   icon: {fileID: 0}
   infoScreen: {fileID: 474622273}
   highlight: {fileID: 1280416914}
@@ -7927,7 +7935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coho
+  m_text: Chum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
   m_sharedMaterial: {fileID: -2801242659646129416, guid: 49f7918cbd574ed4d8cb67cdcf8bab64, type: 2}
@@ -8794,6 +8802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 2
   icon: {fileID: 1787134320}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -9040,6 +9049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 1
   icon: {fileID: 1005104854}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -9636,6 +9646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 0
+  species: 4
   icon: {fileID: 516342097}
   infoScreen: {fileID: 0}
   highlight: {fileID: 0}
@@ -10277,10 +10288,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1174953727}
         m_TargetAssemblyTypeName: LevelSelect, GameAssembly
         m_MethodName: SelectSpecies
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 291324417}
-          m_ObjectArgumentAssemblyTypeName: FishButton, GameAssembly
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Coho

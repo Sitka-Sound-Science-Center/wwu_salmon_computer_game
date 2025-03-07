@@ -9,12 +9,22 @@ public class LevelSelect : MonoBehaviour
     public GameObject currentInfo;
 
     public TextMeshProUGUI curSpecies;
+    public GameObject speciesParent;
     public GameObject curSpeciesIcon;
 
     public LoadScene loadScene;
     //public ManagePhase mp;
     public FishButton active;
     private TouchListener TouchScript;
+
+    void Start()
+    {
+        TouchScript = gameObject.GetComponent<TouchListener>();
+        //mp = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
+        active = fishButtons[0];
+        SelectStage(active);
+        SelectSpeciesFish(SpeciesManager.curSpecies);
+    }
 
     public void SelectStage(FishButton stage) {
         ChooseSelectedLevel(stage.phase.ToString());
@@ -28,11 +38,18 @@ public class LevelSelect : MonoBehaviour
         TouchScript.SetState(active);
     }
 
-    public void SelectSpecies(FishButton fish) {
-        curSpecies.text = fish.name;
+    public void SelectSpeciesFish(SpeciesManager.Species fish) {
+        curSpecies.text = fish.ToString();
         curSpeciesIcon.SetActive(false);
-        curSpeciesIcon = fish.icon;
+        //curSpeciesIcon = fish.icon;
+        curSpeciesIcon = speciesParent.transform.Find(fish.ToString()).gameObject;
         curSpeciesIcon.SetActive(true);
+        SpeciesManager.SetSpecies(fish);
+    }
+
+    public void SelectSpecies(int fish)
+    {
+        SelectSpeciesFish((SpeciesManager.Species)fish);
     }
 
     public string ChooseSelectedStage(ManagePhase.Phase phase) {
@@ -51,12 +68,5 @@ public class LevelSelect : MonoBehaviour
             loadScene.sceneToLoad = LoadScene.Level.Spawning;
         } 
         return loadScene.sceneToLoad.ToString();
-    }
-
-    void Start() {
-        TouchScript = gameObject.GetComponent<TouchListener>();
-        //mp = GameObject.FindWithTag("SpawnPoints").GetComponent<ManagePhase>();
-        active=fishButtons[0];
-        SelectStage(active);
     }
 }

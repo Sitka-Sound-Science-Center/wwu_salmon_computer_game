@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ebb511a86a4f440bf649a7515290ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 1
-  gravityValue: 0
-  HungerMeter: {fileID: 0}
+  hungerMeter: {fileID: 0}
   DeathScreenParent: {fileID: 0}
+  playerSpeed: 1
+  jumpHeight: 1
+  gravityValue: 0
 --- !u!50 &2992819926331853695
 Rigidbody2D:
   serializedVersion: 4
@@ -139,8 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0340d98010cf44d9eaff71af840454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseCurrent: Alevin
   PlayerCamera: {fileID: 0}
+  sp: {fileID: 0}
 --- !u!1 &4128240938706355037
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +684,7 @@ GameObject:
   - component: {fileID: 1027638730681591401}
   - component: {fileID: 1984451737303358459}
   - component: {fileID: 5888755280050569745}
+  - component: {fileID: 4673398054415168337}
   m_Layer: 0
   m_Name: Adult
   m_TagString: Player
@@ -898,3 +900,20 @@ PolygonCollider2D:
       - {x: -0.68, y: -0.66499996}
       - {x: -0.59, y: -0.66499996}
   m_UseDelaunayMesh: 0
+--- !u!114 &4673398054415168337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7020050113916190176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb978b18054887469da98f2c2179698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cohoSprite: {fileID: 21300000, guid: 3f0f0e0eed4d5b24f89582761cd7f17a, type: 3}
+  sockeyeSprite: {fileID: -67127209, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  pinkSprite: {fileID: 1826594756, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  chumSprite: {fileID: -1154232265, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
+  chinookSprite: {fileID: -1301323827, guid: b32ff0a6a6757c64c83e0dd3805a3127, type: 3}
