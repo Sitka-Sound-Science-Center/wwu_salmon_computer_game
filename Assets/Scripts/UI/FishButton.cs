@@ -23,5 +23,6 @@ public class FishButton : MonoBehaviour
         controller.RefreshImage();
 
         highlight.GetComponent<GetSpriteFromParent>().RefreshSprite();
+        infoScreen.GetComponentInChildren<GetSpriteFromParent>().RefreshSprite();
     }
 }
