@@ -55242,7 +55242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DirectionFrequency: 4
   VisionFrequency: 3
-  speed: 0.1
+  speed: 3
   Direction: {x: 0, y: 0, z: 0}
 --- !u!212 &2084937400
 SpriteRenderer:
