@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject credits;
 
     public void Pause() {
         Time.timeScale = 0;
@@ -27,5 +28,17 @@ public class PauseMenu : MonoBehaviour
     public void ReturnToMenu() {
         Time.timeScale = 1;
         SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void ShowCredits()
+    {
+        credits.SetActive(true);
+        menu.SetActive(false);
+    }
+
+    public void HideCredits()
+    {
+        credits.SetActive(false);
+        menu.SetActive(true);
     }
 }
