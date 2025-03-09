@@ -1924,7 +1924,7 @@ Transform:
   m_GameObject: {fileID: 541355757}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.2, y: 27.6, z: 0}
+  m_LocalPosition: {x: 218.2, y: 18.5, z: 41}
   m_LocalScale: {x: 285.31, y: 20.58, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1947,7 +1947,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -1970,7 +1970,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -100
+  m_SortingOrder: -3
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.28235295, g: 0.21568629, b: 0.11764707, a: 1}
   m_FlipX: 0
@@ -4912,7 +4912,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 664ecd6d8334205419ca0998312e88da, type: 2}
@@ -6433,7 +6433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7618395961129743714, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: timeOnScreen
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8779553341439083934, guid: b0dbb8c3f675949468182d71d66ba396, type: 3}
       propertyPath: m_LocalPosition.z
