@@ -1,6 +1,9 @@
 # Sitka-Salmon
 A Unity game built for the Sitka Sound Science Center to teach visitors about the salmon life cycle. Developed, designed, and deployed by Western Washington University Computer Science Senior Project team Mila Brooks, Steven Grubb, and Wyatt Ayers
 
+#How to play
+* The game is installed on a touch screen kiosk at the Sitka Sound Science Center, in Sitka Alaska.
+
 # Changelog and Updates 3/7
 * Added more predators to spawning level
 * Salmon sprites update with species change
